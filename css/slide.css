@@ -1,10 +1,8 @@
-/*공통*/
-@charset "UTF-8";
-
-.slide-wrap{width:100%;border:1px solid #000;}
-.slide-wrap .slide-container{width:100%;overflow:visible;display:block;}
-.slide-wrap .slide-container .slide{width:100%;position:absolute;z-index:1;top:0;display:block;box-sizing:border-box;margin:0;padding:0;}
-.slide-wrap .slide-container .slide img{width:100%;display:block;position:relative;}
+.slide-wrap{position:relative;width:100%;border:1px solid #000;}
+.slide-wrap .slide-container{width:100%;display:block;}
+.slide-wrap .slide-container .slide{display:block;position:absolute;width:100%;z-index:0;top:0;box-sizing:border-box;margin:0;padding:0;left:0;opacity:0;overflow:visible;}
+.slide-wrap .slide-container .slide.on{display:block;opacity:1;z-index:1;}
+.slide-wrap .slide-container .slide img{display:block;position:relative;width:100%;min-height:auto;}
 
 .slide-wrap .indicator{display:table;background:rgba(0,0,0,0);position:absolute;bottom:5%;margin-left:50%;z-index:2;}
 .slide-wrap .indicator .bulet{display:table-cell;box-sizing:border-box;color:#ccc;vertical-align:middle;text-align:center;cursor:pointer;}
