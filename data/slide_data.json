@@ -1,7 +1,10 @@
 [
-    {"img_url":"./images/slide/2016.png","link_url":"","alt_text":"1번 장면 입니다.","click_move":""},
-    {"img_url":"./images/slide/2017.png","link_url":"","alt_text":"2번 장면 입니다.","click_move":""},
-    {"img_url":"./images/slide/2018.png","link_url":"","alt_text":"3번 장면 입니다.","click_move":""},
-    {"img_url":"./images/slide/2019.png","link_url":"","alt_text":"4번 장면 입니다.","click_move":""},
-    {"img_url":"./images/slide/2020.png","link_url":"","alt_text":"5번 장면 입니다.","click_move":""}
+    {"img_url":"./images/slide/banner1.png","link_url":"","alt_text":"1번 장면 입니다.","click_move":""},
+    {"img_url":"./images/slide/banner2.png","link_url":"","alt_text":"2번 장면 입니다.","click_move":""},
+    {"img_url":"./images/slide/banner3.png","link_url":"","alt_text":"3번 장면 입니다.","click_move":""},
+    {"img_url":"./images/slide/banner4.png","link_url":"","alt_text":"4번 장면 입니다.","click_move":""},
+    {"img_url":"./images/slide/banner5.png","link_url":"","alt_text":"5번 장면 입니다.","click_move":""},
+    {"img_url":"./images/slide/banner6.png","link_url":"","alt_text":"6번 장면 입니다.","click_move":""},
+    {"img_url":"./images/slide/banner7.png","link_url":"","alt_text":"7번 장면 입니다.","click_move":""},
+    {"img_url":"./images/slide/banner8.png","link_url":"","alt_text":"8번 장면 입니다.","click_move":""}
 ]
