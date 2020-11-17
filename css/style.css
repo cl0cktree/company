@@ -81,7 +81,7 @@ textarea{box-sizing:border-box;}
 .header .nav .gnb-wrap{display:block;width:calc(100% - 100px);float:right;}
 .header .nav .gnb-wrap li{display:block;box-sizing:border-box;width:25%;float:left;text-align:right;padding-right:20px;}
 .header .nav .gnb-wrap li a{display:inline-block;height:80px;line-height:80px;font-weight:600;text-decoration:none;}
-.section{width:100%;max-width:1280px;height:1000vh;background:rgba(0,0,0,1);margin:0 auto;}
+.section{width:100%;max-width:1280px;height:1000vh;background:rgba(255,255,255,1);margin:0 auto;}
 .footer{width:100%;min-height:200px;background:dimgray;}
 
 /* Exit Icon */
