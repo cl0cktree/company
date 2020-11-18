@@ -1,0 +1,56 @@
+.randing-wrap{position:relative;width:100%;}
+.randing-wrap .randing-background{width:100%;min-height:1080px;background:#fff;}
+.randing-wrap .randing-background .phon-animate{width:300px;height:640px;background:#fff;border:2px solid #000;top:50%;margin-top:-320px;left:50%;margin-left:-700px;position:absolute;transform: rotate(45deg);overflow:hidden;}
+.randing-wrap .randing-container{width:100%;display:block;transition:all 2s;opacity:0;}
+.randing-wrap .randing-container{display:block;position:absolute;width:100%;z-index:0;top:0;box-sizing:border-box;margin:0;padding:0;left:0;opacity:0;overflow:hidden;}
+.randing-wrap .randing-container.on{display:block;opacity:1;z-index:1;}
+
+.randing-wrap .indicator{display:table;background:rgba(0,0,0,0);position:absolute;bottom:5%;margin-left:50%;z-index:2;}
+.randing-wrap .indicator .bulet{display:table-cell;box-sizing:border-box;color:#ccc;vertical-align:middle;text-align:center;cursor:pointer;}
+
+.randing-wrap .con-btn{width:7%;height:100%;position:absolute;z-index:2;top:0px;cursor:pointer;}
+.randing-wrap #prev-btn{left:0px;background:rgba(0,0,0,0) url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23202020'%2F%3E%3C%2Fsvg%3E") no-repeat center;}
+.randing-wrap #next-btn{right:0px;background:rgba(0,0,0,0) url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23202020'%2F%3E%3C%2Fsvg%3E") no-repeat center;}
+
+@keyframes phonaction{
+	/* 0% { transform: rotate(60deg); top:150px;margin-left:-580px; width:338px; height:720px;}
+	25% { transform: rotate(75deg); top:-250px;margin-left:-690px; width:506px; height:1080px;}
+	50%	{ transform: rotate(80deg); top:-270px;margin-left:-575px; width:600px; height:1280px;}
+	75% { transform: rotate(95deg); top:-300px;margin-left:-500px; width:900px; height:1920px;}
+	100% { transform: rotate(90deg); top:-510px;margin-left:-450px; width:900px; height:1920px;} */
+
+	/* 0% { transform: rotate(60deg); top:150px;margin-left:-580px; width:338px; height:720px;}
+	25% { transform: rotate(75deg); top:-250px;margin-left:-690px; width:506px; height:1080px;}
+	100% { transform: rotate(90deg); top:-510px;margin-left:-450px; width:900px; height:1920px;}
+
+	0% { transform: rotate(60deg); top:150px;margin-left:-580px; width:338px; height:720px;}
+	100% { transform: rotate(90deg); top:-510px;margin-left:-450px; width:900px; height:1920px;} */
+	0% { transform: rotate(60deg); margin-top:-320px;margin-left:-580px; width:300px;  height:640px;}
+	25% { transform: rotate(90deg); margin-top:-470px;margin-left:-320px; width:300px;  height:640px;}
+	100% { transform: rotate(90deg); margin-top:-1050px;margin-left:-450px; width:900px; height:1920px;}
+}
+
+@media all and (max-width:320px){
+	.indicator{width:50%;height:15%;left:-25%;font-size:0.5em;line-height:0.5em;}
+}
+@media all and (min-width:321px) and (max-width:480px){
+	.indicator{width:50%;height:15%;left:-25%;font-size:0.5em;line-height:0.5em;}
+}
+@media all and (min-width:481px) and (max-width:640px){
+	.indicator{width:50%;height:15%;left:-25%;font-size:0.5em;line-height:0.5em;}
+}
+@media all and (min-width:641px) and (max-width:720px){
+	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:0.8em;line-height:0.8em;}
+}
+@media all and (min-width:721px) and (max-width:1080px){
+	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:0.8em;line-height:0.8em;}
+}
+@media all and (min-width:1081px) and (max-width:1280px){
+	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:0.8em;line-height:0.8em;}
+}
+@media all and (min-width:1281px) and (max-width:1500px){
+	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:1em;line-height:1em;}
+}
+@media all and (min-width:1501px){
+	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:1em;line-height:1em;}
+}

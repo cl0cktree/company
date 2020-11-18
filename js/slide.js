@@ -1,8 +1,9 @@
 $(function(){
+	//하단 썸네일 기능을 활성화 하고 싶을 경우 thumnail-box 생성 부분의 주석 해제 후 thumnail_on() 함수의 주석 해제하여 사용.
 	if($('body').find('.slide-wrap'))
 		{
 		$('.slide-wrap').append('<div id="slide-container" class="slide-container"></div><ul id="indicator" class="indicator"></ul><div id="prev-btn" class="con-btn"></div><div id="next-btn" class="con-btn"></div>');
-		$('.slide-wrap').after('<ul class="thumnail-box" style="position:relative;box-sizing:border-box;overflow:hidden;border:1px solid #000;background:#999;margin-top:10px;"></ul>');
+		// $('.slide-wrap').after('<ul class="thumnail-box" style="position:relative;box-sizing:border-box;overflow:hidden;border:1px solid #000;background:#999;margin-top:10px;"></ul>');
 		var mswidth;
 		var msheight;
 		var wrapwidth;
@@ -21,7 +22,7 @@ $(function(){
 				$('.slide-container').append('<div class="slide" id="slide'+slideNum+'" data-index="'+slideNum+'"><img src='+item.img_url+' alt="'+item.alt_text+slideNum+'"></div>');
 				$('#slide1').addClass('on');
 				$('.indicator').append('<li id="bulet'+slideNum+'" class="bulet" data-index="'+slideNum+'">●</li>');
-				$('.thumnail-box').append('<li id="thumnail'+slideNum+'" class="thumnail" data-index="'+slideNum+'"><img src='+item.img_url+' alt="미리보기'+slideNum+'" style="width:100%;"></li>');
+				// $('.thumnail-box').append('<li id="thumnail'+slideNum+'" class="thumnail" data-index="'+slideNum+'"><img src='+item.img_url+' alt="미리보기'+slideNum+'" style="width:100%;"></li>');
 				$('.bulet').css({'color':'#ccc'});
 				$('#bulet1').css({'color':'#999'});
 				mswidth = $('.slide').each(Array).length;/*슬라이드 전체 배열의 갯수만큼의 숫자를 추출*/
@@ -91,7 +92,7 @@ $(function(){
 				}
 				bullet_on();
 				page();
-				thumnail_on();
+				// thumnail_on();
 				// inner_controll_s();
 				//sort_all = parseInt($('.slide').data('index'));
 			};
@@ -111,7 +112,7 @@ $(function(){
 				}
 				bullet_on();
 				page();
-				thumnail_on();
+				// thumnail_on();
 				// inner_controll_s();
 			};
 
@@ -122,7 +123,7 @@ $(function(){
 				clearTimeout(prevBtn);
 			}
 
-			$('#prev-btn').on('mouseover mouseout click',function(){
+			$('#prev-btn').on('mouseover mouseout click',function(event){
 				// event.preventDefault();
 				// event.stopPropagation();
 				stop_s();
@@ -153,7 +154,7 @@ $(function(){
 				}
 			});
 
-			$('#next-btn').on('mouseover mouseout click',function(){
+			$('#next-btn').on('mouseover mouseout click',function(event){
 				// event.preventDefault();
 				// event.stopPropagation();
 				stop_s();
@@ -330,7 +331,7 @@ $(function(){
 			function bullet_next(){
 				setTimeout(nextBtn,autospeed);
 			}
-			$('.bulet').on('click mouseover mouseleave',function(){
+			$('.bulet').on('click mouseover mouseleave',function(event){
 				if (event.type=='click')
 				{
 					setTimeout(stop_bar,0);
@@ -338,7 +339,7 @@ $(function(){
 					sort_index = $(this).data('index');
 					bullet_on();
 					page();
-					thumnail_on();
+					// thumnail_on();
 					console.log(sort_index);
 					$('.slide').stop(false,true).animate({'opacity':'0','z-index':'0'},movespeed);
 					$('#slide'+sort_index).stop(false,true).animate({'opacity':'1','z-index':'1'},movespeed);;
@@ -358,13 +359,13 @@ $(function(){
 					// inner_controll_s();
 				}
 			});
-			$('.thumnail').on('click mouseover mouseout', function(){
+			$('.thumnail').on('click mouseover mouseout', function(event){
 				if (event.type=='click')
 				{
 					setTimeout(stop_bar,0);
 					setTimeout(stop_s,0);
 					sort_index = $(this).data('index');
-					thumnail_on();
+					// thumnail_on();
 					bullet_on();
 					page();
 					$('.slide').stop(false,true).animate({'opacity':'0','z-index':'0'},movespeed);

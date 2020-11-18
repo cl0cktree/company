@@ -8,9 +8,9 @@ $(function(){
 	var work_years;
 	var class_add;
 	var frame_year;
-	var jsonCover_data=portfolioindex_url+'/data/cover_data.json';
-	var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
-	var jsonFrame_data=portfolioindex_url+'/data/frame_data.json';
+	// var jsonCover_data=portfolioindex_url+'/data/cover_data.json';
+	// var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
+	// var jsonFrame_data=portfolioindex_url+'/data/frame_data.json';
 	var name_header=document.querySelector('.header');
 	var name_footer=document.querySelector('.footer');
 	var footer_contaner=document.querySelector('footer .body-footer-contaner');
