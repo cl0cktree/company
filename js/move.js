@@ -16,6 +16,15 @@ $(function(){
 	var footer_contaner=document.querySelector('footer .body-footer-contaner');
 	var split_url = this.location.href.split('/').reverse()[0];
 
-	
+	$(document).ready(function(){
+		var down_speed = 700;
+
+		function nav_down(){
+			nav_timeout = setTimeout(function(){
+				$('.nav').css({'margin-top':'0'});
+			},down_speed);
+		};
+		nav_down();
+	});
 	return false;
 });

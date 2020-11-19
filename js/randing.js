@@ -8,7 +8,7 @@ $(function(){
 				$('.phon-animate').css({'transform':'rotate(90deg)','transition':'all 1s;','overflow':'hidden'});
 				$('.phon-animate').fadeOut(300);
 				if($('.phon-animate').css('height')){
-					$('.randing-container').stop().animate({'opacity':'1'},1000);
+					$('.randing-container').stop().animate({'z-index':'2','opacity':'1'},1000);
 				}
 			},randing_time2);
 		}

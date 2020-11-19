@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('http://fixability.co.kr/css/nanumgothic.css');
+@import url('./nanumgothic.css');
 @font-face{
 	font-family:'Nanum Gothic','NanumGothic';
 	src:url('/fonts/NanumGothic.eot');
@@ -74,7 +74,7 @@ textarea{box-sizing:border-box;}
 .clear_both{clear:both;}
 
 .header{position:fixed;width:100%;background:rgba(255,255,255,1);top:0;border-bottom:1px solid #000;z-index:5;}
-.header .nav{width:100%;height:80px;max-width:1280px;margin:0 auto;overflow:hidden;margin-top:-80px;}
+.header .nav{width:100%;height:80px;max-width:1280px;margin:0 auto;overflow:hidden;margin-top:-80px;transition:all 0.5s;}
 .header .nav .top-logo{display:block;box-sizing:border-box;width:80px;height:80px;line-height:80px;float:left;padding-left:20px;}
 .header .nav .top-logo a{display:block;width:60px;height:80px;}
 .header .nav .top-logo a img{width:100%;padding-top:20px;}
@@ -82,8 +82,9 @@ textarea{box-sizing:border-box;}
 .header .nav .gnb-wrap li{display:block;box-sizing:border-box;width:25%;float:left;text-align:center;}
 .header .nav .gnb-wrap li a{display:inline-block;height:80px;line-height:80px;font-weight:600;text-decoration:none;}
 .section{width:100%;background:rgba(255,255,255,1);margin:0 auto;margin-top:80px;}
-.section .article{width:100%;max-width:1280px;min-height:100vh;border-top:0px solid #000; border-bottom:5px solid #000;margin:0 auto;}
-.section .article.wide{max-width:100%;}
+.section .article{width:100%;min-height:100vh;border-top:0px solid #000; border-bottom:5px solid #000;margin:0 auto;}
+.section .article .container{width:100%;min-height:100vh;background:rgba(251,251,251,1);}
+.section .article .container.left:before{content:'';position:absolute;display:block;width:1280px;height:1280px;background:rgba(251,251,251,1);background:#000;transform: rotate(45deg);}
 .footer{width:100%;min-height:200px;background:dimgray;}
 
 /* Exit Icon */
