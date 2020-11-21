@@ -26,5 +26,10 @@ $(function(){
 		};
 		nav_down();
 	});
+	$('.gnb-wrap').find('a').on('click',function(){
+		$('.gnb-wrap').find('a').removeClass('on');
+		$(this).addClass('on');
+		console.log(this);
+	});
 	return false;
 });
