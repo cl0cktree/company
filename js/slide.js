@@ -1,15 +1,6 @@
 $(function(){
 	if($('body').find('.slide-wrap'))
 		{
-		var slide_leng = $('.slide-wrap').length;
-		var leng=0;
-		$('.slide-wrap').attr('id','slide-wrap1');
-		for (var i=0;i<slide_leng;i++){
-			if ($('body').find('#slide-wrap1')){
-				leng++;
-				$('.slide-wrap').attr('id','slide-wrap'+leng);
-			}
-		};
 		$('.slide-wrap').append('<div class="slide-container"></div><ul class="indicator"></ul><div class="con-btn prev-btn"></div><div class="con-btn next-btn"></div>');
 		$('.slide-wrap').after('<ul class="thumnail-box" style="position:relative;box-sizing:border-box;overflow:hidden;border:1px solid #000;background:#999;margin-top:10px;"></ul>');
 		var mswidth;

@@ -86,8 +86,13 @@ textarea{box-sizing:border-box;}
 .header .nav .gnb-wrap li a.on:after{width:100%;height:3px;background:#919191;left:0%;transition:all 0.3s;}
 .header .language{width:200px;height:40px;line-height:40px;top:30px;right:30px;background:#919191;overflow:hidden;color:#fff;font-weight:500;border-radius:5px;float:left;}
 .header .language:before{content:'';background:url('../images/selectarrow.png');background-size:16px 16px;background-position:center;display:block;position:absolute;width:16px;height:16px;top:12px;right:5px;z-index:1;}
-.header .language li{text-align:left;padding-left:10px;}
-.header h2{width:70px;height:100px;float:right;margin-right:30px;background:red;}
+.header .language li{text-align:left;padding-left:10px;cursor:pointer;}
+.header h2{width:50px;height:100px;float:right;margin-right:30px;}
+.header h2 label{display:block;position:relative;width:100%;height:42px;margin-top:30px;cursor:pointer;}
+.header h2 label span{display:block;position:absolute;width:100%;height:7px;background:#919191;text-indent:-10000%;}
+.header h2 label span:nth-of-type(1){top:3px;}
+.header h2 label span:nth-of-type(2){top:17px;}
+.header h2 label span:nth-of-type(3){top:31px;}
 .section{width:100%;background:rgba(255,255,255,1);margin:0 auto;margin-top:100px;}
 .section .article{width:100%;min-height:100vh;border-top:0px solid #000; border-bottom:5px solid #fff;margin:0 auto;overflow:hidden;}
 .section .article .container{width:200%;min-height:100vh;background:rgba(251,251,251,1);}
