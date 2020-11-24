@@ -31,5 +31,35 @@ $(function(){
 		$(this).addClass('on');
 		console.log(this);
 	});
+	$('.language').on('click','li',function(e){
+		var sel_lang = $(this).data('lang');
+		var roll_speed;
+		if(e.type=='click'){
+			roll_speed=30000;
+			if($('.language').height()<160){
+				$('.language').addClass('on');
+			}else{
+				$('.language').removeClass('on');
+				if(sel_lang=='val'){
+					$(this).html();
+				}else{
+					$('.language').find('li:eq(0)').html(sel_lang);
+				}
+			}
+			function roll_up(){
+				$('.language').removeClass('on');
+			};
+			setTimeout(roll_up,roll_speed);
+		}
+	});
+	$('.nav').on('click','.menu_btn',function(){
+		if($(this)=='.menu_btn.on'){
+			$(this).removeClass('on');
+			
+		}else if($(this)!=='.menu_btn.on'){
+			$(this).addClass('on');
+			
+		}
+	});
 	return false;
 });

@@ -74,7 +74,8 @@ textarea{box-sizing:border-box;}
 .clear_both{clear:both;}
 
 .header{position:fixed;width:100%;background:rgba(255,255,255,1);top:0;border-bottom:1px solid #000;z-index:5;}
-.header .nav{width:100%;height:100px;margin:0 auto;overflow:hidden;margin-top:-100px;transition:all 0.5s;}
+.header .nav{width:100%;height:100px;margin:0 auto;margin-top:-100px;transition:all 0.5s;}
+.header .nav:after{display:block;content:'';width:100%;height:0;clear:both;}
 .header .nav .top-logo{display:block;width:80px;height:100px;line-height:100px;float:left;padding-left:30px;}
 .header .nav .top-logo a{display:block;width:60px;height:100px;}
 .header .nav .top-logo a img{width:100%;padding-top:30px;}
@@ -84,15 +85,20 @@ textarea{box-sizing:border-box;}
 .header .nav .gnb-wrap li a:hover:before{width:100%;height:3px;background:#000;left:0%;transition:all 0.3s;z-index:1;}
 .header .nav .gnb-wrap li a:before,.header .nav .gnb-wrap li a:after{content:'';display:block;position:absolute;width:0;bottom:0;left:50%;transition:all 0.5s;}
 .header .nav .gnb-wrap li a.on:after{width:100%;height:3px;background:#919191;left:0%;transition:all 0.3s;}
-.header .language{width:200px;height:40px;line-height:40px;top:30px;right:30px;background:#919191;overflow:hidden;color:#fff;font-weight:500;border-radius:5px;float:left;}
+.header .language{position:absolute;width:200px;height:40px;line-height:40px;top:30px;right:110px;background:#919191;overflow:hidden;color:#fff;font-weight:500;border-radius:5px;transition:all 0.3s;}
+.header .language.on{overflow:visible;height:160px;}
 .header .language:before{content:'';background:url('../images/selectarrow.png');background-size:16px 16px;background-position:center;display:block;position:absolute;width:16px;height:16px;top:12px;right:5px;z-index:1;}
 .header .language li{text-align:left;padding-left:10px;cursor:pointer;}
-.header h2{width:50px;height:100px;float:right;margin-right:30px;}
-.header h2 label{display:block;position:relative;width:100%;height:42px;margin-top:30px;cursor:pointer;}
-.header h2 label span{display:block;position:absolute;width:100%;height:7px;background:#919191;text-indent:-10000%;}
-.header h2 label span:nth-of-type(1){top:3px;}
-.header h2 label span:nth-of-type(2){top:17px;}
-.header h2 label span:nth-of-type(3){top:31px;}
+.header .language li:hover{color:#000;font-weight:600;}
+.header .language li:nth-of-type(1):hover{color:#fff;font-weight:400;}
+.header .menu_btn{width:40px;height:42px;float:right;margin-right:30px;margin-top:30px;cursor:pointer;}
+.header .menu_btn span{display:block;position:absolute;width:100%;height:7px;background:#919191;top:50%;text-indent:-10000%;transition:all 0.3s;}
+.header .menu_btn span:nth-of-type(1){margin-top:-20px;transform:rotate(0deg);}
+.header .menu_btn span:nth-of-type(2){margin-top:-4px;transform:rotate(0deg);}
+.header .menu_btn span:nth-of-type(3){margin-top:12px;transform:rotate(0deg);}
+.header .menu_btn.on span:nth-of-type(1){margin-top:-3.5px;transform:rotate(45deg);}
+.header .menu_btn.on span:nth-of-type(2){margin-top:-3.5px;transform:rotate(45deg);}
+.header .menu_btn.on span:nth-of-type(3){margin-top:-3.5px;transform:rotate(-45deg);}
 .section{width:100%;background:rgba(255,255,255,1);margin:0 auto;margin-top:100px;}
 .section .article{width:100%;min-height:100vh;border-top:0px solid #000; border-bottom:5px solid #fff;margin:0 auto;overflow:hidden;}
 .section .article .container{width:200%;min-height:100vh;background:rgba(251,251,251,1);}
