@@ -53,12 +53,10 @@ $(function(){
 		}
 	});
 	$('.nav').on('click','.menu_btn',function(){
-		if($(this)=='.menu_btn.on'){
-			$(this).removeClass('on');
-			
-		}else if($(this)!=='.menu_btn.on'){
-			$(this).addClass('on');
-			
+		if($('.nav').find('.mobile')){
+			$('.menu_btn').removeClass('mobile');
+		}else{
+			$('.menu_btn').addClass('mobile');
 		}
 	});
 	return false;
