@@ -53,10 +53,16 @@ $(function(){
 		}
 	});
 	$('.nav').on('click','.menu_btn',function(){
-		if($('.nav').find('.mobile')){
-			$('.menu_btn').removeClass('mobile');
+		console.log($('#menuChck input[type=checkbox]').prop(('checked')));
+		if($('#menuChck input[type=checkbox]').prop('checked')==false){
+			
+			$('.menu_btn').find('span').addClass('mobile');
+			// $('.menu_btn').find('span').removeClass('mobile');
+			
 		}else{
-			$('.menu_btn').addClass('mobile');
+			$('.menu_btn').find('span').removeClass('mobile');
+			// $('.menu_btn').find('span').addClass('mobile');
+			
 		}
 	});
 	return false;
