@@ -27,9 +27,10 @@ $(function(){
 		nav_down();
 	});
 	$('.gnb-wrap').find('a').on('click',function(){
+		
+		$('.language').removeClass('on');
 		$('.gnb-wrap').find('a').removeClass('on');
 		$(this).addClass('on');
-		console.log(this);
 	});
 	$('.language').on('click','li',function(e){
 		var sel_lang = $(this).data('lang');
@@ -52,17 +53,12 @@ $(function(){
 			setTimeout(roll_up,roll_speed);
 		}
 	});
-	$('.nav').on('click','.menu_btn',function(){
-		console.log($('#menuChck input[type=checkbox]').prop(('checked')));
-		if($('#menuChck input[type=checkbox]').prop('checked')==false){
-			
-			$('.menu_btn').find('span').addClass('mobile');
-			// $('.menu_btn').find('span').removeClass('mobile');
-			
+	$('.nav').on('click keypress','.menu_btn input[type=checkbox]',function(){
+		$('.language').removeClass('on');
+		if($('.menu_btn input[type=checkbox]').prop('checked')==false){
+			$('.menu_btn').removeClass('mobile');
 		}else{
-			$('.menu_btn').find('span').removeClass('mobile');
-			// $('.menu_btn').find('span').addClass('mobile');
-			
+			$('.menu_btn').addClass('mobile');
 		}
 	});
 	return false;
