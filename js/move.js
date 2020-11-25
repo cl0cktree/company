@@ -26,19 +26,15 @@ $(function(){
 		};
 		nav_down();
 	});
-	$('.gnb-wrap').find('a').on('click',function(){
-		
-		$('.language').removeClass('on');
-		$('.gnb-wrap').find('a').removeClass('on');
-		$(this).addClass('on');
-	});
-	$('.language').on('click','li',function(e){
+	$('.language').on('click keypress','li',function(e){
 		var sel_lang = $(this).data('lang');
 		var roll_speed;
 		if(e.type=='click'){
 			roll_speed=30000;
 			if($('.language').height()<160){
 				$('.language').addClass('on');
+				$('.language').children('before').css({'display':'none'});
+				$('.language').children('after').css({'display':'block'});
 			}else{
 				$('.language').removeClass('on');
 				if(sel_lang=='val'){
@@ -57,9 +53,23 @@ $(function(){
 		$('.language').removeClass('on');
 		if($('.menu_btn input[type=checkbox]').prop('checked')==false){
 			$('.menu_btn').removeClass('mobile');
+			$('.background-filter').find('.gnb-modile').animate({'right':'-100%'},function(){
+				$('.nav').find('.background-filter').remove('');
+			});
 		}else{
 			$('.menu_btn').addClass('mobile');
+			$('.nav').prepend('<div class="background-filter"><ul class="gnb-modile"><li class="gnb-1" data-index="1"><a href="javascript:;" class="color_black">사업분야</a></li><li class="gnb-2" data-index="2"><a href="javascript:;" class="color_black">기업현황</a></li><li class="gnb-3" data-index="3"><a href="javascript:;" class="color_black">경영이념</a></li><li class="gnb-4" data-index="4"><a href="javascript:;" class="color_black">오시는길</a></li></ul></div>');
+			$('.background-filter').addClass('on');
+			$('.background-filter').find('.gnb-modile').animate({'right':'0'});
 		}
+	});
+	
+	$('.nav').find('.gnb-wrap, .gnb-modile').on('click keypress','a',function(){
+		var gnb_index=$(this).parent('li').data('index');
+		console.log(gnb_index);
+		$('.language').removeClass('on');
+		$('.nav').find('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
+		$('.nav').find('.gnb-wrap, .gnb-modile').find('.gnb-'+gnb_index).children('a').addClass('on');
 	});
 	return false;
 });
