@@ -1,5 +1,5 @@
 .randing-wrap{position:relative;width:100%;}
-.randing-wrap .randing-background{width:100%;min-height:1080px;background:#fff;}
+.randing-wrap .randing-background{width:100%;min-height:100vh;background:#fff;}
 .randing-wrap .randing-background .phon-animate{width:300px;height:640px;background:#fff;border:2px solid #000;top:50%;margin-top:-320px;left:50%;margin-left:-700px;position:absolute;transform: rotate(45deg);overflow:hidden;}
 .randing-wrap .randing-container{width:100%;display:block;transition:all 2s;opacity:0;}
 .randing-wrap .randing-container{display:block;position:absolute;width:100%;z-index:0;top:0;box-sizing:border-box;margin:0;padding:0;left:0;opacity:0;overflow:hidden;z-index:-1;}
