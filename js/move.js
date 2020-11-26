@@ -24,8 +24,6 @@ $(function(){
 			nav_timeout = setTimeout(function(){
 				$('.nav').css({'margin-top':'0'});
 			},down_speed);
-			$('.nav').prepend('<div class="background-filter"></div>');
-			
 		};
 		nav_down();
 	});
@@ -38,7 +36,7 @@ $(function(){
 			if( $language.height()<160){
 				$language.stop().addClass('on');
 			}else{
-				 $language.removeClass('on');
+				 $language.stop().removeClass('on');
 				if(sel_lang=='val'){
 					$(this).html();
 				}else{
@@ -56,17 +54,17 @@ $(function(){
 		if($('.menu_btn input[type=checkbox]').prop('checked')==false){
 			$('.menu_btn').removeClass('mobile');
 			$name_header.find('.gnb-modile').animate({'right':'-100%'},function(){
-				$('.nav').find('.background-filter').removeClass('on');
+				$('.background-filter').fadeOut('300').removeClass('on');
 			});
 		}else{
 			$('.menu_btn').addClass('mobile');
-			$('.nav').find('.background-filter').addClass('on');
+			$('.background-filter').fadeIn('300').addClass('on');
 			$name_header.find('.gnb-modile').animate({'right':'0'});
 		}
 	});
-	$('.nav').find('.background-filter').on('click',function(){
+	$('.background-filter').on('click',function(){
 		$name_header.find('.gnb-modile').animate({'right':'-100%'},function(){
-			$('.nav').find('.background-filter').removeClass('on');
+			$('.background-filter').fadeOut('300').removeClass('on');
 		});
 		$('.menu_btn input[type=checkbox]').click();
 	});
