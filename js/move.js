@@ -102,7 +102,6 @@ $(function(){
 		var roll_speed;
 		if(e.type=='click'){
 			roll_speed=30000;
-			
 			if($('.language, .language-mobile').height()<160){
 				$('.language, .language-mobile').stop().addClass('on');
 			}else{
