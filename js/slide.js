@@ -5,6 +5,7 @@ $(function(){
 		$('.slide-wrap').after('<ul class="thumnail-box" style="position:relative;box-sizing:border-box;overflow:hidden;border:1px solid #000;background:#999;margin-top:10px;"></ul>');
 		var mswidth;
 		var msheight;
+		var article_height;
 		var wrapwidth;
 		var dragindex;
 		var class_slide;
@@ -40,13 +41,15 @@ $(function(){
 			function lazy_0(){
 				if($('.slide-wrap').height()==0||$('.slide-wrap').height()==null){
 					$(document).ready(function(){
-							if ($('body').width>720){
-								msheight = $('.slide').children('img').height();
-							}
-							else{
-								msheight = '100vh';
-							}
-							$('.slide-wrap').css({'height':msheight});
+							// if ($('body').width>720){
+							// 	msheight = $('.slide').children('img').height();
+							// }
+							// else{
+							// 	msheight = '100vh';
+							// }
+							msheight = $('.slide').children('img').height();
+							article_height = $('.article').height();
+							$('.slide-wrap').css({'height':msheight,'max-height':article_height});
 						}
 					);
 				};
@@ -76,28 +79,31 @@ $(function(){
 			sort_index = $('.slide, .bulet').data('index');
 			app_sort = mswidth+1;
 
-			if ($('body').width>720){
-				msheight = $('.slide').children('img').height();
-			}
-			else{
-				msheight = '100vh';
-			}
+			// if ($('body').width>720){
+			// 	msheight = $('.slide').children('img').height();
+			// }
+			// else{
+			// 	msheight = '100vh';
+			// }
+			msheight = $('.slide').children('img').height();
 
 			$(window).resize(function(){
 				var delay_time;
 				if(!delay_time){
 					delay_time = setTimeout(function() {
 						delay_time=null;
-						if ($('body').width>720){
-							msheight = $('.slide').children('img').height();
-						}
-						else{
-							msheight = '100vh';
-						}
+						// if ($('body').width>720){
+						// 	msheight = $('.slide').children('img').height();
+						// }
+						// else{
+						// 	msheight = '100vh';
+						// }
+						msheight = $('.slide').children('img').height();
 						var mswidth = $('.slide').each(Array).length;/*-슬라이드 전체 배열의 갯수만큼의 숫자를 추출-*/
 						wrapwidth = mswidth*100;
 						s_width = $('.slide').width();
-						$('.slide-wrap').css({'height':msheight});
+						article_height = $('.article').height();
+						$('.slide-wrap').css({'height':msheight,'max-height':article_height});
 					},framespeed);
 				}
 			});
@@ -480,13 +486,15 @@ $(function(){
 			function lazy_0(){
 				if($('.slide-wrap').height()==0){
 					$(document).ready(function(){
-						if ($('body').width>720){
-							msheight = $('.slide').children('img').height();
-						}
-						else{
-							msheight = '100vh';
-						}
-						$('.slide-wrap').css({'height':msheight});
+						// if ($('body').width>720){
+						// 	msheight = $('.slide').children('img').height();
+						// }
+						// else{
+						// 	msheight = '100vh';
+						// }
+						msheight = $('.slide').children('img').height();
+						article_height = $('.article').height();
+						$('.slide-wrap').css({'height':msheight,'max-height':article_height});
 						// console.log(msheight+' --')
 						}
 					);
