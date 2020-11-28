@@ -1,4 +1,4 @@
-.slide-wrap{width:100%;border:1px solid #000;position:relative;}
+.slide-wrap{width:100%;border:0px solid #000;position:relative;}
 .slide-wrap .slide-container{width:100%;overflow:visible;display:block;}
 .slide-wrap .slide-container .slide{width:100%;position:absolute;z-index:1;top:0;display:block;box-sizing:border-box;margin:0;padding:0;}
 .slide-wrap .slide-container .slide img{width:100%;display:block;position:relative;}

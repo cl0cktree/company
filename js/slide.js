@@ -103,8 +103,8 @@ $(function(){
 			});
 
 			// console.log(sort_index);
-			page();
-			controll();
+			// page();
+			// controll();
 			function nextBtn(){
 				// console.log('app_sort = '+app_sort);
 				if(sort_index<mswidth){
@@ -117,8 +117,8 @@ $(function(){
 					$('.slide-container').stop().animate({'left':move+'%','transition-timing-function':'linear'},movespeed);
 				}
 				bullet_on();
-				page();
-				thumnail_on();
+				// page();
+				// thumnail_on();
 				// inner_controll_s();
 				//sort_all = parseInt($('.slide').data('index'));
 			};
@@ -135,8 +135,8 @@ $(function(){
 					$('.slide-container').stop().animate({'left':move+'%','transition-timing-function':'linear'},movespeed);
 				}
 				bullet_on();
-				page();
-				thumnail_on();
+				// page();
+				// thumnail_on();
 				// inner_controll_s();
 			};
 
@@ -150,62 +150,62 @@ $(function(){
 			$('.prev-btn').on('mouseover mouseout click',function(event){
 				// event.preventDefault();
 				// event.stopPropagation();
-				stop_s();
-				stop_bar();
+				// stop_s();
+				// stop_bar();
 				if (event.type=='mouseover')
 				{
 					// event.preventDefault();
 					// event.stopPropagation();
-					stop_s();
-					stop_bar();
+					// stop_s();
+					// stop_bar();
 					// inner_controll_p();
 				}else if (event.type=='mouseout')
 				{
-					start_s();
-					startbar();
+					// start_s();
+					// startbar();
 					// inner_controll_s();
 				}
 				else if (event.type=='click')
 				{
 					// event.preventDefault();
 					// event.stopPropagation();
-					setTimeout(stop_bar,0);
-					setTimeout(stop_s,0);
-					setTimeout(stop_next,0);
+					// setTimeout(stop_bar,0);
+					// setTimeout(stop_s,0);
+					// setTimeout(stop_next,0);
 					prevBtn();
-					setTimeout(startbar,0);
-					setTimeout(start_s,0);
+					// setTimeout(startbar,0);
+					// setTimeout(start_s,0);
 				}
 			});
 
 			$('.next-btn').on('mouseover mouseout click',function(event){
 				// event.preventDefault();
 				// event.stopPropagation();
-				stop_s();
-				stop_bar();
+				// stop_s();
+				// stop_bar();
 				if (event.type=='mouseover')
 				{
 					// event.preventDefault();
 					// event.stopPropagation();
-					stop_s();
-					stop_bar();
+					// stop_s();
+					// stop_bar();
 					// inner_controll_p();
 				}else if (event.type=='mouseout')
 				{
-					start_s();
-					startbar();
+					// start_s();
+					// startbar();
 					// inner_controll_s();
 				}
 				else if (event.type=='click')
 				{
 					// event.preventDefault();
 					// event.stopPropagation();
-					setTimeout(stop_bar,0);
-					setTimeout(stop_s,0);
-					setTimeout(stop_prev,0);
+					// setTimeout(stop_bar,0);
+					// setTimeout(stop_s,0);
+					// setTimeout(stop_prev,0);
 					nextBtn();
-					setTimeout(startbar,0);
-					setTimeout(start_s,0);
+					// setTimeout(startbar,0);
+					// setTimeout(start_s,0);
 				}
 			});
 
@@ -227,8 +227,8 @@ $(function(){
 					ystart=event.originalEvent.touches[0].pageY;
 					// tstart=event.originalEvent.targetTouches[0].pageX;
 					// ystart=event.originalEvent.targetTouches[0].pageY;
-					stop_s();
-					stop_bar();
+					// stop_s();
+					// stop_bar();
 				}
 				else if (event.type=='touchmove'){
 					event.preventDefault();
@@ -238,8 +238,8 @@ $(function(){
 					tvalue = tstart-tmove;
 					yvalue = ystart-ymove;
 
-					stop_s();
-					stop_bar();
+					// stop_s();
+					// stop_bar();
 
 					slideNum =$('.slide').css('width').replace('px', '');
 					mswidth = $('.slide').each(Array).length;
@@ -261,7 +261,7 @@ $(function(){
 						else if(sort_index==0){
 							// console.log('prepend in mswidth = '+mswidth);
 							if(mswidth<app_sort){
-								$('.slide-container').append('<div class="slide slide'+app_sort+'" data-index="'+app_sort+'" style="left:'+app_left+'%"></div>')
+								$('.slide-container').append('<div class="slide slide'+app_sort+'" data-index="'+app_sort+'" style="left:'+app_right+'%"></div>')
 								$('.slide'+mswidth).children('img').clone().appendTo('.slide'+app_sort);
 							}
 						};
@@ -295,8 +295,8 @@ $(function(){
 					console.log(app_sort);
 					$('.slide'+app_sort).remove('');
 					mswidth = $('.slide').each(Array).length;
-					stop_s();
-					stop_bar();
+					// stop_s();
+					// stop_bar();
 					nextBtn();
 					if (tvalue>cal_width){
 						//$('.next-btn').stop().click();
@@ -332,8 +332,8 @@ $(function(){
 						}
 					}
 					$('.slide'+app_sort).remove('');
-					start_s();
-					startbar();
+					// start_s();
+					// startbar();
 				}
 				else if (event.type=='touchcancle')
 				{
@@ -354,8 +354,8 @@ $(function(){
 					// console.log(tvalue-cal_width);
 					$('.slide'+app_sort).remove('');
 					mswidth = $('.slide').each(Array).length;
-					stop_s();
-					stop_bar();
+					// stop_s();
+					// stop_bar();
 					nextBtn();
 					if (tvalue>cal_width){
 						// $('.next-btn').stop().click();
@@ -391,29 +391,29 @@ $(function(){
 						}
 					}
 					$('.slide'+app_sort).remove('');
-					start_s();
-					startbar();
+					// start_s();
+					// startbar();
 				}
 				else if (event.type=='mouseover')
 				{
-					stop_s();
-					stop_bar();
+					// stop_s();
+					// stop_bar();
 					// inner_controll_p();
 				}
 				else if (event.type=='mouseleave')
 				{
-					start_s();
-					startbar();
+					// start_s();
+					// startbar();
 					// inner_controll_s();
 				}
 				else if(event.type=='click'){
 					event.preventDefault();
 					event.stopPropagation();
-					setTimeout(stop_s,0);
-					setTimeout(stop_bar,0);
+					// setTimeout(stop_s,0);
+					// setTimeout(stop_bar,0);
 					click_move();
-					start_s();
-					startbar();
+					// start_s();
+					// startbar();
 				};
 				return false;
 			});
@@ -424,55 +424,55 @@ $(function(){
 			$('.bulet').on('click mouseover mouseleave',function(event){
 				if (event.type=='click')
 				{
-					setTimeout(stop_bar,0);
-					setTimeout(stop_s,0);
+					// setTimeout(stop_bar,0);
+					// setTimeout(stop_s,0);
 					sort_index = $(this).data('index');
 					move=(sort_index-1)*-100;
 					bullet_on();
-					page();
-					thumnail_on();
+					// page();
+					// thumnail_on();
 					$('.slide-container').stop().animate({'left':move+'%'},movespeed);
 					// inner_controll_s();
-					setTimeout(startbar,0);
-					setTimeout(start_s,0);
+					// setTimeout(startbar,0);
+					// setTimeout(start_s,0);
 				}
 				else if (event.type=='mouseover')
 				{
-					stop_s();
-					stop_bar();
+					// stop_s();
+					// stop_bar();
 					// inner_controll_p();
 				}else if (event.type=='mouseleave')
 				{
-					start_s();
-					startbar();
+					// start_s();
+					// startbar();
 					// inner_controll_s();
 				}
 			});
 			$('.thumnail').on('click mouseover mouseout', function(event){
 				if (event.type=='click')
 				{
-					setTimeout(stop_bar,0);
-					setTimeout(stop_s,0);
+					// setTimeout(stop_bar,0);
+					// setTimeout(stop_s,0);
 					sort_index = $(this).data('index');
 					move=(sort_index-1)*-100;
-					thumnail_on();
+					// thumnail_on();
 					bullet_on();
-					page();
+					// page();
 					$('.slide-container').stop().animate({'left':move+'%'},movespeed);
-					setTimeout(startbar,0);
-					setTimeout(start_s,0);
+					// setTimeout(startbar,0);
+					// setTimeout(start_s,0);
 				}
 				else if (event.type=='mouseover')
 				{
-					stop_s();
-					stop_bar();
+					// stop_s();
+					// stop_bar();
 					// inner_controll_p();
 				}else if (event.type=='mouseout')
 				{
-					stop_s();
-					stop_bar();
-					start_s();
-					startbar();
+					// stop_s();
+					// stop_bar();
+					// start_s();
+					// startbar();
 					// inner_controll_s();
 				}
 			});
@@ -551,12 +551,12 @@ $(function(){
 					if ($(this).prop('checked')==true)
 					{
 						$('.controll label').children('span').text('Play');
-						stop_s();
-						stop_bar();
+						// stop_s();
+						// stop_bar();
 					}else{
 						$('.controll label').children('span').text('Stop');
-						start_s();
-						startbar();
+						// start_s();
+						// startbar();
 					}
 					click_snd();
 				});
@@ -605,8 +605,8 @@ $(function(){
 					}
 				}
 			};
-			start_s();
-			startbar();
+			// start_s();
+			// startbar();
 			function stop_s(){
 				clearInterval(slide_on);
 			};
