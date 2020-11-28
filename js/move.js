@@ -136,10 +136,18 @@ $(function(){
 	//-----------------------------------
 	//------풀브라우징 및 모바일 GNB 제어--
 	$('.gnb-wrap, .gnb-modile').on('click keypress','a',function(){
-		var gnb_index=$(this).parent('li').data('index');
+		var gnb_index = $(this).parent('li').data('index');
+		var art_index = gnb_index+1;
+		var topminus;
+		if($('.header').width()>1063){
+			topminus = 70;
+		}else{
+			topminus = 100;
+		};
 		$language.removeClass('on');
 		$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 		$('.gnb-wrap, .gnb-modile').find('.gnb-'+gnb_index).children('a').addClass('on');
+		$('body, html').stop().animate({ scrollTop: $('.article_'+art_index).offset().top-topminus },300);
 	});
 	//----------------------------------
 	//-----top_btn 클릭시 동작-----------
