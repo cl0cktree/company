@@ -76,6 +76,13 @@ $(function(){
 					}else{
 						$('.top_btn').css({'bottom':'50px'});
 					}
+					$('.article').each(function(){
+						if ($(window).scrollTop()>=$(this).offset().top-100){
+							var scm = $(this).attr('data-index');
+							$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
+							$('.gnb-wrap, .gnb-modile').find('.gnb-'+scm).children('a').addClass('on');
+						}
+					});
 				}else{
 					$('.header').css({'background':'rgba(255,255,255,1)'});
 					$('.gnb-wrap').stop().css({'height':'100px','line-height':'100px'},200);

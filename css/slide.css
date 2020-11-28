@@ -1,7 +1,7 @@
 .slide-wrap{width:100%;border:0px solid #000;position:relative;}
 .slide-wrap .slide-container{width:100%;overflow:visible;display:block;}
-.slide-wrap .slide-container .slide{width:100%;position:absolute;z-index:1;top:0;display:block;box-sizing:border-box;margin:0;padding:0;}
-.slide-wrap .slide-container .slide img{width:100%;display:block;position:relative;}
+.slide-wrap .slide-container .slide{width:100%;position:absolute;z-index:1;top:0;display:block;box-sizing:border-box;margin:0;padding:0;text-align:center;}
+.slide-wrap .slide-container .slide img{width:100%;min-height:calc(100vh - 100px);display:inline-block;position:relative;float:none;}
 
 .slide-wrap .indicator{display:table;background:rgba(0,0,0,0);position:absolute;bottom:5%;margin-left:50%;z-index:2;}
 .slide-wrap .indicator .bulet{display:table-cell;box-sizing:border-box;color:#ccc;vertical-align:middle;text-align:center;cursor:pointer;}
@@ -13,37 +13,41 @@
 
 @media all and (max-width:320px){
 	.slide-wrap{min-width:320px;max-height:100%;}
-	/* .slide-wrap .slide-container{min-height:calc(100vh - 100px);} */
+	.slide-wrap .slide-container .slide img{min-width:320px;}
 	.indicator{width:50%;height:calc(15% - 100px);left:-25%;font-size:0.5em;line-height:0.5em;}
 }
 @media all and (min-width:321px) and (max-width:480px){
 	.slide-wrap{min-width:320px;max-height:100%;}
-	/* .slide-wrap .slide-container{min-height:calc(100vh - 100px);} */
+	.slide-wrap .slide-container .slide img{min-width:320px;}
 	.indicator{width:50%;height:calc(15% - 100px);left:-25%;font-size:0.5em;line-height:0.5em;}
 }
 @media all and (min-width:481px) and (max-width:640px){
 	.slide-wrap{min-width:480px;max-height:100%;}
-	/* .slide-wrap .slide-container{min-height:calc(100vh - 100px);} */
+	.slide-wrap .slide-container .slide img{min-width:480px;}
 	.indicator{width:50%;height:calc(15% - 100px);left:-25%;font-size:0.5em;line-height:0.5em;}
 }
 @media all and (min-width:641px) and (max-width:720px){
 	.slide-wrap{min-width:640px;max-height:100%;}
-	/* .slide-wrap .slide-container{min-height:calc(100vh - 100px);} */
+	.slide-wrap .slide-container .slide img{min-width:640px;}
 	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:0.8em;line-height:0.8em;}
 }
 @media all and (min-width:721px) and (max-width:1080px){
 	.slide-wrap{min-width:720px;max-height:100%;}
+	.slide-wrap .slide-container .slide img{min-width:720px;}
 	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:0.8em;line-height:0.8em;}
 }
 @media all and (min-width:1081px) and (max-width:1280px){
 	.slide-wrap{min-width:1080px;max-height:100%;}
+	.slide-wrap .slide-container .slide img{min-width:1080px;}
 	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:0.8em;line-height:0.8em;}
 }
 @media all and (min-width:1281px) and (max-width:1500px){
 	.slide-wrap{min-width:1280px;max-height:100%;}
+	.slide-wrap .slide-container .slide img{min-width:1280px;}
 	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:1em;line-height:1em;}
 }
 @media all and (min-width:1501px){
 	.slide-wrap{min-width:1280px;max-height:100%;}
+	.slide-wrap .slide-container .slide img{min-width:1280px}
 	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:1em;line-height:1em;}
 }
