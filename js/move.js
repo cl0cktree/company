@@ -97,7 +97,7 @@ $(function(){
 	});
 	//--------------------------------
 	//-----언어 선택 selectbox---------
-	$('.language, .language-mobile').on('click keypress','li, i',function(e){
+	$('.language, .language-mobile').on('click keypress','a, i',function(e){
 		var sel_lang = $(this).data('lang');
 		var roll_speed;
 		if(e.type=='click'){
@@ -109,7 +109,7 @@ $(function(){
 				if(sel_lang=='val'){
 					$(this).html();
 				}else{
-					$('.language, .language-mobile').find('li:eq(0)').html(sel_lang);
+					$('.language, .language-mobile').find('a:eq(0)').html(sel_lang);
 				}
 			}
 			function roll_up(){
