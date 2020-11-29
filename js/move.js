@@ -161,6 +161,17 @@ $(function(){
 		$('body, html').stop().animate({ scrollTop: $('body').offset().top-100},400);
 	});
 	//----------------------------------
+	//-----footer 클릭시 각 동작 모음----
+	$name_footer.on('click','.phon-num',function(){
+		if (navigator.userAgent.match(/android/i)) {
+			location.href='tel:02-6952-8892','_self';
+		} else if (navigator.userAgent.match(/(iphone)|(ipod)|(ipad)/i)){
+			location.href='tel:02-6952-8892','_self';
+		}else{
+			alert('모바일에서만 가능합니다.');
+		}
+	})
+	//----------------------------------
 
 	return false;
 });
