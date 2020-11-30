@@ -77,10 +77,36 @@ $(function(){
 						$('.top_btn').css({'bottom':'50px'});
 					}
 					$('.article').each(function(){
+						var draw_speed = 400;
 						if ($(window).scrollTop()>=$(this).offset().top-100){
 							var scm = $(this).attr('data-index');
+							var $container_this;
+							function contents_draw(){
+								if ($container_this.parent('.article').find('.top-pop')){
+									$container_this.parent('.article').find('.top-pop').stop().animate({'top':'0','opacity':'1'},draw_speed);
+								}else if($container_this.parent('.article').find('.bottom-pop')){
+									$container_this.parent('.article').find('.bottom-pop').stop().animate({'bottom':'0','opacity':'1'},draw_speed);
+								}else if($container_this.parent('.article').find('.left-pop')){
+									$container_this.parent('.article').find('.left-pop').stop().animate({'left':'0','opacity':'1'},draw_speed);
+								}else if($container_this.parent('.article').find('.right-pop')){
+									$container_this.parent('.article').find('.right-pop').stop().animate({'right':'0','opacity':'1'},draw_speed);
+								}
+								console.log($container_this.siblings('.contents'));
+							};
 							$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 							$('.gnb-wrap, .gnb-modile').find('.gnb-'+scm).children('a').addClass('on');
+							if ($(this).find('.left')){
+								$(this).find('.left').stop().css({'background-position':'0px top','opacity':'1'},function(){
+									$container_this = $(this);
+									// contents_draw();
+								});
+							}
+							if($(this).find('.right')){
+								$(this).find('.right').stop().css({'background-position':'-1650px top','opacity':'1'},function(){
+									$container_this = $(this);
+									// contents_draw();
+								});
+							}
 						}
 					});
 				}else{
@@ -96,6 +122,13 @@ $(function(){
 		}
 	});
 	//--------------------------------
+	//-----top_btn 클릭시 동작-----------
+	$('.top_btn').on('click',function(){
+		$('body, html').stop().animate({ scrollTop: $('body').offset().top-100},400);
+	});
+	//----------------------------------
+	//-----스크롤시 각 article 동작------
+	//----------------------------------
 	//-----언어 선택 selectbox---------
 	$('.language, .language-mobile').on('click keypress','a, i',function(e){
 		var sel_lang = $(this).data('lang');
@@ -154,11 +187,6 @@ $(function(){
 		$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 		$('.gnb-wrap, .gnb-modile').find('.gnb-'+gnb_index).children('a').addClass('on');
 		$('body, html').stop().animate({ scrollTop: $('.article_'+art_index).offset().top-topminus },300);
-	});
-	//----------------------------------
-	//-----top_btn 클릭시 동작-----------
-	$('.top_btn').on('click',function(){
-		$('body, html').stop().animate({ scrollTop: $('body').offset().top-100},400);
 	});
 	//----------------------------------
 	//-----footer 클릭시 각 동작 모음----
