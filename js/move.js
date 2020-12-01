@@ -99,7 +99,7 @@ $(function(){
 								$(this).find('.contents').children('h3').stop().animate({'top':'0','opacity':'1'},500,function(){
 									$container_this = $(this);
 									console.log($container_this);
-									$container_this.siblings('.card-wrap').find('.sevice_title').css({'box-shadow':'5px 5px 5px 0px rgba(0,0,0,0.6)'});
+									$container_this.siblings('.card-wrap').find('.sevice_title').css({'box-shadow':'5px 5px 5px 0px rgba(0,0,0,0.4)'});
 								});
 							}
 
@@ -166,6 +166,11 @@ $(function(){
 		$name_header.find('.mobile-menu').stop().animate({'right':'-100%'},function(){
 			$('.background-filter').stop().fadeOut('300').removeClass('on');
 		});
+		if ($('.terms-modal').length==0){
+			console.log($('.terms-modal').length);
+			$('.background-filter').stop().fadeOut('300').removeClass('on');
+		}
+		
 		if($('.menu_btn input[type=checkbox]').prop('checked')==true){
 			$('.menu_btn input[type=checkbox]').click();
 		}
@@ -193,13 +198,13 @@ $(function(){
 		var datasum;
 		$('.background-filter').stop().fadeIn('300').addClass('on');
 		if ($(this).is('.terms-service')){
-			datasum = portfolioindex_url+'/data/terms.html .data-service';
+			datasum = './data/terms.html .data-service';
 		}else if($(this).is('.information-policy')){
-			datasum = portfolioindex_url+'/data/terms.html #filter-conbox-contents29';
+			datasum = './data/terms.html .data-policy';
 		}else if($(this).is('.standard-terms')){
-			datasum = portfolioindex_url+'/data/terms.html #filter-conbox-contents29';
+			datasum = './data/terms.html .data-terms';
 		}else if($(this).is('.Rejection-email')){
-			datasum = portfolioindex_url+'/data/terms.html #filter-conbox-contents29';
+			datasum = './data/terms.html .data-Rejection';
 		}
 		$('.background-filter').load(datasum);
 	});
