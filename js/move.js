@@ -43,7 +43,9 @@ $(function(){
 					$('.menu_btn').stop().removeClass('mobile');
 					$('.menu_btn input[type=checkbox]').prop('checked',false);
 					$name_header.find('.mobile-menu').stop().animate({'right':'-100%'},function(){
-						$('.background-filter').stop().fadeOut('300').removeClass('on');
+						if ($('.background-filter').find('.terms-modal')==false){
+							$('.background-filter').stop().fadeOut('300').removeClass('on');
+						}
 					});
 				}else{
 					$('.nav').stop().css({'height':'100px','line-height':'100px'},200);
@@ -91,7 +93,6 @@ $(function(){
 								}else if($container_this.parent('.article').find('.right-pop')){
 									$container_this.parent('.article').find('.right-pop').stop().animate({'right':'0','opacity':'1'},draw_speed);
 								}
-								console.log($container_this.siblings('.contents'));
 							};
 							$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 							$('.gnb-wrap, .gnb-modile').find('.gnb-'+scm).children('a').addClass('on');
@@ -164,12 +165,11 @@ $(function(){
 	});
 	$('.background-filter').on('click',function(){
 		$name_header.find('.mobile-menu').stop().animate({'right':'-100%'},function(){
-			$('.background-filter').stop().fadeOut('300').removeClass('on');
+			// $('.background-filter').stop().fadeOut('300').removeClass('on');
+			if ($('.background-filter').find('.terms-modal')==false){
+				$('.background-filter').stop().fadeOut('300').removeClass('on');
+			}
 		});
-		if ($('.terms-modal').length==0){
-			console.log($('.terms-modal').length);
-			$('.background-filter').stop().fadeOut('300').removeClass('on');
-		}
 		
 		if($('.menu_btn input[type=checkbox]').prop('checked')==true){
 			$('.menu_btn input[type=checkbox]').click();
@@ -206,7 +206,13 @@ $(function(){
 		}else if($(this).is('.Rejection-email')){
 			datasum = './data/terms.html .data-Rejection';
 		}
+		$('.background-filter').css({'z-index':'200'});
 		$('.background-filter').load(datasum);
+	});
+	$('.background-filter').on('click','.close-btn',function(){
+		$('.background-filter').stop().fadeOut('300').removeClass('on');
+		$('.background-filter').css({'z-index':'-1'});
+		$('.background-filter').html('');
 	});
 	$name_footer.on('click','.phon-num',function(){
 		if (navigator.userAgent.match(/android/i)) {
