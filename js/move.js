@@ -95,18 +95,14 @@ $(function(){
 							};
 							$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 							$('.gnb-wrap, .gnb-modile').find('.gnb-'+scm).children('a').addClass('on');
-							if ($(this).find('.left')){
-								$(this).find('.left').stop().css({'background-position':'0px top','opacity':'1'},function(){
+							if ($(this).find('.contents')){
+								$(this).find('.contents').children('h3').stop().animate({'top':'0','opacity':'1'},500,function(){
 									$container_this = $(this);
-									// contents_draw();
+									console.log($container_this);
+									$container_this.siblings('.card-wrap').find('.sevice_title').css({'box-shadow':'5px 5px 5px 0px rgba(0,0,0,0.6)'});
 								});
 							}
-							if($(this).find('.right')){
-								$(this).find('.right').stop().css({'background-position':'-1650px top','opacity':'1'},function(){
-									$container_this = $(this);
-									// contents_draw();
-								});
-							}
+
 						}
 					});
 				}else{
@@ -170,7 +166,10 @@ $(function(){
 		$name_header.find('.mobile-menu').stop().animate({'right':'-100%'},function(){
 			$('.background-filter').stop().fadeOut('300').removeClass('on');
 		});
-		$('.menu_btn input[type=checkbox]').click();
+		if($('.menu_btn input[type=checkbox]').prop('checked')==true){
+			$('.menu_btn input[type=checkbox]').click();
+		}
+		
 	});
 	//-----------------------------------
 	//------풀브라우징 및 모바일 GNB 제어--
@@ -190,6 +189,20 @@ $(function(){
 	});
 	//----------------------------------
 	//-----footer 클릭시 각 동작 모음----
+	$name_footer.find('.terms').on('click','a',function(){
+		var datasum;
+		$('.background-filter').stop().fadeIn('300').addClass('on');
+		if ($(this).is('.terms-service')){
+			datasum = portfolioindex_url+'/data/terms.html .data-service';
+		}else if($(this).is('.information-policy')){
+			datasum = portfolioindex_url+'/data/terms.html #filter-conbox-contents29';
+		}else if($(this).is('.standard-terms')){
+			datasum = portfolioindex_url+'/data/terms.html #filter-conbox-contents29';
+		}else if($(this).is('.Rejection-email')){
+			datasum = portfolioindex_url+'/data/terms.html #filter-conbox-contents29';
+		}
+		$('.background-filter').load(datasum);
+	});
 	$name_footer.on('click','.phon-num',function(){
 		if (navigator.userAgent.match(/android/i)) {
 			location.href='tel:02-6952-8892','_self';
@@ -198,7 +211,7 @@ $(function(){
 		}else{
 			alert('모바일에서만 가능합니다.');
 		}
-	})
+	});
 	//----------------------------------
 
 	return false;
