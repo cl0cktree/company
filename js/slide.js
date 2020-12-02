@@ -2,7 +2,7 @@ $(function(){
 	if($('body').find('.slide-wrap'))
 		{
 		$('.slide-wrap').append('<div class="slide-container"></div><ul class="indicator"></ul><div class="con-btn prev-btn"></div><div class="con-btn next-btn"></div>');
-		// $('.slide-wrap').after('<ul class="thumnail-box" style="position:relative;box-sizing:border-box;overflow:hidden;border:1px solid #000;background:#999;margin-top:10px;"></ul>');
+		$('.slide-wrap').after('<ul class="thumnail-box" style="position:relative;box-sizing:border-box;min-width:720px;height:100px;overflow:hidden;border:0px solid #000;background:#999;margin-top:-70px;"></ul>');
 		var mswidth;
 		var msheight;
 		var article_height;
@@ -20,14 +20,14 @@ $(function(){
 			$.each(data, function(I, item){
 				slideNum++;
 				$('.slide-container').append('<div class="slide slide'+slideNum+'" data-index="'+slideNum+'"><video play controls poster="'+item.img_url+'" preload="auto" alt="'+item.alt_text+slideNum+'"><source src="'+item.video_url+'" type="video/mp4">'+item.alt_text+'</video></div>');
-				$('.indicator').append('<li class="bulet bulet'+slideNum+'" data-index="'+slideNum+'">●</li>');
-				// $('.thumnail-box').append('<li class="thumnail thumnail'+slideNum+'" data-index="'+slideNum+'"><img src='+item.img_url+' alt="미리보기'+slideNum+'" style="width:100%;"></li>');
+				// $('.indicator').append('<li class="bulet bulet'+slideNum+'" data-index="'+slideNum+'">●</li>');
+				$('.thumnail-box').append('<li class="thumnail thumnail'+slideNum+'" data-index="'+slideNum+'"><img src='+item.img_url+' alt="미리보기'+slideNum+'" style="width:100%;"></li>');
 				$('.bulet').css({'color':'#ccc'});
 				$('.bulet1').css({'color':'#999'});
 				mswidth = $('.slide').each(Array).length;/*슬라이드 전체 배열의 갯수만큼의 숫자를 추출*/
 				$(document).ready(function(){
-					thum_width = 100/mswidth;
-					$('.thumnail').children('img').css({'border':'2px solid #999','display':'block','float':'left','width':'calc('+thum_width+'% - 24px)','margin':'10px','cursor':'pointer'});
+					thum_width = 100/8;
+					$('.thumnail').children('img').css({'border':'2px solid #999','display':'block','float':'left','width':'calc('+thum_width+'% - 24px)','max-width':'142px','max-height':'80px','margin':'10px','cursor':'pointer'});
 					$('.thumnail1').children('img').css({'border':'2px solid #000'});
 				});
 				for (var i=0;i<mswidth;i++)/*.slide의 배열이 늘어나면 알아서 아이디와 레프트값 연산 및 .indicator의 btn도 배열 갯수만큼 append*/
@@ -124,7 +124,7 @@ $(function(){
 				}
 				bullet_on();
 				// page();
-				// thumnail_on();
+				thumnail_on();
 				// inner_controll_s();
 				//sort_all = parseInt($('.slide').data('index'));
 			};
@@ -142,7 +142,7 @@ $(function(){
 				}
 				bullet_on();
 				// page();
-				// thumnail_on();
+				thumnail_on();
 				// inner_controll_s();
 			};
 
@@ -436,7 +436,7 @@ $(function(){
 					move=(sort_index-1)*-100;
 					bullet_on();
 					// page();
-					// thumnail_on();
+					thumnail_on();
 					$('.slide-container').stop().animate({'left':move+'%'},movespeed);
 					// inner_controll_s();
 					// setTimeout(startbar,0);
@@ -461,7 +461,7 @@ $(function(){
 					// setTimeout(stop_s,0);
 					sort_index = $(this).data('index');
 					move=(sort_index-1)*-100;
-					// thumnail_on();
+					thumnail_on();
 					bullet_on();
 					// page();
 					$('.slide-container').stop().animate({'left':move+'%'},movespeed);
@@ -580,23 +580,23 @@ $(function(){
 			};
 			//----------------------------------------------------------------------------------------------
 			function click_move(){
-				if(sort_index==1){
-					$('body').css({'background':'red'})
-				}else if(sort_index==2){
-					$('body').css({'background':'orange'})
-				}else if(sort_index==3){
-					$('body').css({'background':'yellow'})
-				}else if(sort_index==4){
-					$('body').css({'background':'green'})
-				}else if(sort_index==5){
-					$('body').css({'background':'blue'})
-				}else if(sort_index==6){
-					$('body').css({'background':'purple'})
-				}else if(sort_index==7){
-					$('body').css({'background':'gray'})
-				}else if(sort_index==8){
-					$('body').css({'background':'black'})
-				}
+				// if(sort_index==1){
+				// 	$('body').css({'background':'red'})
+				// }else if(sort_index==2){
+				// 	$('body').css({'background':'orange'})
+				// }else if(sort_index==3){
+				// 	$('body').css({'background':'yellow'})
+				// }else if(sort_index==4){
+				// 	$('body').css({'background':'green'})
+				// }else if(sort_index==5){
+				// 	$('body').css({'background':'blue'})
+				// }else if(sort_index==6){
+				// 	$('body').css({'background':'purple'})
+				// }else if(sort_index==7){
+				// 	$('body').css({'background':'gray'})
+				// }else if(sort_index==8){
+				// 	$('body').css({'background':'black'})
+				// }
 			};
 			function start_s(){
 				setTimeout(lazy_0,0);

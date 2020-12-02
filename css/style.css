@@ -141,6 +141,9 @@ textarea{box-sizing:border-box;}
 .section .article .contents .greeting .word{font-size:18px;font-weight:700;color:#666;word-break:keep-all;}
 .section .article .contents .container{position:absolute;width:100%;min-height:calc(50vh - 140px);background:rgba(0,0,0,0.6);bottom:0;}
 
+.section .article_4{min-height:0}
+.section .article_4 .contents{min-height:0;}
+
 .section .top_btn{display:block; position:fixed; width:72px; height:72px; line-height:72px; background:rgba(100,100,100,0.8); right:30px; bottom:50px; font-size:20px; color:#fff; border-radius:50%; text-align:center; text-decoration: none; opacity:0; z-index:-5; transition:all 0.3s;}
 .section .top_btn.on{ opacity:1; z-index:4;}
 
@@ -157,7 +160,7 @@ textarea{box-sizing:border-box;}
 .footer .address span a{cursor:pointer;}
 .footer .address span a:hover{text-decoration:underline;}
 
-.terms-modal{position:relative;width:calc(100% + 16px);min-height:100vh;background:#fff;margin:0px auto;cursor:default;overflow:hidden;overflow-y:auto;z-index:20;}
+.terms-modal{position:relative;width:calc(100% + 16px);min-height:100vh;background:#fff;margin:0px auto;cursor:default;overflow:hidden;overflow-y:scroll;z-index:20;}
 .terms-modal .close-btn{display:block;position:absolute;width:60px;height:60px;background:#000;top:0;right:0;line-height:60px;}
 .terms-modal .close-btn img{display:block;margin:10px auto;width:40px;float:none;}
 .terms-modal .detailed{width:92%;margin:60px auto;}

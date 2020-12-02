@@ -224,8 +224,10 @@ $(function(){
 			datasum = './data/terms.html .data-policy';
 		}else if($(this).is('.standard-terms')){
 			datasum = './data/terms.html .data-terms';
-		}else if($(this).is('.Rejection-email')){
-			datasum = './data/terms.html .data-Rejection';
+		}else if($(this).is('.rejection-email')){
+			datasum = './data/terms.html .data-rejection';
+		}else if($(this).is('.recruit')){
+			datasum = './data/terms.html .data-recruit';
 		}
 		$('.background-filter').css({'z-index':'200'});
 		$('.background-filter').load(datasum);
