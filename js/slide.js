@@ -601,11 +601,18 @@ $(function(){
 				// }else if(sort_index==8){
 				// 	$('body').css({'background':'black'})
 				// }
+				video_controll();
 			};
 			function video_pause(){
 				$('.article_4').find('.slide').children('video').trigger('pause');
 			};
-
+			function video_controll(){
+				if($('.article_4').find('.slide'+sort_index).children(this).prop('paused')){
+					$('.article_4').find('.slide'+sort_index).children(this).trigger('play');
+				}else{
+					$('.article_4').find('.slide'+sort_index).children(this).trigger('pause');
+				}
+			};
 			function start_s(){
 				setTimeout(lazy_0,0);
 				stop_next();
