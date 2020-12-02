@@ -59,6 +59,7 @@ $(function(){
 	$(window).scroll(function(){
 		var scroll_delay_time_1;
 		var height_over = $(window).height()+$(window).scrollTop();
+		var scrollBottom = $("body").height() - $(window).height() - $(window).scrollTop();
 		var footer_height = $name_footer.height()+20;
 		var article1_height = $('.article_1').height()-35;
 
@@ -99,8 +100,8 @@ $(function(){
 							if ($(this).find('.contents')){
 								$(this).find('.contents').children('h3').stop().animate({'top':'0','opacity':'1'},500,function(){
 									$container_this = $(this);
-									console.log($container_this);
-									$container_this.siblings('.card-wrap').find('.sevice_title').css({'box-shadow':'5px 5px 5px 0px rgba(0,0,0,0.4)'});
+									// console.log($container_this);
+									$container_this.siblings('.card-wrap').find('.sevice_title').css({'box-shadow':'3px 3px 5px 0px rgba(0,0,0,0.4)'});
 								});
 							}
 
