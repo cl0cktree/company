@@ -81,8 +81,8 @@ textarea{box-sizing:border-box;}
 
 .header .language{position:absolute;width:200px;height:40px;line-height:40px;top:30px;right:30px;background:#919191;color:#fff;font-weight:500;border-radius:5px;overflow:hidden;transition:all 0.3s;}
 .header .language.on{overflow:visible;height:160px;}
-.header .language i{display:block;position:absolute;box-sizing:border-box;background:url('../images/arrowsplite.png') no-repeat;width:16px;height:16px;background-size:32px 48px;background-position:-8px -33px;top:12px;right:10px;cursor:pointer;overflow:hidden;}
-.header .language.on i{background-position:-8px 1px;}
+.header .language:after{content:'';display:block;position:absolute;box-sizing:border-box;background:url('../images/arrowsplite.png') no-repeat;width:16px;height:16px;background-size:32px 48px;background-position:-8px -33px;top:12px;right:10px;cursor:pointer;overflow:hidden;}
+.header .language.on:after{background-position:-8px 1px;}
 .header .language a{display:block;text-align:left;padding-left:10px;cursor:pointer;}
 .header .language a:hover{color:#000;font-weight:600;}
 .header .language a:nth-of-type(1):hover{color:#fff;font-weight:400;}
@@ -97,8 +97,8 @@ textarea{box-sizing:border-box;}
 
 .header .language-mobile{position:absolute;width:100px;height:40px;line-height:40px;margin-top:50px;right:30px;background:#919191;color:#fff;font-weight:500;border-radius:5px;overflow:hidden;transition:all 0.3s;}
 .header .language-mobile.on{overflow:visible;height:160px;}
-.header .language-mobile i{display:block;position:absolute;box-sizing:border-box;background:url('../images/arrowsplite.png') no-repeat;width:16px;height:16px;background-size:32px 48px;background-position:-8px -33px;top:12px;right:10px;cursor:pointer;overflow:hidden;}
-.header .language-mobile.on i{background-position:-8px 1px;}
+.header .language-mobile:after{content:'';display:block;position:absolute;box-sizing:border-box;background:url('../images/arrowsplite.png') no-repeat;width:16px;height:16px;background-size:32px 48px;background-position:-8px -33px;top:12px;right:10px;cursor:pointer;overflow:hidden;}
+.header .language-mobile.on:after{background-position:-8px 1px;}
 .header .language-mobile a{display:block;text-align:left;padding-left:10px;cursor:pointer;}
 .header .language-mobile a:hover{color:#000;font-weight:600;}
 .header .language-mobile a:nth-of-type(1):hover{color:#fff;font-weight:400;}
