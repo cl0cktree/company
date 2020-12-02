@@ -2,7 +2,7 @@ $(function(){
 	if($('body').find('.slide-wrap'))
 		{
 		$('.slide-wrap').append('<div class="slide-container"></div><ul class="indicator"></ul><div class="con-btn prev-btn"></div><div class="con-btn next-btn"></div>');
-		$('.slide-wrap').after('<ul class="thumnail-box" style="position:relative;box-sizing:border-box;min-width:720px;height:100px;overflow:hidden;border:0px solid #000;background:#999;margin-top:-70px;"></ul>');
+		$('.slide-wrap').after('<ul class="thumnail-box" style="position:relative;box-sizing:border-box;min-width:720px;height:100px;overflow:hidden;border:0px solid #000;background:#999;margin-top:0px;"></ul>');
 		var mswidth;
 		var msheight;
 		var article_height;
