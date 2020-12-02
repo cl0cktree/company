@@ -127,6 +127,7 @@ $(function(){
 				thumnail_on();
 				// inner_controll_s();
 				//sort_all = parseInt($('.slide').data('index'));
+				video_pause();
 			};
 
 			function prevBtn(){
@@ -144,6 +145,7 @@ $(function(){
 				// page();
 				thumnail_on();
 				// inner_controll_s();
+				video_pause();
 			};
 
 			function stop_next(){
@@ -533,10 +535,12 @@ $(function(){
 			function bullet_on(){
 				$('.bulet').css({'color':'#ccc'});
 				$('.bulet'+sort_index).css({'color':'#999'});
+				video_pause();
 			};
 			function thumnail_on(){
 				$('.thumnail').children('img').css({'border':'2px solid transparent'});
 				$('.thumnail'+sort_index).children('img').css({'border':'2px solid #000'});
+				video_pause();
 			};
 			function click_snd(){
 				var clickSnd = new Audio();
@@ -598,6 +602,10 @@ $(function(){
 				// 	$('body').css({'background':'black'})
 				// }
 			};
+			function video_pause(){
+				$('.article_4').find('.slide').children('video').trigger('pause');
+			};
+
 			function start_s(){
 				setTimeout(lazy_0,0);
 				stop_next();
