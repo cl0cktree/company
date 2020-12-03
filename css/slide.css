@@ -1,4 +1,4 @@
-.slide-wrap{width:100%;background:#000;border:0px solid #000;position:relative;}
+.slide-wrap{width:100%;background:#333;border:0px solid #000;position:relative;margin-top:50px;}
 .slide-wrap .slide-container{width:100%;overflow:visible;display:block;}
 .slide-wrap .slide-container .slide{width:100%;position:absolute;z-index:1;top:0;display:block;box-sizing:border-box;margin:0;padding:0;text-align:center;}
 .slide-wrap .slide-container .slide img{width:100%;min-height:calc(100vh - 100px);display:inline-block;position:relative;float:none;}

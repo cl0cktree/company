@@ -68,10 +68,10 @@ $(function(){
 				scroll_delay_time_1=null;
 				if ($(window).scrollTop()>article1_height){
 					$('.header').css({'background':'rgba(255,255,255,0.7)'});
-					$('.gnb-wrap').stop().css({'height':'70px','line-height':'70px'},200);
-					$('.language').stop().css({'top':'15px'},220);
+					$('.gnb-wrap').stop().css({'height':'100px','line-height':'100px'},200);
+					$('.language').stop().css({'top':'30px'},220);
 					if ($name_header.width()>1063){
-						$('.nav').stop().css({'height':'70px','line-height':'70px'},200);
+						$('.nav').stop().css({'height':'100px','line-height':'100px'},200);
 					}
 					$('.top_btn').addClass('on');
 					if ((height_over>$name_section.height())&&(scroll_bottom<$name_footer.height())){
@@ -101,7 +101,7 @@ $(function(){
 								$(this).find('.contents').children('h3').stop().animate({'top':'0','opacity':'1'},500,function(){
 									$container_this = $(this);
 									// console.log($container_this);
-									$container_this.siblings('.card-wrap').find('.sevice_title').css({'box-shadow':'3px 3px 5px 0px rgba(0,0,0,0.4)'});
+									// $container_this.siblings('.card-wrap').find('.sevice_title').css({'box-shadow':'3px 3px 5px 0px rgba(0,0,0,0.4)'});
 								});
 							}
 
@@ -201,10 +201,10 @@ $(function(){
 	//------풀브라우징 및 모바일 GNB 제어--
 	$('.gnb-wrap, .gnb-modile').on('click keypress','a',function(){
 		var gnb_index = $(this).parent('li').data('index');
-		var art_index = gnb_index+1;
+		var art_index = gnb_index;
 		var topminus;
 		if($('.header').width()>1063){
-			topminus = 70;
+			topminus = 100;
 		}else{
 			topminus = 100;
 		};

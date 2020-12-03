@@ -2,7 +2,7 @@ $(function(){
 	if($('body').find('.slide-wrap'))
 		{
 		$('.slide-wrap').append('<div class="slide-container"></div><ul class="indicator"></ul><div class="con-btn prev-btn"></div><div class="con-btn next-btn"></div>');
-		$('.slide-wrap').after('<ul class="thumnail-box" style="position:relative;box-sizing:border-box;min-width:720px;height:100px;overflow:hidden;border:0px solid #000;background:#999;margin-top:0px;"></ul>');
+		$('.slide-wrap').after('<ul class="thumnail-box" style="position:relative;box-sizing:border-box;min-width:720px;height:100px;overflow:hidden;border:0px solid #000;background:#333;margin-top:0px;"></ul>');
 		var mswidth;
 		var msheight;
 		var article_height;
@@ -27,8 +27,8 @@ $(function(){
 				mswidth = $('.slide').each(Array).length;/*슬라이드 전체 배열의 갯수만큼의 숫자를 추출*/
 				$(document).ready(function(){
 					thum_width = 100/8;
-					$('.thumnail').children('img').css({'border':'2px solid #999','display':'block','float':'left','width':'calc('+thum_width+'% - 24px)','max-width':'142px','max-height':'80px','margin':'10px','cursor':'pointer'});
-					$('.thumnail1').children('img').css({'border':'2px solid #000'});
+					$('.thumnail').children('img').css({'border':'2px solid #000','display':'block','float':'left','width':'calc('+thum_width+'% - 24px)','max-width':'142px','max-height':'80px','margin':'10px','cursor':'pointer'});
+					$('.thumnail1').children('img').css({'border':'2px solid #ccc'});
 				});
 				for (var i=0;i<mswidth;i++)/*.slide의 배열이 늘어나면 알아서 아이디와 레프트값 연산 및 .indicator의 btn도 배열 갯수만큼 append*/
 				{
@@ -538,8 +538,8 @@ $(function(){
 				video_pause();
 			};
 			function thumnail_on(){
-				$('.thumnail').children('img').css({'border':'2px solid transparent'});
-				$('.thumnail'+sort_index).children('img').css({'border':'2px solid #000'});
+				$('.thumnail').children('img').css({'border':'2px solid #000'});
+				$('.thumnail'+sort_index).children('img').css({'border':'2px solid #ccc'});
 				video_pause();
 			};
 			function click_snd(){
@@ -604,13 +604,13 @@ $(function(){
 				video_controll();
 			};
 			function video_pause(){
-				$('.article_4').find('.slide').children('video').trigger('pause');
+				$('.article_5').find('.slide').children('video').trigger('pause');
 			};
 			function video_controll(){
-				if($('.article_4').find('.slide'+sort_index).children(this).prop('paused')){
-					$('.article_4').find('.slide'+sort_index).children(this).trigger('play');
+				if($('.article_5').find('.slide'+sort_index).children(this).prop('paused')){
+					$('.article_5').find('.slide'+sort_index).children(this).trigger('play');
 				}else{
-					$('.article_4').find('.slide'+sort_index).children(this).trigger('pause');
+					$('.article_5').find('.slide'+sort_index).children(this).trigger('pause');
 				}
 			};
 			function start_s(){
