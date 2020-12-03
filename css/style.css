@@ -163,7 +163,7 @@ textarea{box-sizing:border-box;}
 .footer .terms a:before{content:' | ';display:inline-block;margin-right:5px;}
 .footer .terms a:nth-of-type(1):before{content:'';}
 .footer .terms a:hover{text-decoration:underline;}
-.footer .address{padding:0px 30px;word-break:keep-all;}
+.footer .address{padding:0px 30px 30px;word-break:keep-all;}
 .footer .address span{display:inline-block;box-sizing:border-box;color:#fff;margin-right:5px;}
 .footer .address span:before{content:' | ';display:inline-block;margin-right:5px;}
 .footer .address span:nth-of-type(1):before{content:'';}

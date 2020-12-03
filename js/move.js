@@ -45,7 +45,8 @@ $(function(){
 					$('.menu_btn').stop().removeClass('mobile');
 					$('.menu_btn input[type=checkbox]').prop('checked',false);
 					$name_header.find('.mobile-menu').stop().animate({'right':'-100%'},function(){
-						if ($('.background-filter').find('.terms-modal')==false){
+						if ($('.background-filter').css('z-index')!=='200'){
+							console.log('rideride');
 							$('.background-filter').stop().fadeOut('300').removeClass('on');
 						}
 					});
@@ -206,9 +207,9 @@ $(function(){
 		var art_index = gnb_index;
 		var topminus;
 		if($('.header').width()>1063){
-			topminus = 100;
+			topminus = 99;
 		}else{
-			topminus = 100;
+			topminus = 99;
 		};
 		$language.removeClass('on');
 		$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
