@@ -9,7 +9,7 @@ $(function(){
 				$('.phon-animate').fadeOut(300);
 				if($('.phon-animate').css('height')){
 					$('.randing-container').stop().animate({'z-index':'2','opacity':'1'},1000,function(){
-						// $('.randing-background').addClass('back-1');
+						$(this).addClass('back-1');
 					});
 				}
 				// randing_animation();

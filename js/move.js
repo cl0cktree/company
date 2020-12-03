@@ -142,7 +142,11 @@ $(function(){
 			if(sel_lang=='val'){
 				$(this).html();
 			}else{
-				$('.language, .language-mobile').find('a:eq(0)').html(sel_lang);
+				if ((sel_lang=='Eng')||(sel_lang=='Chi')){
+					alert('준비 중 입니다.');
+					sel_lang = 'Kor';
+					$('.language, .language-mobile').find('a:eq(0)').html(sel_lang);
+				}
 			}
 		}
 		function roll_up(){
@@ -207,9 +211,9 @@ $(function(){
 		var art_index = gnb_index;
 		var topminus;
 		if($('.header').width()>1063){
-			topminus = 99;
+			topminus = 99.5;
 		}else{
-			topminus = 99;
+			topminus = 99.5;
 		};
 		$language.removeClass('on');
 		$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');

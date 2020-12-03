@@ -1,10 +1,17 @@
 .randing-wrap{position:relative;width:100%;}
 .randing-wrap .randing-background{width:100%;min-height:calc(100vh - 100px);background:#fff;}
 .randing-wrap .randing-background .phon-animate{width:300px;height:640px;background:#fff;border:2px solid #000;top:50%;margin-top:-320px;left:50%;margin-left:-700px;position:absolute;transform: rotate(45deg);overflow:hidden;}
-.randing-wrap .randing-container{width:100%;display:block;transition:all 2s;opacity:0;}
-.randing-wrap .randing-container{display:block;position:absolute;width:100%;z-index:0;top:0;box-sizing:border-box;margin:0;padding:0;left:0;opacity:0;overflow:hidden;z-index:-1;}
+.randing-wrap .randing-container{display:block;position:absolute;box-sizing:border-box;width:100%;height:calc(100vh - 100px);margin:0;padding:0;top:0;left:0;transition:all 2s;overflow:hidden;opacity:0;z-index:-1;}
 .randing-wrap .randing-container.on{display:block;opacity:1;z-index:1;}
-.back-1{background:url('../images/randing/conference-room-768441_1920.jpg') no-repeat;background-position:center;background-size:cover;overflow:hidden;}
+.randing-wrap .randing-container.back-1{background:url('../images/randing/conference-room-768441_1920.jpg') no-repeat;background-position:center;background-size:cover;overflow:hidden;}
+.randing-wrap .randing-container .message-background{width:100%;height:100vh;background:rgba(0,0,0,0.6);}
+.randing-wrap .randing-container .message-background .message{position:absolute;color:#fff;top:50%;left:50%;word-break:keep-all;}
+.randing-wrap .randing-container .message-background .message-1{margin-top:-10px;margin-left:-235px;}
+.randing-wrap .randing-container .message-background .message-2{margin-top:40px;margin-left:-235px;}
+.randing-wrap .randing-container .message-background .message-3{margin-top:90px;margin-left:-235px;}
+.randing-wrap .randing-container .message-background .message-4{width:470px;height:30px;line-height:0px;background:rgba(23,28,97,0.5);margin-top:-60px;margin-left:-235px;text-align:center;color:#60b25b;font-size:50px;font-weight:900;}
+.randing-wrap .randing-container .message-background .message-4 span{display:inline-block;box-sizing:border-box;}
+/* .randing-wrap .randing-container .message-background .message-4:before{content:'';display:block;position:absolute;width:300px;height:50px;top:20px;left:20px;background:rgba(23,28,97,0.5);z-index:0;} */
 
 @keyframes phonaction{
 	/* 0% { transform: rotate(60deg); top:150px;margin-left:-580px; width:338px; height:720px;}

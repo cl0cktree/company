@@ -584,23 +584,6 @@ $(function(){
 			};
 			//----------------------------------------------------------------------------------------------
 			function click_move(){
-				// if(sort_index==1){
-				// 	$('body').css({'background':'red'})
-				// }else if(sort_index==2){
-				// 	$('body').css({'background':'orange'})
-				// }else if(sort_index==3){
-				// 	$('body').css({'background':'yellow'})
-				// }else if(sort_index==4){
-				// 	$('body').css({'background':'green'})
-				// }else if(sort_index==5){
-				// 	$('body').css({'background':'blue'})
-				// }else if(sort_index==6){
-				// 	$('body').css({'background':'purple'})
-				// }else if(sort_index==7){
-				// 	$('body').css({'background':'gray'})
-				// }else if(sort_index==8){
-				// 	$('body').css({'background':'black'})
-				// }
 				video_controll();
 			};
 			function video_pause(){
