@@ -4,8 +4,7 @@
 .randing-wrap .randing-container{width:100%;display:block;transition:all 2s;opacity:0;}
 .randing-wrap .randing-container{display:block;position:absolute;width:100%;z-index:0;top:0;box-sizing:border-box;margin:0;padding:0;left:0;opacity:0;overflow:hidden;z-index:-1;}
 .randing-wrap .randing-container.on{display:block;opacity:1;z-index:1;}
-.randing-wrap .randing-container .randing-animation{height:calc(100vh - 100px);overflow:hidden;}
-.randing-wrap .randing-container .randing-animation img{width:100%;min-width:1920px;margin-left:-10%;margin-top:-30px;}
+.back-1{background:url('../images/randing/conference-room-768441_1920.jpg') no-repeat;background-position:center;background-size:cover;overflow:hidden;}
 
 @keyframes phonaction{
 	/* 0% { transform: rotate(60deg); top:150px;margin-left:-580px; width:338px; height:720px;}
@@ -26,26 +25,26 @@
 }
 
 @media all and (max-width:320px){
-	.indicator{width:50%;height:15%;left:-25%;font-size:0.5em;line-height:0.5em;}
+	.randing-wrap .randing-container .randing-animation img{margin-top:-130px;margin-left:-35%;}
 }
 @media all and (min-width:321px) and (max-width:480px){
-	.indicator{width:50%;height:15%;left:-25%;font-size:0.5em;line-height:0.5em;}
+	.randing-wrap .randing-container .randing-animation img{margin-top:-130px;margin-left:-35%;}
 }
 @media all and (min-width:481px) and (max-width:640px){
-	.indicator{width:50%;height:15%;left:-25%;font-size:0.5em;line-height:0.5em;}
+	.randing-wrap .randing-container .randing-animation img{margin-top:-130px;margin-left:-25%;}
 }
 @media all and (min-width:641px) and (max-width:720px){
-	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:0.8em;line-height:0.8em;}
+	.randing-wrap .randing-container .randing-animation img{margin:-35% auto;}
 }
 @media all and (min-width:721px) and (max-width:1080px){
-	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:0.8em;line-height:0.8em;}
+	.randing-wrap .randing-container .randing-animation img{margin:-30% auto;}
 }
 @media all and (min-width:1081px) and (max-width:1280px){
-	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:0.8em;line-height:0.8em;}
+	.randing-wrap .randing-container .randing-animation img{margin:-30% auto;}
 }
 @media all and (min-width:1281px) and (max-width:1500px){
-	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:1em;line-height:1em;}
+	.randing-wrap .randing-container .randing-animation img{margin:-20% auto;}
 }
 @media all and (min-width:1501px){
-	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:1em;line-height:1em;}
+	.randing-wrap .randing-container .randing-animation img{margin:-20% auto;}
 }

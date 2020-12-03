@@ -23,12 +23,14 @@ $(function(){
 	//-----시작시 바로 동적 요소 제어------
 	$(document).ready(function(){
 		var down_speed = 700;
-
 		function nav_down(){
 			nav_timeout = setTimeout(function(){
 				$('.nav').css({'margin-top':'0'});
 			},down_speed);
 		};
+		$('body, html').stop().animate({ scrollTop: $('body').offset().top-100},0);
+		$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
+		$('.gnb-wrap, .gnb-modile').find('.gnb-1').children('a').addClass('on');
 		nav_down();
 	});
 	//----------------------------------
@@ -66,7 +68,7 @@ $(function(){
 		if(!scroll_delay_time_1){
 			scroll_delay_time_1 = setTimeout(function(){
 				scroll_delay_time_1=null;
-				if ($(window).scrollTop()>article1_height){
+				if ($(window).scrollTop()>0){
 					$('.header').css({'background':'rgba(255,255,255,0.7)'});
 					$('.gnb-wrap').stop().css({'height':'100px','line-height':'100px'},200);
 					$('.language').stop().css({'top':'30px'},220);
