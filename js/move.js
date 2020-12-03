@@ -211,9 +211,9 @@ $(function(){
 		var art_index = gnb_index;
 		var topminus;
 		if($('.header').width()>1063){
-			topminus = 99.5;
+			topminus = 99;
 		}else{
-			topminus = 99.5;
+			topminus = 99;
 		};
 		$language.removeClass('on');
 		$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
