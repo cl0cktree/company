@@ -65,6 +65,8 @@ textarea{box-sizing:border-box;}
 .background-filter{display:none;position:fixed;width:100%;height:100vh;background:rgba(0,0,0,0.6);top:0;left:0;right:0;bottom:0;overflow-x:hidden;overflow-y:auto;z-index:-1;cursor:pointer;}
 .background-filter.on{display:block;z-index:5;}
 
+.background-filter video{width:86%;margin:60px auto;display:block;position:relative;float:none;cursor:pointer;}
+
 .header{position:fixed;width:100%;background:rgba(255,255,255,1);top:0;border-bottom:1px solid #ccc;z-index:5;}
 .header .nav{display:table;width:100%;height:100px;margin:0 auto;margin-top:-100px;transition:all 0.5s;}
 .header .nav:after{display:block;content:'';width:100%;height:0;clear:both;}
@@ -143,7 +145,7 @@ textarea{box-sizing:border-box;}
 .section .article .contents .graph .graph-img .img-wrap{margin-top:20px;}
 .section .article .contents .graph .graph-img .img-wrap img{width:100%;float:none;}
 
-.section .article .contents .graph-2 .graph-img .img-wrap img{width:90%;}
+/* .section .article .contents .graph-2 .graph-img .img-wrap img{width:90%;} */
 
 
 .section .article .contents .sevice_title{min-width:320px;width:80%;margin:0 auto;padding:1em;transition:all 0.3s;}
@@ -152,20 +154,19 @@ textarea{box-sizing:border-box;}
 .section .article .contents .sevice_title>div:nth-of-type(1){line-height:40px;font-size:22px;font-weight:500;}
 .section .article .contents .sevice_title>div:nth-of-type(2){height:30px;line-height:30px;font-size:17px;font-weight:500;}
 
-.section .article .contents .card p{box-sizing:border-box;min-width:372px;max-width:610px;min-height:315px;color:#666;line-height:16px;margin:0 auto;padding:10px;font-size:15px;font-weight:700;word-spacing:-1px;text-align:center;}
+.section .article .contents .card p{box-sizing:border-box;min-width:320px;max-width:610px;min-height:315px;color:#666;margin:0 auto;padding:10px;font-weight:700;word-spacing:-1px;text-align:center;}
 /*
 .section .article .contents .card_1 p{background:url('../images/building.png') no-repeat;background-size:130px;background-position:center;}
 .section .article .contents .card_2 p{background:url('../images/1588.png') no-repeat;background-size:166px;background-position:center;}
 .section .article .contents .card_3 p{background:url('../images/app.png') no-repeat;background-size:160px;background-position:center;}
-.section .article .contents .card_4 p{background:url('../images/office.png') no-repeat;background-size:326px;background-position:center;} 
+.section .article .contents .card_4 p{background:url('../images/office.png') no-repeat;background-size:326px;background-position:center;}
 */
 
-.section .article .contents .greeting{height:100%;margin-top:100px;padding:40px 5%;}
-.section .article .contents .greeting .word{font-size:18px;font-weight:500;color:#666;word-break:keep-all;text-align:center;}
+.section .article .contents .greeting{height:100%;margin-top:30px;padding:40px 5%;}
+.section .article .contents .greeting .word{font-weight:500;color:#666;word-break:keep-all;text-align:center;}
 .section .article .contents .container{position:absolute;width:100%;min-height:calc(50vh - 140px);background:rgba(0,0,0,0);bottom:0;}
 
 .section .article_1{min-height:calc(100vh - 100px);background:#fff;}
-.section .article_1 .randing-container .message{font-size:20px;color:#666;}
 
 .section .article_2 .contents{padding-bottom:50px;}
 
@@ -265,6 +266,10 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
+	.section .article .contents .card p{line-height:14px;font-size:12px;}
+	.section .article .contents .greeting .word{font-size:14px;}
+	.footer .terms a{font-size: 13px;}
+	.footer .address span{font-size: 13px;}	.footer .address span a{font-size: 13px;}
 }
 @media all and (min-width:321px) and (max-width:480px){
 	.terms-modal{width:100%;}
@@ -276,6 +281,10 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
+	.section .article .contents .card p{line-height:14px;font-size:12px;}
+	.section .article .contents .greeting .word{font-size:14px;}
+	.footer .terms a{font-size: 13px;}
+	.footer .address span{font-size: 13px;}	.footer .address span a{font-size: 13px;}
 }
 @media all and (min-width:481px) and (max-width:640px){
 	.terms-modal{width:100%;}
@@ -287,6 +296,10 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
+	.section .article .contents .card p{line-height:15px;font-size:14px;}
+	.section .article .contents .greeting .word{font-size:14px;}
+	.footer .terms a{font-size: 14px;}
+	.footer .address span{font-size: 14px;}	.footer .address span a{font-size: 14px;}
 }
 @media all and (min-width:641px) and (max-width:720px){
 	.terms-modal{width:calc(100% + 16px);}
@@ -298,6 +311,10 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
+	.section .article .contents .card p{line-height:15px;font-size:14px;}
+	.section .article .contents .greeting .word{font-size:16px;}
+	.footer .terms a{font-size: 14px;}
+	.footer .address span{font-size: 14px;}	.footer .address span a{font-size: 14px;}
 }
 @media all and (min-width:721px) and (max-width:1080px){
 	.terms-modal{width:calc(100% + 16px);}
@@ -310,6 +327,10 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
+	.section .article .contents .card p{line-height:15px;font-size:14px;}
+	.section .article .contents .greeting .word{font-size:16px;}
+	.footer .terms a{font-size: 14px;}
+	.footer .address span{font-size: 14px;}	.footer .address span a{font-size: 14px;}
 }
 @media all and (min-width:1081px) and (max-width:1280px){
 	.terms-modal{width:calc(100% + 16px);}
@@ -322,6 +343,10 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .card:before{display:block;}
 	.section .article .contents .graph{width:50%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:block;}
+	.section .article .contents .card p{line-height:16px;font-size:15px;}
+	.section .article .contents .greeting .word{font-size:18px;}
+	.footer .terms a{font-size: 16px;}
+	.footer .address span{font-size: 16px;}	.footer .address span a{font-size: 16px;}
 }
 @media all and (min-width:1281px) and (max-width:1500px){
 	.terms-modal{width:calc(100% + 16px);}
@@ -334,6 +359,10 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .card:before{display:block;}
 	.section .article .contents .graph{width:50%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:block;}
+	.section .article .contents .card p{line-height:16px;font-size:15px;}
+	.section .article .contents .greeting .word{font-size:18px;}
+	.footer .terms a{font-size: 16px;}
+	.footer .address span{font-size: 16px;}	.footer .address span a{font-size: 16px;}
 }
 @media all and (min-width:1501px){
 	.terms-modal{width:calc(100% + 16px);}
@@ -346,4 +375,8 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .card:before{display:block;}
 	.section .article .contents .graph{width:50%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:block;}
+	.section .article .contents .card p{line-height:16px;font-size:15px;}
+	.section .article .contents .greeting .word{font-size:18px;}
+	.footer .terms a{font-size: 16px;}
+	.footer .address span{font-size: 16px;}	.footer .address span a{font-size: 16px;}
 }

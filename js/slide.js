@@ -2,7 +2,7 @@ $(function(){
 	if($('body').find('.slide-wrap'))
 		{
 		$('.slide-wrap').append('<div class="slide-container"></div><ul class="indicator"></ul><div class="con-btn prev-btn"></div><div class="con-btn next-btn"></div>');
-		$('.slide-wrap').after('<ul class="thumnail-box" style="position:relative;box-sizing:border-box;min-width:720px;height:100px;overflow:hidden;border:0px solid #000;background:#333;margin-top:0px;"></ul>');
+		// $('.slide-wrap').after('<ul class="thumnail-box" style="position:relative;box-sizing:border-box;overflow:hidden;border:1px solid #000;background:#999;margin-top:10px;"></ul>');
 		var mswidth;
 		var msheight;
 		var article_height;
@@ -19,16 +19,16 @@ $(function(){
 		$.getJSON(jsonLocation, function(data){
 			$.each(data, function(I, item){
 				slideNum++;
-				$('.slide-container').append('<div class="slide slide'+slideNum+'" data-index="'+slideNum+'"><video play controls poster="'+item.img_url+'" preload="auto" alt="'+item.alt_text+slideNum+'"><source src="'+item.video_url+'" type="video/mp4">'+item.alt_text+'</video></div>');
-				// $('.indicator').append('<li class="bulet bulet'+slideNum+'" data-index="'+slideNum+'">●</li>');
-				$('.thumnail-box').append('<li class="thumnail thumnail'+slideNum+'" data-index="'+slideNum+'"><img src='+item.img_url+' alt="미리보기'+slideNum+'" style="width:100%;"></li>');
+				$('.slide-container').append('<div class="slide slide'+slideNum+'" data-index="'+slideNum+'"><img src='+item.img_url+' alt="'+item.alt_text+slideNum+'"></div>');
+				$('.indicator').append('<li class="bulet bulet'+slideNum+'" data-index="'+slideNum+'">●</li>');
+				// $('.thumnail-box').append('<li class="thumnail thumnail'+slideNum+'" data-index="'+slideNum+'"><img src='+item.img_url+' alt="미리보기'+slideNum+'" style="width:100%;"></li>');
 				$('.bulet').css({'color':'#ccc'});
 				$('.bulet1').css({'color':'#999'});
 				mswidth = $('.slide').each(Array).length;/*슬라이드 전체 배열의 갯수만큼의 숫자를 추출*/
 				$(document).ready(function(){
-					thum_width = 100/8;
-					$('.thumnail').children('img').css({'border':'2px solid #000','display':'block','float':'left','width':'calc('+thum_width+'% - 24px)','max-width':'142px','max-height':'80px','margin':'10px','cursor':'pointer'});
-					$('.thumnail1').children('img').css({'border':'2px solid #ccc'});
+					thum_width = 100/mswidth;
+					$('.thumnail').children('img').css({'border':'2px solid #999','display':'block','float':'left','width':'calc('+thum_width+'% - 24px)','margin':'10px','cursor':'pointer'});
+					$('.thumnail1').children('img').css({'border':'2px solid #000'});
 				});
 				for (var i=0;i<mswidth;i++)/*.slide의 배열이 늘어나면 알아서 아이디와 레프트값 연산 및 .indicator의 btn도 배열 갯수만큼 append*/
 				{
@@ -42,12 +42,12 @@ $(function(){
 				if($('.slide-wrap').height()==0||$('.slide-wrap').height()==null){
 					$(document).ready(function(){
 							// if ($('body').width>720){
-							// 	msheight = $('.slide').children('video').height()+100;
+							// 	msheight = $('.slide').children('img').height();
 							// }
 							// else{
 							// 	msheight = '100vh';
 							// }
-							msheight = $('.slide').children('video').height()+100;
+							msheight = $('.slide').children('img').height();
 							article_height = $('.article').height();
 							$('.slide-wrap').css({'height':msheight,'max-height':article_height});
 						}
@@ -80,12 +80,12 @@ $(function(){
 			app_sort = mswidth+1;
 
 			// if ($('body').width>720){
-			// 	msheight = $('.slide').children('video').height()+100;
+			// 	msheight = $('.slide').children('img').height();
 			// }
 			// else{
 			// 	msheight = '100vh';
 			// }
-			msheight = $('.slide').children('video').height()+100;
+			msheight = $('.slide').children('img').height();
 
 			$(window).resize(function(){
 				var delay_time;
@@ -93,12 +93,12 @@ $(function(){
 					delay_time = setTimeout(function() {
 						delay_time=null;
 						// if ($('body').width>720){
-						// 	msheight = $('.slide').children('video').height()+100;
+						// 	msheight = $('.slide').children('img').height();
 						// }
 						// else{
 						// 	msheight = '100vh';
 						// }
-						msheight = $('.slide').children('video').height()+100;
+						msheight = $('.slide').children('img').height();
 						var mswidth = $('.slide').each(Array).length;/*-슬라이드 전체 배열의 갯수만큼의 숫자를 추출-*/
 						wrapwidth = mswidth*100;
 						s_width = $('.slide').width();
@@ -124,10 +124,9 @@ $(function(){
 				}
 				bullet_on();
 				// page();
-				thumnail_on();
+				// thumnail_on();
 				// inner_controll_s();
 				//sort_all = parseInt($('.slide').data('index'));
-				video_pause();
 			};
 
 			function prevBtn(){
@@ -143,9 +142,8 @@ $(function(){
 				}
 				bullet_on();
 				// page();
-				thumnail_on();
+				// thumnail_on();
 				// inner_controll_s();
-				video_pause();
 			};
 
 			function stop_next(){
@@ -438,7 +436,7 @@ $(function(){
 					move=(sort_index-1)*-100;
 					bullet_on();
 					// page();
-					thumnail_on();
+					// thumnail_on();
 					$('.slide-container').stop().animate({'left':move+'%'},movespeed);
 					// inner_controll_s();
 					// setTimeout(startbar,0);
@@ -463,7 +461,7 @@ $(function(){
 					// setTimeout(stop_s,0);
 					sort_index = $(this).data('index');
 					move=(sort_index-1)*-100;
-					thumnail_on();
+					// thumnail_on();
 					bullet_on();
 					// page();
 					$('.slide-container').stop().animate({'left':move+'%'},movespeed);
@@ -489,12 +487,12 @@ $(function(){
 				if($('.slide-wrap').height()==0){
 					$(document).ready(function(){
 						// if ($('body').width>720){
-						// 	msheight = $('.slide').children('video').height()+100;
+						// 	msheight = $('.slide').children('img').height();
 						// }
 						// else{
 						// 	msheight = '100vh';
 						// }
-						msheight = $('.slide').children('video').height()+100;
+						msheight = $('.slide').children('img').height();
 						article_height = $('.article').height();
 						$('.slide-wrap').css({'height':msheight,'max-height':article_height});
 						// console.log(msheight+' --')
@@ -535,12 +533,10 @@ $(function(){
 			function bullet_on(){
 				$('.bulet').css({'color':'#ccc'});
 				$('.bulet'+sort_index).css({'color':'#999'});
-				video_pause();
 			};
 			function thumnail_on(){
-				$('.thumnail').children('img').css({'border':'2px solid #000'});
-				$('.thumnail'+sort_index).children('img').css({'border':'2px solid #ccc'});
-				video_pause();
+				$('.thumnail').children('img').css({'border':'2px solid transparent'});
+				$('.thumnail'+sort_index).children('img').css({'border':'2px solid #000'});
 			};
 			function click_snd(){
 				var clickSnd = new Audio();
@@ -584,17 +580,17 @@ $(function(){
 			};
 			//----------------------------------------------------------------------------------------------
 			function click_move(){
-				video_controll();
-			};
-			function video_pause(){
-				$('.article_5').find('.slide').children('video').trigger('pause');
-			};
-			function video_controll(){
-				if($('.article_5').find('.slide'+sort_index).children(this).prop('paused')){
-					$('.article_5').find('.slide'+sort_index).children(this).trigger('play');
-				}else{
-					$('.article_5').find('.slide'+sort_index).children(this).trigger('pause');
+				var load_video;
+				$('.background-filter').stop().fadeIn('300').addClass('on');
+				if(sort_index==1){
+					load_video = './media/First_video_final_no_voice.mp4'
 				}
+				$('.background-filter').css({'z-index':'200'});
+				$.getJSON(jsonLocation, function(data){
+					$.each(data, function(I, item){
+						$('.background-filter').append('<video play controls poster="'+item.img_url+'" preload="auto" alt="'+item.alt_text+slideNum+'"><source src="'+item.video_url+'" type="video/mp4">'+item.alt_text+'</video>');
+					});
+				});
 			};
 			function start_s(){
 				setTimeout(lazy_0,0);
