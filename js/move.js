@@ -22,7 +22,7 @@ $(function(){
 	//-----------------------------------
 	//-----시작시 바로 동적 요소 제어------
 	$(document).ready(function(){
-		var down_speed = 700;
+		var down_speed = 500;
 		function nav_down(){
 			nav_timeout = setTimeout(function(){
 				$('.nav').css({'margin-top':'0'});

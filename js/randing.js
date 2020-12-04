@@ -8,9 +8,7 @@ $(function(){
 				$('.phon-animate').css({'transform':'rotate(90deg)','transition':'all 1s;','overflow':'hidden'});
 				$('.phon-animate').fadeOut(300);
 				if($('.phon-animate').css('height')){
-					$('.randing-container').stop().animate({'z-index':'2','opacity':'1'},1000,function(){
-						$(this).addClass('back-1');
-					});
+					
 				}
 				// randing_animation();
 			},randing_time2);
@@ -18,10 +16,13 @@ $(function(){
 		function randing_animation(){
 
 		};
-		$('.phon-animate').stop().animate({'margin-top':'-470px','margin-left':'-320px','width':'300px','height':'640px'},randing_time1);
+		// $('.phon-animate').stop().animate({'margin-top':'-470px','margin-left':'-320px','width':'300px','height':'640px'},randing_time1);
 		if ($('.phon-animate').css('margin-top')<'-470'){
-			phon_act1();
+			// phon_act1();
 		}
+		$('.randing-container').stop().animate({'z-index':'2','opacity':'1'},1000,function(){
+			$(this).addClass('back-1');
+		});
 	});
 	return false;
 });
