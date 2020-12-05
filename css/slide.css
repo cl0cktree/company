@@ -1,4 +1,4 @@
-.slide-wrap{width:100%;background:#333;border:0px solid #000;position:relative;margin-top:50px;}
+.slide-wrap{width:100%;background:#333;border:0px solid #000;position:relative;margin:50px auto 0;}
 .slide-wrap .slide-container{width:100%;overflow:visible;display:block;}
 .slide-wrap .slide-container .slide{width:100%;position:absolute;z-index:1;top:0;display:block;box-sizing:border-box;margin:0;padding:0;text-align:center;}
 .slide-wrap .slide-container .slide img{width:100%;display:inline-block;position:relative;float:none;}
@@ -12,42 +12,34 @@
 .slide-wrap .next-btn{right:10px;background:url("../images/slide/slide_btn.png") no-repeat;background-position:-65px 0px;background-size:130px 65px;}
 
 @media all and (max-width:320px){
-	.slide-wrap{min-width:320px;max-height:100%;}
 	.slide-wrap .slide-container .slide img{min-width:320px;}
 	.indicator{width:50%;height:calc(15% - 100px);left:-25%;font-size:0.5em;line-height:0.5em;}
 }
 @media all and (min-width:321px) and (max-width:480px){
-	.slide-wrap{min-width:320px;max-height:100%;}
 	.slide-wrap .slide-container .slide img{min-width:320px;}
 	.indicator{width:50%;height:calc(15% - 100px);left:-25%;font-size:0.5em;line-height:0.5em;}
 }
 @media all and (min-width:481px) and (max-width:640px){
-	.slide-wrap{min-width:480px;max-height:100%;}
 	.slide-wrap .slide-container .slide img{min-width:480px;}
 	.indicator{width:50%;height:calc(15% - 100px);left:-25%;font-size:0.5em;line-height:0.5em;}
 }
 @media all and (min-width:641px) and (max-width:720px){
-	.slide-wrap{min-width:640px;max-height:100%;}
 	.slide-wrap .slide-container .slide img{min-width:640px;}
 	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:0.8em;line-height:0.8em;}
 }
 @media all and (min-width:721px) and (max-width:1080px){
-	.slide-wrap{min-width:720px;max-height:100%;}
 	.slide-wrap .slide-container .slide img{min-width:720px;}
 	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:0.8em;line-height:0.8em;}
 }
 @media all and (min-width:1081px) and (max-width:1280px){
-	.slide-wrap{min-width:1080px;max-height:100%;}
 	.slide-wrap .slide-container .slide img{min-width:1080px;}
 	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:0.8em;line-height:0.8em;}
 }
 @media all and (min-width:1281px) and (max-width:1500px){
-	.slide-wrap{min-width:1280px;max-height:100%;}
 	.slide-wrap .slide-container .slide img{min-width:1280px;}
 	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:1em;line-height:1em;}
 }
 @media all and (min-width:1501px){
-	.slide-wrap{min-width:1280px;max-height:100%;}
-	.slide-wrap .slide-container .slide img{min-width:1280px}
+	.slide-wrap .slide-container .slide img{min-width:1280px;max-width:1920px;max-height:1080px;}
 	.indicator{width:25%;height:7.5%;left:-12.5%;font-size:1em;line-height:1em;}
 }
