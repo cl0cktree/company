@@ -194,7 +194,7 @@ $(function(){
 	$('.background-filter').on('click',function(){
 		$name_header.find('.mobile-menu').stop().animate({'right':'-100%'},function(){
 			// $('.background-filter').stop().fadeOut('300').removeClass('on');
-			if ($('.background-filter').find('.terms-modal')==false){
+			if (($('.background-filter').css('z-index')!=='200')||($('.background-filter').find('.terms-modal')==false)){
 				$('.background-filter').stop().fadeOut('300').removeClass('on');
 			}
 		});
