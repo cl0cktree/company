@@ -4,10 +4,15 @@
 .randing-wrap .randing-container{display:block;position:absolute;box-sizing:border-box;width:100%;height:calc(100vh - 100px);margin:0;padding:0;top:0;left:0;transition:all 2s;overflow:hidden;opacity:0;z-index:-1;}
 .randing-wrap .randing-container.on{display:block;opacity:1;z-index:1;}
 
-.randing-wrap .randing-container .randing-animation{display:block;position:absolute;box-sizing:border-box;width:100%;height:calc(100vh - 100px);margin:0;padding:0;top:0;left:0;transition:all 2s;overflow:hidden;opacity:1;z-index:-1;}
+.randing-wrap .randing-container .randing-animation{display:block;position:absolute;box-sizing:border-box;width:100%;height:calc(100vh - 100px);margin:0;padding:0;top:0;left:0;transition:all 2s;overflow:hidden;opacity:1;z-index:0;}
+/* 
 .randing-wrap .randing-container .randing-animation.back-1{background:url('../images/randing/conference-room-768441_1920.jpg') no-repeat;background-position:center;background-size:cover;opacity:1;z-index:0;}
 .randing-wrap .randing-container .randing-animation.back-2{background:url('../images/randing/meeting-2284501_1920_1.jpg') no-repeat;background-position:center;background-size:cover;opacity:1;z-index:0;}
-.randing-wrap .randing-container .randing-animation.back-3{background:url('../images/randing/write-593333_1920.jpg') no-repeat;background-position:center;background-size:cover;opacity:1;z-index:0;}
+.randing-wrap .randing-container .randing-animation.back-3{background:url('../images/randing/write-593333_1920.jpg') no-repeat;background-position:center;background-size:cover;opacity:1;z-index:0;} */
+.randing-wrap .randing-container .randing-animation .randing{display:block;position:absolute;box-sizing:border-box;width:100%;height:calc(100vh - 100px);margin:0;padding:0;top:0;left:0;overflow:hidden;opacity:0;z-index:0;}
+.randing-wrap .randing-container .randing-animation .randing_1{background:url('../images/randing/background_01.jpg') no-repeat;background-position:center;background-size:cover;}
+.randing-wrap .randing-container .randing-animation .randing_2{background:url('../images/randing/background_02.jpg') no-repeat;background-position:center;background-size:cover;}
+.randing-wrap .randing-container .randing-animation .randing_3{background:url('../images/randing/background_03.jpg') no-repeat;background-position:center;background-size:cover;}
 
 .randing-wrap .randing-container .message-background{width:100%;height:calc(100vh - 100px);background:rgba(0,0,0,0.6);}
 .randing-wrap .randing-container .message-background .message{position:absolute;color:#fff;top:50%;left:50%;word-break:keep-all;line-height:44px;color:#999;text-align:center;}

@@ -1,9 +1,10 @@
 $(function(){
 	var randing_time1 = 5000;
 	var randing_time2 = 1500;
-	var fadein_time = 800;
-	var fadeout_time = 1500;
+	var fadein_time = 1000;
+	var fadeout_time = 1000;
 	var back_num;
+	var $randing_animate = $('.randing-animation');
 	$(document).ready(function(){
 		function phon_act1(){
 			randing_on = setTimeout(function(){
@@ -22,28 +23,19 @@ $(function(){
 		$('.randing-container').stop().animate({'z-index':'2','opacity':'1'},1000,function(){
 			function randing_animation(){
 				back_num = 0;
-				$('.randing-animation').stop().fadeIn('300').addClass('back-1');
+				var randing_num = $randing_animate.find('.randing').length;
+
+				$randing_animate.find('.randing_1').stop().animate({'opacity':'1','z-index':'1'},'300');
 				randing_on = setInterval(function(){
-					$('.randing-animation').stop().fadeOut(fadeout_time).removeClass('back-'+back_num);
-					console.log(back_num);
-					if ($('.randing-animation').data('background')>back_num){
+					$randing_animate.find('.randing_'+back_num).stop(false,false).animate({'opacity':'0','z-index':'-1'},fadeout_time);
+					if (randing_num>back_num){
 						back_num++;
-						$('.randing-animation').stop().fadeIn(fadein_time).addClass('back-'+back_num);
-						// console.log(back_num);
+						$randing_animate.find('.randing_'+back_num).stop(false,false).animate({'opacity':'1','z-index':'2'},fadein_time);
 					}else{
 						back_num = 1;
-						// $('.randing-animation').stop().fadeOut('300').removeClass('back-'+back_num);
-						$('.randing-animation').stop().fadeIn(fadein_time).addClass('back-'+back_num);
+						// $randing_animate.stop().fadeOut('300').removeClass('back-'+back_num);
+						$randing_animate.find('.randing_'+back_num).stop(false,false).animate({'opacity':'1','z-index':'2'},fadein_time);
 					}
-					// $('.slide').stop(false,false).animate({'opacity':'0','z-index':'0'},movespeed);
-					// if(sort_index<mswidth){
-					// 	sort_index++;
-					// 	$('#slide'+sort_index).stop(false,true).animate({'opacity':'1','z-index':'1'},movespeed);
-					// }else{
-					// 	$('.slide').removeClass('on');
-					// 	sort_index=1;
-					// 	$('#slide'+sort_index).stop(false,true).animate({'opacity':'1','z-index':'1'},movespeed);
-					// }
 				},randing_time1);
 			};
 			randing_animation();
