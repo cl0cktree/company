@@ -110,12 +110,12 @@ textarea{box-sizing:border-box;}
 .header .language-mobile a:hover{color:#000;font-weight:600;}
 .header .language-mobile a:nth-of-type(1):hover{color:#fff;font-weight:400;}
 
-.header .menu_btn{width:40px;height:40px;position:absolute;top:30px;right:30px;z-index:50;transition:all 0.2s;}
-.header label{display:block;width:40px;height:40px;cursor:pointer;}
+.header .menu_btn{width:35px;height:35px;position:absolute;top:35px;right:30px;z-index:50;transition:all 0.2s;}
+.header label{display:block;width:35px;height:35px;cursor:pointer;}
 .header label span{display:block;position:absolute;width:100%;height:7px;background:#919191;top:50%;text-indent:-10000%;transition:all 0.3s;}
 .header label span:nth-of-type(1){margin-top:-20px;transform:rotate(0deg);}
-.header label span:nth-of-type(2){margin-top:-4px;transform:rotate(0deg);}
-.header label span:nth-of-type(3){margin-top:12px;transform:rotate(0deg);}
+.header label span:nth-of-type(2){margin-top:-6px;transform:rotate(0deg);}
+.header label span:nth-of-type(3){margin-top:8px;transform:rotate(0deg);}
 .header .menu_btn.mobile span:nth-of-type(1){margin-top:-3.5px;transform:rotate(45deg);}
 .header .menu_btn.mobile span:nth-of-type(2){margin-top:-3.5px;transform:rotate(45deg);}
 .header .menu_btn.mobile span:nth-of-type(3){margin-top:-3.5px;transform:rotate(-45deg);}
@@ -176,7 +176,8 @@ textarea{box-sizing:border-box;}
 .section .article_2 .contents{padding-bottom:50px;}
 
 .section .article_4{min-height:calc(100vh - 100vh);}
-.section .article_4 .contents{padding:50px 0;}
+.section .article_4 .contents{padding:0px 0;}
+.section .article_4 .word{line-height:22px;}
 
 .section .article_5{min-height:0}
 .section .article_5 .contents{min-height:0;}
