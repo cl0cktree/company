@@ -19,8 +19,8 @@ $(function(){
 		$.getJSON(jsonLocation, function(data){
 			$.each(data, function(I, item){
 				slideNum++;
-				$('.slide-container').append('<div class="slide slide'+slideNum+'" data-index="'+slideNum+'"><img src='+item.img_url+' alt="'+item.alt_text+slideNum+'"><a href="javascrip:;" class="movei-btn">동영상 보기</a></div>');
-				// $('.indicator').append('<li class="bulet bulet'+slideNum+'" data-index="'+slideNum+'">●</li>');
+				$('.slide-container').append('<div class="slide slide'+slideNum+'" data-index="'+slideNum+'"><img src='+item.img_url+' alt="'+item.alt_text+slideNum+'"><a href="javascrip:;" class="movei-btn"></a></div>');
+				$('.indicator').append('<li class="bulet bulet'+slideNum+'" data-index="'+slideNum+'">●</li>');
 				// $('.thumnail-box').append('<li class="thumnail thumnail'+slideNum+'" data-index="'+slideNum+'"><img src='+item.img_url+' alt="미리보기'+slideNum+'" style="width:100%;"></li>');
 				$('.bulet').css({'color':'#ccc'});
 				$('.bulet1').css({'color':'#999'});
@@ -326,7 +326,7 @@ $(function(){
 						}
 					}else if(((tvalue<10)&&(tvalue>-10))||(tvalue==0)){
 						if(yvalue==0){
-							click_move();
+							// click_move();
 						}else{
 							if(yvalue>cal_height){
 								$('body, html').stop().animate({ scrollTop: $("body").offset().top+yvalue },300);
@@ -385,7 +385,7 @@ $(function(){
 						}
 					}else if(((tvalue<10)&&(tvalue>-10))||(tvalue==0)){
 						if(yvalue==0){
-							click_move();
+							// click_move();
 						}else{
 							if(yvalue>cal_height){
 								$('body, html').stop().animate({ scrollTop: $("body").offset().top+yvalue },300);
@@ -417,7 +417,7 @@ $(function(){
 					event.stopPropagation();
 					// setTimeout(stop_s,0);
 					// setTimeout(stop_bar,0);
-					click_move();
+					// click_move();
 					// start_s();
 					// startbar();
 				};
