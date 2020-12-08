@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('./nanumgothic.css');
+/* @import url('./nanumgothic.css'); */
 @font-face{
 	font-family:'Nanum Gothic','NanumGothic';
 	src:url('/fonts/NanumGothic.eot');
@@ -96,7 +96,7 @@ textarea{box-sizing:border-box;}
 
 .header .mobile-menu{display:block;position:fixed;background:#fff;width:140px;height:100vh;top:0;right:-100%;z-index:5;padding-top:100px;}
 .header .gnb-modile{display:block;width:100%;top:0;z-index:5;}
-.header .gnb-modile li{display:block;box-sizing:border-box;text-align:right;margin-right:30px;}
+.header .gnb-modile li{display:block;box-sizing:border-box;width:100px;text-align:right;margin-right:30px;}
 .header .gnb-modile li a{display:inline-block;position:relative;height:40px;line-height:40px;font-weight:600;text-decoration:none;}
 .header .gnb-modile li a:hover:before{width:100%;height:3px;background:#000;left:0%;transition:all 0.3s;z-index:1;}
 .header .gnb-modile li a:before,.gnb-modile li a:after{content:'';display:block;position:absolute;width:0;bottom:0;left:50%;transition:all 0.5s;}
@@ -189,12 +189,10 @@ textarea{box-sizing:border-box;}
 .footer .terms{padding:20px 30px;word-break:keep-all;}
 .footer .terms a{display:inline-block;box-sizing:border-box;color:#fff;margin-right:5px;text-decoration:none;}
 .footer .terms a:before{content:' | ';display:inline-block;margin-right:5px;}
-.footer .terms a:nth-of-type(1):before{content:'';}
 .footer .terms a:hover{text-decoration:underline;}
 .footer .address{padding:0px 30px 30px;word-break:keep-all;}
 .footer .address span{display:inline-block;box-sizing:border-box;color:#fff;margin-right:5px;}
 .footer .address span:before{content:' | ';display:inline-block;margin-right:5px;}
-.footer .address span:nth-of-type(1):before{content:'';}
 .footer .address span a{cursor:pointer;}
 .footer .address span a:hover{text-decoration:underline;}
 
@@ -325,6 +323,8 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .greeting .word{font-size:16px;}
 	.section .top_btn{ width:72px; height:72px; line-height:72px; font-size:20px;}
 	.footer .terms a{font-size: 14px;}
+	.footer .terms a:nth-of-type(1):before{content:'';}
+	.footer .address span:nth-of-type(1):before{content:'';}
 	.footer .address span{font-size: 14px;}	.footer .address span a{font-size: 14px;}
 }
 @media all and (min-width:721px) and (max-width:1080px){
@@ -342,6 +342,8 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .greeting .word{font-size:16px;}
 	.section .top_btn{ width:72px; height:72px; line-height:72px; font-size:20px;}
 	.footer .terms a{font-size: 14px;}
+	.footer .terms a:nth-of-type(1):before{content:'';}
+	.footer .address span:nth-of-type(1):before{content:'';}
 	.footer .address span{font-size: 14px;}	.footer .address span a{font-size: 14px;}
 }
 @media all and (min-width:1081px) and (max-width:1280px){
@@ -359,6 +361,8 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .greeting .word{font-size:18px;}
 	.section .top_btn{ width:72px; height:72px; line-height:72px; font-size:20px;}
 	.footer .terms a{font-size: 16px;}
+	.footer .terms a:nth-of-type(1):before{content:'';}
+	.footer .address span:nth-of-type(1):before{content:'';}
 	.footer .address span{font-size: 16px;}	.footer .address span a{font-size: 16px;}
 }
 @media all and (min-width:1281px) and (max-width:1500px){
@@ -376,6 +380,8 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .greeting .word{font-size:18px;}
 	.section .top_btn{ width:72px; height:72px; line-height:72px; font-size:20px;}
 	.footer .terms a{font-size: 16px;}
+	.footer .terms a:nth-of-type(1):before{content:'';}
+	.footer .address span:nth-of-type(1):before{content:'';}
 	.footer .address span{font-size: 16px;}	.footer .address span a{font-size: 16px;}
 }
 @media all and (min-width:1501px){
@@ -393,5 +399,7 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .greeting .word{font-size:18px;}
 	.section .top_btn{ width:72px; height:72px; line-height:72px; font-size:20px;}
 	.footer .terms a{font-size: 16px;}
+	.footer .terms a:nth-of-type(1):before{content:'';}
+	.footer .address span:nth-of-type(1):before{content:'';}
 	.footer .address span{font-size: 16px;}	.footer .address span a{font-size: 16px;}
 }
