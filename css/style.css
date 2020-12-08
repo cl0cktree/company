@@ -280,6 +280,7 @@ textarea{box-sizing:border-box;}
 	.section .top_btn{ width:60px; height:60px; line-height:60px; font-size:16px;}
 	.footer .terms a{font-size: 13px;}
 	.footer .address span{font-size: 13px;}	.footer .address span a{font-size: 13px;}
+	.terms-service{min-width:102px;} .information-policy{min-width:195px;} .standard-terms{min-width:166px;} .rejection-email{min-width:122px;} .recruit{min-width:61px;} .address-add{min-width:244px;} .address-ceo{min-width:109px;} .address-num{min-width:173px;} .address-phon{min-width:149px;}
 }
 @media all and (min-width:321px) and (max-width:480px){
 	.terms-modal{width:100%;}
@@ -296,6 +297,7 @@ textarea{box-sizing:border-box;}
 	.section .top_btn{ width:60px; height:60px; line-height:60px; font-size:16px;}
 	.footer .terms a{font-size: 13px;}
 	.footer .address span{font-size: 13px;}	.footer .address span a{font-size: 13px;}
+	.terms-service{min-width:102px;} .information-policy{min-width:195px;} .standard-terms{min-width:166px;} .rejection-email{min-width:122px;} .recruit{min-width:61px;} .address-add{min-width:280px;} .address-ceo{min-width:109px;} .address-num{min-width:173px;} .address-phon{min-width:149px;}
 }
 @media all and (min-width:481px) and (max-width:640px){
 	.terms-modal{width:100%;}
@@ -312,6 +314,7 @@ textarea{box-sizing:border-box;}
 	.section .top_btn{ width:72px; height:72px; line-height:72px; font-size:20px;}
 	.footer .terms a{font-size: 14px;}
 	.footer .address span{font-size: 14px;}	.footer .address span a{font-size: 14px;}
+	.terms-service{min-width:102px;} .information-policy{min-width:195px;} .standard-terms{min-width:166px;} .rejection-email{min-width:122px;} .recruit{min-width:61px;} .address-add{min-width:280px;} .address-ceo{min-width:109px;} .address-num{min-width:173px;} .address-phon{min-width:149px;}
 }
 @media all and (min-width:641px) and (max-width:720px){
 	.terms-modal{width:calc(100% + 16px);}
@@ -330,6 +333,7 @@ textarea{box-sizing:border-box;}
 	.footer .terms a:nth-of-type(1){border-left:0px solid #fff;}
 	.footer .address span:nth-of-type(1){border-left:0px solid #fff;}
 	.footer .address span{font-size: 14px;}	.footer .address span a{font-size: 14px;}
+	.terms-service{min-width:102px;} .information-policy{min-width:195px;} .standard-terms{min-width:166px;} .rejection-email{min-width:122px;} .recruit{min-width:61px;} .address-add{min-width:280px;} .address-ceo{min-width:109px;} .address-num{min-width:173px;} .address-phon{min-width:149px;}
 }
 @media all and (min-width:721px) and (max-width:1080px){
 	.terms-modal{width:calc(100% + 16px);}
@@ -349,6 +353,7 @@ textarea{box-sizing:border-box;}
 	.footer .terms a:nth-of-type(1){border-left:0px solid #fff;}
 	.footer .address span:nth-of-type(1){border-left:0px solid #fff;}
 	.footer .address span{font-size: 14px;}	.footer .address span a{font-size: 14px;}
+	.terms-service{min-width:102px;} .information-policy{min-width:195px;} .standard-terms{min-width:166px;} .rejection-email{min-width:122px;} .recruit{min-width:61px;} .address-add{min-width:280px;} .address-ceo{min-width:109px;} .address-num{min-width:173px;} .address-phon{min-width:149px;}
 }
 @media all and (min-width:1081px) and (max-width:1280px){
 	.terms-modal{width:calc(100% + 16px);}
@@ -368,6 +373,7 @@ textarea{box-sizing:border-box;}
 	.footer .terms a:nth-of-type(1){border-left:0px solid #fff;}
 	.footer .address span:nth-of-type(1){border-left:0px solid #fff;}
 	.footer .address span{font-size: 16px;}	.footer .address span a{font-size: 16px;}
+	.terms-service{min-width:102px;} .information-policy{min-width:195px;} .standard-terms{min-width:166px;} .rejection-email{min-width:122px;} .recruit{min-width:61px;} .address-add{min-width:280px;} .address-ceo{min-width:109px;} .address-num{min-width:173px;} .address-phon{min-width:149px;}
 }
 @media all and (min-width:1281px) and (max-width:1500px){
 	.terms-modal{width:calc(100% + 16px);}
@@ -387,6 +393,7 @@ textarea{box-sizing:border-box;}
 	.footer .terms a:nth-of-type(1){border-left:0px solid #fff;}
 	.footer .address span:nth-of-type(1){border-left:0px solid #fff;}
 	.footer .address span{font-size: 16px;}	.footer .address span a{font-size: 16px;}
+	.terms-service{min-width:102px;} .information-policy{min-width:195px;} .standard-terms{min-width:166px;} .rejection-email{min-width:122px;} .recruit{min-width:61px;} .address-add{min-width:280px;} .address-ceo{min-width:109px;} .address-num{min-width:173px;} .address-phon{min-width:149px;}
 }
 @media all and (min-width:1501px){
 	.terms-modal{width:calc(100% + 16px);}
@@ -406,4 +413,5 @@ textarea{box-sizing:border-box;}
 	.footer .terms a:nth-of-type(1){border-left:0px solid #fff;}
 	.footer .address span:nth-of-type(1){border-left:0px solid #fff;}
 	.footer .address span{font-size: 16px;}	.footer .address span a{font-size: 16px;}
+	.terms-service{min-width:102px;} .information-policy{min-width:195px;} .standard-terms{min-width:166px;} .rejection-email{min-width:122px;} .recruit{min-width:61px;} .address-add{min-width:280px;} .address-ceo{min-width:109px;} .address-num{min-width:173px;} .address-phon{min-width:149px;}
 }
