@@ -1,7 +1,7 @@
 .slide-wrap{width:100%;background:#333;border:0px solid #000;position:relative;margin:50px auto 0;}
 .slide-wrap .slide-container{width:100%;overflow:visible;display:block;}
 .slide-wrap .slide-container .slide{width:100%;position:absolute;z-index:1;top:0;display:block;box-sizing:border-box;margin:0;padding:0;text-align:center;}
-.slide-wrap .slide-container .slide img{width:100%;display:inline-block;position:relative;float:none;}
+.slide-wrap .slide-container .slide img{width:100%;display:block;position:relative;float:none;}
 
 .slide-wrap .slide-container .slide .movei-btn{display:block;position:absolute;box-sizing:border-box;border:0px solid #666;border-radius:50%;top:50%;left:50%;text-align:center;text-decoration:none;color:#fff;z-index:9;}
 
