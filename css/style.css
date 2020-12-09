@@ -137,7 +137,8 @@ textarea{box-sizing:border-box;}
 .section .article .contents.right-pop{right:-100%;}
 
 .section .article .contents .card-wrap{height:100%;}
-.section .article .contents .card{word-break:keep-all;margin-top:30px;color:#24242d;border-bottom:0px solid #ccc;float:left;}
+.section .article .contents .card{word-break:keep-all;margin-top:0px;color:#24242d;border-bottom:0px solid #ccc;float:left;}
+.section .article .contents .card:nth-of-type(1){margin-top:20px;}
 .section .article .contents .card:before{content:'';position:absolute;box-sizing:border-box;width:5px;height:30vh;top:50%;left:0;margin-top:-15vh;border-left:5px solid #ededed;border-radius:5px;}
 .section .article .contents .card:nth-of-type(1):before,.section .article .contents .card:nth-of-type(3):before{display:none;}
 .section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{content:'';position:absolute;box-sizing:border-box;width:30vh;height:5px;bottom:0;left:50%;margin-left:-15vh;border-bottom:5px solid #ededed;border-radius:5px;}
@@ -172,16 +173,16 @@ textarea{box-sizing:border-box;}
 .section .article .contents .greeting .word{font-weight:500;color:#666;word-break:keep-all;text-align:center;}
 .section .article .contents .container{position:absolute;width:100%;min-height:calc(50vh - 140px);background:rgba(0,0,0,0);bottom:0;}
 
-.section .article_1{min-height:calc(100vh - 100px);background:#fff;}
+.section .article_0{min-height:calc(100vh - 100px);background:#fff;}
 
-.section .article_2 .contents{padding-bottom:50px;}
+.section .article_1 .contents{padding-bottom:50px;}
 
-.section .article_4{min-height:calc(100vh - 100vh);}
-.section .article_4 .contents{padding:0px 0;}
-.section .article_4 .word{line-height:22px;}
+.section .article_3{min-height:calc(100vh - 100vh);}
+.section .article_3 .contents{padding:0px 0;}
+.section .article_3 .word{line-height:22px;}
 
-.section .article_5{min-height:0}
-.section .article_5 .contents{min-height:0;}
+/* .section .article_4{min-height:0}
+.section .article_4 .contents{min-height:0;} */
 
 .section .top_btn{display:block; position:fixed; background:rgba(100,100,100,0.8); right:30px; bottom:50px; color:#fff; border-radius:50%; text-align:center; text-decoration: none; opacity:0; z-index:-5; transition:all 0.3s;}
 .section .top_btn.on{ opacity:1; z-index:4;}
@@ -193,12 +194,15 @@ textarea{box-sizing:border-box;}
 
 /* .footer .terms a:before{content:' | ';display:block;margin-right:9px;float:left;} */
 .footer .terms a:hover{text-decoration:underline;}
-.footer .address{padding:0px 30px 30px;word-break:keep-all;}
+.footer .address{padding:0px 30px 20px;word-break:keep-all;}
 .footer .address:after{display:block;content:'';width:100%;height:0;clear:both;}
 .footer .address span{display:block;box-sizing:border-box;width:fit-content;border-left:2px solid #fff;margin-right:10px;float:left;padding-left:10px;color:#fff;float:left;}
 /* .footer .address span:before{content:' | ';display:block;margin-right:9px;float:left;} */
 .footer .address span a{cursor:pointer;}
 .footer .address span a:hover{text-decoration:underline;}
+
+.footer .copyright{display:none;padding:0px 30px 30px;word-break:keep-all;}
+.footer .copyright span{display:block;box-sizing:border-box;width:fit-content;border-left:0px solid #fff;margin-right:10px;float:left;padding-left:10px;color:#fff;float:left;}
 
 .terms-modal{position:relative;min-height:100vh;background:#fff;margin:0px auto;cursor:default;overflow:hidden;overflow-y:scroll;z-index:20;}
 .terms-modal .detailed{width:92%;margin:60px auto;}
@@ -271,7 +275,7 @@ textarea{box-sizing:border-box;}
 	.header .nav .gnb-wrap{display:none;}
 	.header .menu_btn{display:block;}
 	.language{display:none;}
-	.section .article_3 .contents .card{width:100%;min-height:21.5vh;}
+	.section .article_2 .contents .card{width:100%;min-height:21.5vh;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
@@ -288,7 +292,7 @@ textarea{box-sizing:border-box;}
 	.header .nav .gnb-wrap{display:none;}
 	.header .menu_btn{display:block;}
 	.language{display:none;}
-	.section .article_3 .contents .card{width:100%;min-height:21.5vh;}
+	.section .article_2 .contents .card{width:100%;min-height:21.5vh;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
@@ -305,7 +309,7 @@ textarea{box-sizing:border-box;}
 	.header .nav .gnb-wrap{display:none;}
 	.header .menu_btn{display:block;}
 	.language{display:none;}
-	.section .article_3 .contents .card{width:100%;min-height:21.5vh;padding:20px 0;}
+	.section .article_2 .contents .card{width:100%;min-height:21.5vh;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
@@ -322,7 +326,7 @@ textarea{box-sizing:border-box;}
 	.header .nav .gnb-wrap{display:none;}
 	.header .menu_btn{display:block;}
 	.language{display:none;}
-	.section .article_3 .contents .card{width:100%;min-height:21.5vh;padding:20px 0;}
+	.section .article_2 .contents .card{width:100%;min-height:21.5vh;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
@@ -342,7 +346,7 @@ textarea{box-sizing:border-box;}
 	.header .menu_btn{display:block;}
 	.language{display:none;}
 	.mobile-menu{max-width:480px;}
-	.section .article_3 .contents .card{width:100%;min-height:21.5vh;padding:20px 0;}
+	.section .article_2 .contents .card{width:100%;min-height:21.5vh;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
@@ -362,7 +366,7 @@ textarea{box-sizing:border-box;}
 	.header .menu_btn{display:none;}
 	.language{display:block;}
 	.mobile-menu{max-width:720px;}
-	.section .article_3 .contents .card{width:100%;padding:50px 0;}
+	.section .article_2 .contents .card{width:100%;padding:50px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
@@ -382,7 +386,7 @@ textarea{box-sizing:border-box;}
 	.header .menu_btn{display:none;}
 	.language{display:block;}
 	.mobile-menu{max-width:720px;}
-	.section .article_3 .contents .card{width:100%;padding:50px 0;}
+	.section .article_2 .contents .card{width:100%;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
@@ -402,11 +406,11 @@ textarea{box-sizing:border-box;}
 	.header .menu_btn{display:none;}
 	.language{display:block;}
 	.mobile-menu{max-width:720px;}
-	.section .article_3 .contents .card{width:100%;padding:50px 0;}
+	.section .article_2 .contents .card{width:100%;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
-	.section .article .contents .card p{line-height:16px;font-size:15px;}
+	.section .article .contents .card p{line-height:18px;font-size:17px;}
 	.section .article .contents .greeting .word{font-size:18px;}
 	.section .top_btn{ width:72px; height:72px; line-height:72px; font-size:20px;}
 	.footer .terms a{font-size: 16px;}

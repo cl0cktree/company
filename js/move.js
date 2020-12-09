@@ -30,7 +30,7 @@ $(function(){
 		};
 		$('body, html').stop().animate({ scrollTop: $('body').offset().top-100},0);
 		$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
-		$('.gnb-wrap, .gnb-modile').find('.gnb-1').children('a').addClass('on');
+		// $('.gnb-wrap, .gnb-modile').find('.gnb-1').children('a').addClass('on');
 		nav_down();
 	});
 	//----------------------------------
