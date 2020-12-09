@@ -220,6 +220,10 @@ $(function(){
 		$('body, html').stop().animate({ scrollTop: $('.article_'+art_index).offset().top-topminus },300);
 	});
 	//----------------------------------
+	//-----외부컨탠츠 가져오기------------
+		var bell_sum = 'https://www.thebell.co.kr/free/content/article.asp?svccode=04 .listBox'
+		$('.thebell').load(bell_sum);
+	//-----------------------------------
 	//-----footer 클릭시 각 동작 모음----
 	$name_footer.find('.terms').on('click','a',function(){
 		var datasum;
