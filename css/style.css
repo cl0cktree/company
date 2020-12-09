@@ -181,8 +181,8 @@ textarea{box-sizing:border-box;}
 
 .section .article_1 .contents{padding-bottom:50px;}
 
-.section .article_3{min-height:calc(100vh - 100vh);}
-.section .article_3 .contents{padding:0px 0;}
+.section .article_3{min-height:100%;}
+.section .article_3 .contents{padding:0px 0;min-height:100%;}
 .section .article_3 .word{line-height:22px;}
 
 /* .section .article_4{min-height:0}
