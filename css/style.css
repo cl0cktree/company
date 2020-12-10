@@ -319,7 +319,7 @@ textarea{box-sizing:border-box;}
 	.header .nav .gnb-wrap{display:none;}
 	.header .menu_btn{display:block;}
 	.language{display:none;}
-	.section .article_1 .contents .word>div{line-height:18px;font-size:16px;}
+	.section .article_1 .contents .word>div{line-height:20px;font-size:16px;}
 	.section .article_2 .contents .card{width:100%;min-height:21.5vh;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
@@ -338,7 +338,7 @@ textarea{box-sizing:border-box;}
 	.header .nav .gnb-wrap{display:none;}
 	.header .menu_btn{display:block;}
 	.language{display:none;}
-	.section .article_1 .contents .word>div{line-height:18px;font-size:16px;}
+	.section .article_1 .contents .word>div{line-height:20px;font-size:16px;}
 	.section .article_2 .contents .card{width:100%;min-height:21.5vh;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
@@ -360,7 +360,7 @@ textarea{box-sizing:border-box;}
 	.header .menu_btn{display:block;}
 	.language{display:none;}
 	.mobile-menu{max-width:480px;}
-	.section .article_1 .contents .word>div{line-height:18px;font-size:16px;}
+	.section .article_1 .contents .word>div{line-height:20px;font-size:16px;}
 	.section .article_2 .contents .card{width:100%;min-height:21.5vh;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
@@ -382,7 +382,7 @@ textarea{box-sizing:border-box;}
 	.header .menu_btn{display:none;}
 	.language{display:block;}
 	.mobile-menu{max-width:720px;}
-	.section .article_1 .contents .word>div{line-height:20px;font-size:17px;}
+	.section .article_1 .contents .word>div{line-height:23px;font-size:17px;}
 	.section .article_2 .contents .card{width:100%;padding:50px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
@@ -404,7 +404,7 @@ textarea{box-sizing:border-box;}
 	.header .menu_btn{display:none;}
 	.language{display:block;}
 	.mobile-menu{max-width:720px;}
-	.section .article_1 .contents .word>div{line-height:22px;font-size:17px;}
+	.section .article_1 .contents .word>div{line-height:23px;font-size:17px;}
 	.section .article_2 .contents .card{width:100%;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
@@ -426,7 +426,7 @@ textarea{box-sizing:border-box;}
 	.header .menu_btn{display:none;}
 	.language{display:block;}
 	.mobile-menu{max-width:720px;}
-	.section .article_1 .contents .word>div{line-height:22px;font-size:18px;}
+	.section .article_1 .contents .word>div{line-height:24px;font-size:18px;}
 	.section .article_2 .contents .card{width:100%;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
