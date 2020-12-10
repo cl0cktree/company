@@ -180,6 +180,10 @@ textarea{box-sizing:border-box;}
 .section .article_0{min-height:calc(100vh - 100px);background:#fff;}
 
 .section .article_1 .contents{padding-bottom:50px;}
+.section .article_1 .contents .word{width:100%;max-width:1920px;min-height:300px;margin:0 auto;padding:50px 30px 0px;word-break:keep-all;}
+.section .article_1 .contents .word h4{width:132px;height:33px;line-height:33px;font-size:25px;font-weight:500;margin-left:30px;}
+.section .article_1 .contents .word h4:before{content:'';display:block;position:absolute;width:20px;height:20px;background:#60b25b;top:6px;left:-30px;}
+.section .article_1 .contents .word>div{margin-top:20px;}
 
 .section .article_3{min-height:100%;}
 .section .article_3 .contents{padding:0px 0;min-height:100%;}
@@ -315,6 +319,7 @@ textarea{box-sizing:border-box;}
 	.header .nav .gnb-wrap{display:none;}
 	.header .menu_btn{display:block;}
 	.language{display:none;}
+	.section .article_1 .contents .word>div{line-height:18px;font-size:16px;}
 	.section .article_2 .contents .card{width:100%;min-height:21.5vh;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
@@ -333,6 +338,7 @@ textarea{box-sizing:border-box;}
 	.header .nav .gnb-wrap{display:none;}
 	.header .menu_btn{display:block;}
 	.language{display:none;}
+	.section .article_1 .contents .word>div{line-height:18px;font-size:16px;}
 	.section .article_2 .contents .card{width:100%;min-height:21.5vh;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
@@ -354,6 +360,7 @@ textarea{box-sizing:border-box;}
 	.header .menu_btn{display:block;}
 	.language{display:none;}
 	.mobile-menu{max-width:480px;}
+	.section .article_1 .contents .word>div{line-height:18px;font-size:16px;}
 	.section .article_2 .contents .card{width:100%;min-height:21.5vh;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
@@ -375,6 +382,7 @@ textarea{box-sizing:border-box;}
 	.header .menu_btn{display:none;}
 	.language{display:block;}
 	.mobile-menu{max-width:720px;}
+	.section .article_1 .contents .word>div{line-height:20px;font-size:17px;}
 	.section .article_2 .contents .card{width:100%;padding:50px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
@@ -396,11 +404,12 @@ textarea{box-sizing:border-box;}
 	.header .menu_btn{display:none;}
 	.language{display:block;}
 	.mobile-menu{max-width:720px;}
+	.section .article_1 .contents .word>div{line-height:22px;font-size:17px;}
 	.section .article_2 .contents .card{width:100%;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
-	.section .article .contents .card p{line-height:16px;font-size:15px;}
+	.section .article .contents .card p{line-height:20px;font-size:17px;}
 	.section .article .contents .greeting .word{font-size:18px;}
 	.section .article .contents .with .company-wrap>div{width:25%;}
 	.section .top_btn{ width:72px; height:72px; line-height:72px; font-size:20px;}
@@ -417,11 +426,12 @@ textarea{box-sizing:border-box;}
 	.header .menu_btn{display:none;}
 	.language{display:block;}
 	.mobile-menu{max-width:720px;}
+	.section .article_1 .contents .word>div{line-height:22px;font-size:18px;}
 	.section .article_2 .contents .card{width:100%;padding:20px 0;}
 	.section .article .contents .card:before{display:none;}
 	.section .article .contents .graph{width:100%;min-height:43vh;}
 	.section .article .contents .card:nth-of-type(1):after,.section .article .contents .card:nth-of-type(2):after{display:none;}
-	.section .article .contents .card p{line-height:18px;font-size:17px;}
+	.section .article .contents .card p{line-height:20px;font-size:18px;}
 	.section .article .contents .greeting .word{font-size:18px;}
 	.section .article .contents .with .company-wrap>div{width:25%;}
 	.section .top_btn{ width:72px; height:72px; line-height:72px; font-size:20px;}
