@@ -485,8 +485,8 @@ $(function(){
 
 			$('.movei-btn').on('click touchstart',function(){
 				click_move();
+				// console.log($('body').find('.video_play').length);
 			});
-
 
 			function lazy_0(){
 				if($('.slide-wrap').height()==0){
@@ -595,7 +595,7 @@ $(function(){
 				$.getJSON(jsonLocation, function(data){
 					$.each(data, function(I, item){
 						if (movei_index == item.index){
-							$('.background-filter').append('<div class="video_play"><h1>'+item.alt_text+slideNum+'</h1><a href="javascript:;" class="close-btn"><img src="./images/closebtn.png" alt="동영상 닫기"></a><video play controls poster="'+item.img_url+'" preload="auto" alt="'+item.alt_text+slideNum+'" src="'+item.video_url+'"><track label="Korea" kind="subtitles" srclang="ko" src="./captions/vtt/movei_1-kr.vtt" default>'+item.alt_text+slideNum+'</video></div>');
+							$('.background-filter').append('<div class="video_play"><h1>'+item.alt_text+slideNum+'</h1><a href="javascript:;" class="close-btn"><img src="./images/closebtn.png" alt="동영상 닫기"></a><video play controls poster="'+item.img_url+'" preload="auto" alt="'+item.alt_text+slideNum+'" src="'+item.video_url+'" type="video/mp4"><source src="'+item.video_url+'" type="video/mp4"><track label="Korea" kind="subtitles" srclang="ko" src="./captions/vtt/movei_1-kr.vtt" default>'+item.alt_text+slideNum+'</video></div>');
 						}
 					});
 				});
