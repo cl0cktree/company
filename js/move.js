@@ -69,7 +69,7 @@ $(function(){
 			scroll_delay_time_1 = setTimeout(function(){
 				scroll_delay_time_1=null;
 				if ($(window).scrollTop()>0){
-					$('.header').css({'background':'rgba(255,255,255,0.7)'});
+					// $('.header').css({'background':'rgba(255,255,255,0.7)'});
 					$('.gnb-wrap').stop().css({'height':'100px','line-height':'100px'},200);
 					$('.language').stop().css({'top':'30px'},220);
 					if ($name_header.width()>1063){
