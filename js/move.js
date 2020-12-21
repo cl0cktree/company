@@ -199,7 +199,7 @@ $(function(){
 	});
 	//----------------------------------
 	//-----외부컨탠츠 가져오기------------
-		var bell_sum = 'http://webmail.fixability.co.kr/admin/mail_adminBoardList.php?bbsType=B&bbsManageIdx=14 #contents'
+		var bell_sum = 'http://fixshowping.cafe24.com/board/%EB%B6%80%EB%8F%99%EC%82%B0%EC%A0%95%EB%B3%B4/1 #contents'
 		$('.board_ceo').load(bell_sum);
 	//-----------------------------------
 	//-----footer 클릭시 각 동작 모음----
