@@ -189,9 +189,13 @@ textarea{box-sizing:border-box;}
 .section .article .contents .card_3 p{background:url('../images/app.png') no-repeat;background-size:160px;background-position:center;}
 .section .article .contents .card_4 p{background:url('../images/office.png') no-repeat;background-size:326px;background-position:center;}
 */
-
+/* 
 .section .article .contents .greeting{height:100%;margin-top:30px;padding:40px 5%;}
-.section .article .contents .greeting .word{font-weight:500;color:#666;word-break:keep-all;text-align:center;}
+.section .article .contents .greeting .word{font-weight:500;color:#666;word-break:keep-all;text-align:center;} */
+
+.section .article .contents .greeting .qna-board{width:100%;max-width:1280px; min-height:200px;margin:60px auto 0;overflow:hidden;}
+.section .article .contents .greeting .qna-board iframe{overflow:hidden;}
+
 .section .article .contents .container{position:absolute;width:100%;min-height:calc(50vh - 140px);background:rgba(0,0,0,0);bottom:0;}
 
 .section .article_0{min-height:calc(100vh - 100px);background:#fff;}
