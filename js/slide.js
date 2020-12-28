@@ -19,7 +19,7 @@ $(function(){
 		$.getJSON(jsonLocation, function(data){
 			$.each(data, function(I, item){
 				slideNum++;
-				$('.slide-container').append('<div class="slide slide'+slideNum+'" data-index="'+slideNum+'"><img src='+item.img_url+' alt="'+item.alt_text+slideNum+'"><a href="javascript:;" class="movei-btn"></a></div>');
+				$('.slide-container').append('<div class="slide slide'+slideNum+'" data-index="'+slideNum+'"><img src='+item.img_url+' alt="'+item.alt_text+slideNum+'"><a href="javascript:;" class="movei-btn">동영상팝업</a></div>');
 				$('.indicator').append('<li class="bulet bulet'+slideNum+'" data-index="'+slideNum+'">●</li>');
 				// $('.thumnail-box').append('<li class="thumnail thumnail'+slideNum+'" data-index="'+slideNum+'"><img src='+item.img_url+' alt="미리보기'+slideNum+'" style="width:100%;"></li>');
 				$('.bulet').css({'color':'#ccc'});
