@@ -86,6 +86,7 @@ $(function(){
 						if ($(window).scrollTop()>=$(this).offset().top-170){
 							var scm = $(this).attr('data-index');
 							var $container_this;
+							var $graph_this;
 							function contents_draw(){
 								if ($container_this.parent('.article').find('.top-pop')){
 									$container_this.parent('.article').find('.top-pop').stop().animate({'top':'0','opacity':'1'},draw_speed);
@@ -103,10 +104,15 @@ $(function(){
 								$(this).find('.contents').children('h3').stop().animate({'top':'0','opacity':'1'},300,function(){
 									$container_this = $(this);
 									// console.log($container_this);
-									// $container_this.siblings('.card-wrap').find('.sevice_title').css({'box-shadow':'3px 3px 5px 0px rgba(0,0,0,0.4)'});
+									$container_this.siblings('.vision, .mission').css({'margin-left':'auto','margin-right':'auto','opacity':'1'});
 								});
 							}
-
+							if($(window).scrollTop()>=$('.graph-1').offset().top-100){
+								$('.graph-1').find('.graph-img').css({'opacity':'1'});
+							};
+							if ($(window).scrollTop()>=$('.graph-2').offset().top-100){
+								$('.graph-2').find('.graph-img').css({'opacity':'1'});
+							};
 						}
 					});
 				}else{
