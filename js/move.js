@@ -76,7 +76,7 @@ $(function(){
 						$('.nav').stop().css({'height':'100px','line-height':'100px'},200);
 					}
 					$('.top_btn').addClass('on');
-					if ((height_over>$name_section.height())&&(scroll_bottom<$name_footer.height())){
+					if ((height_over>$name_section.height()+$name_footer.height()-50)&&(scroll_bottom<$name_footer.height())){
 						$('.top_btn').css({'bottom':footer_height});
 					}else{
 						$('.top_btn').css({'bottom':'50px'});
@@ -105,6 +105,21 @@ $(function(){
 									$container_this = $(this);
 									// console.log($container_this);
 									$container_this.siblings('.vision, .mission').css({'margin-left':'auto','margin-right':'auto','opacity':'1'});
+									$container_this.parent().find('.board_ceo').stop().animate({'opacity':'1'},300);
+									$container_this.parent().find('.qna-board').stop().animate({'opacity':'1'},300);
+									$container_this.parent().find('.card').css({'margin-left':'0','opacity':'1'},function(){
+										// $container_this.parent().find('.card_2').css({'margin-left':'0','opacity':'1'},function(){
+										// 	$container_this.parent().find('.card_3').css({'margin-left':'0','opacity':'1'},function(){
+										// 		$container_this.parent().find('.card_4').css({'margin-left':'0','opacity':'1'},function(){
+										// 			$container_this.parent().find('.card_5').css({'margin-left':'0','opacity':'1'},function(){
+										// 				$container_this.parent().find('.card_6').css({'margin-left':'0','opacity':'1'});
+										// 				console.log($container_this);
+										// 			});
+										// 		});
+										// 	});
+										// });
+									});
+									
 								});
 							}
 							if($(window).scrollTop()>=$('.graph-1').offset().top-100){
