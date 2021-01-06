@@ -37,9 +37,6 @@ mail($to,'=?UTF-8?B?'.base64_encode($email_subject).'?=',$email_body, $headers);
     echo "         <script>
          window.alert('메일이 정상적으로 발송되었습니다.');
          history.go(-1);
-         document.getElementById('email').value='';
-         document.getElementById('name').value='';
-         document.getElementById('message').value='';
          </script>";
 
 ?>

@@ -100,6 +100,7 @@ $(function(){
 							};
 							$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 							$('.gnb-wrap, .gnb-modile').find('.gnb-'+scm).children('a').addClass('on');
+							console.log(scm);
 							if ($(this).find('.contents')){
 								$(this).find('.contents').children('h3').stop().animate({'top':'0','opacity':'1'},300,function(){
 									$container_this = $(this);
@@ -108,18 +109,7 @@ $(function(){
 									$container_this.parent().find('.board_ceo').stop().animate({'opacity':'1'},300);
 									$container_this.parent().find('.qna-board').stop().animate({'opacity':'1'},300);
 									$container_this.parent().find('.card').css({'margin-left':'0','opacity':'1'},function(){
-										// $container_this.parent().find('.card_2').css({'margin-left':'0','opacity':'1'},function(){
-										// 	$container_this.parent().find('.card_3').css({'margin-left':'0','opacity':'1'},function(){
-										// 		$container_this.parent().find('.card_4').css({'margin-left':'0','opacity':'1'},function(){
-										// 			$container_this.parent().find('.card_5').css({'margin-left':'0','opacity':'1'},function(){
-										// 				$container_this.parent().find('.card_6').css({'margin-left':'0','opacity':'1'});
-										// 				console.log($container_this);
-										// 			});
-										// 		});
-										// 	});
-										// });
 									});
-									
 								});
 							}
 							if($(window).scrollTop()>=$('.graph-1').offset().top-100){
