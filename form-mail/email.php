@@ -42,7 +42,7 @@
             </td>
           </tr>
           <tr>
-            <td colspan="2" style="height:50px;">(답변이 필요 하신 분은 꼭 연락처를 남겨주세요.)</td>
+            <td colspan="2" class="ps_1">(답변이 필요 하신 분은 꼭 연락처를 남겨주세요.)</td>
           </tr>
           <tr>
              <td colspan="2" style="padding-top:20px;">

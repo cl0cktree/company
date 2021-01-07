@@ -219,9 +219,9 @@ textarea{box-sizing:border-box;}
 .section .article_4{min-height:100%;}
 .section .article_4 .contents{min-height:100%;}
 
-.section .email_send{display:block;min-height: 600px;}
+.section .email_send{display:block;min-height: calc(100vh - 300px);}
 .section .email_send:after{content:"";display:block;width:100%;height:0;clear:both;}
-.section .email_send iframe{width: 100%; min-height: 600px; height: 100%; border: none; padding:0; margin:0; box-sizing: border-box;float: left;}
+.section .email_send iframe{width: 100%; min-height: calc(100vh - 300px); height: 100%; border: none; padding:0; margin:0; box-sizing: border-box;float: left;}
 
 .section .top_btn{display:block; position:fixed; background:rgba(100,100,100,0.8); right:30px; bottom:50px; color:#fff; border-radius:50%; text-align:center; text-decoration: none; opacity:0; z-index:-5; transition:all 0.3s;}
 .section .top_btn.on{ opacity:1; z-index:4;}
