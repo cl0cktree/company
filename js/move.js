@@ -100,7 +100,7 @@ $(function(){
 							};
 							$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 							$('.gnb-wrap, .gnb-modile').find('.gnb-'+scm).children('a').addClass('on');
-							console.log(scm);
+							// console.log(scm);
 							if ($(this).find('.contents')){
 								$(this).find('.contents').children('h3').stop().animate({'top':'0','opacity':'1'},300,function(){
 									$container_this = $(this);
