@@ -587,6 +587,7 @@ $(function(){
 			function click_move(){
 				var load_video;
 				var movei_index;
+				var time_left;
 				$('.background-filter').stop().fadeIn('300').addClass('on');
 				if(sort_index==1){
 					movei_index = '1';
@@ -600,8 +601,8 @@ $(function(){
 							
 							$('.video_play').find('video').on('loadedmetadata',function(){
 								videoTime = parseInt($('.video_play').find('video').get(0).duration);
-								m = Math.floor(videoTime / 60) + ":" + (videoTime % 60);  // 남은 시간 계산
-								console.log(m);
+								time_left = Math.floor(videoTime / 60) + ":" + (videoTime % 60);  // 남은 시간 계산
+								console.log(time_left);
 							});
 							
 							$('.video_play').find('video').on('timeupdate', function() {
