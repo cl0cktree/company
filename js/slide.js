@@ -602,7 +602,7 @@ $(function(){
 							$('.video_play').find('video').on('loadedmetadata',function(){
 								videoTime = parseInt($('.video_play').find('video').get(0).duration);
 								time_left = Math.floor(videoTime / 60) + ":" + (videoTime % 60);  // 남은 시간 계산
-								console.log(time_left);
+								// console.log(time_left);
 							});
 							
 							$('.video_play').find('video').on('timeupdate', function() {
