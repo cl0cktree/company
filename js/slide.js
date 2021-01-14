@@ -612,7 +612,7 @@ $(function(){
 								var subLocation = './data/subscript_data.json';
 								$.getJSON(subLocation, function(data){
 									$.each(data, function(I, item){
-										if(item.index=='1'){
+										if(item.index==movei_index){
 											if ((currentPos>0)&&(currentPos<7.5)){
 												$('.sub_scr').html(item.line_1);
 											}else if ((currentPos>7.6)&&(currentPos<37.5)){
@@ -628,7 +628,7 @@ $(function(){
 											}else if (currentPos>237.6){
 												$('.sub_scr').html(item.line_1);
 											}
-											console.log(currentPos);
+											// console.log(currentPos);
 										};
 									});
 								});
