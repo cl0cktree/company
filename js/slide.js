@@ -600,7 +600,7 @@ $(function(){
 							$('.background-filter').append('<div class="video_play"><h1>'+item.alt_text+slideNum+'</h1><a href="javascript:;" class="close-btn"><img src="./images/closebtn.png" alt="동영상 닫기"></a><video play controls poster="'+item.img_url+'" preload="metadata" alt="'+item.alt_text+slideNum+'" src="'+item.video_url+'" preload="auto" type="video/mp4"><source src="'+item.video_url+'" type="video/mp4">'+item.alt_text+slideNum+'</video></div>');
 							$('.video_play').append('<div class="video_player"></div>');
 							
-							$('.video_player').append('<div class="sub_scr" style="min-height:40px;line-height:40px;background:rgba(255,255,255,1);color:#000;text-align:center;"></div>');
+							// $('.video_player').append('<div class="sub_scr" style="min-height:40px;line-height:40px;background:rgba(255,255,255,1);color:#000;text-align:center;"></div>');
 							// $('.video_player').append('<div class="play_controll" style="height:60px;background:rgba(255,255,255,1);color:#000;"></div>');
 							// $('.play_controll').append('<span class="play_puase" style=""></span>');
 							// $('.video_player').append('<div class="play_bar_wrap" style="height:60px;background:rgba(255,255,255,1);color:#000;"><div class="play_bar_back" style="width:96%;height:10px;background:rgba(255,255,255,0.7);margin:0 auto;"><span class="play_bar" style="display:block;width:0;height:10px;background:rgba(100,150,150,0.8);cursor:pointer;"></span></div></div>');
