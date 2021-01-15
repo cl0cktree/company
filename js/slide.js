@@ -597,13 +597,13 @@ $(function(){
 					$.each(data, function(I, item){
 						if (movei_index == item.index){
 							/*---생성---*/
-							$('.background-filter').append('<div class="video_play"><h1>'+item.alt_text+slideNum+'</h1><a href="javascript:;" class="close-btn"><img src="./images/closebtn.png" alt="동영상 닫기"></a><video play controls poster="'+item.img_url+'" preload="metadata" alt="'+item.alt_text+slideNum+'" src="'+item.video_url+'" preload="auto" type="video/mp4"><source src="'+item.video_url+'" type="video/mp4"><track label="Korea" kind="subtitles" srclang="ko" src="./captions/vtt/movei_1-kr.vtt" default>'+item.alt_text+slideNum+'</video></div>');
+							$('.background-filter').append('<div class="video_play"><h1>'+item.alt_text+slideNum+'</h1><a href="javascript:;" class="close-btn"><img src="./images/closebtn.png" alt="동영상 닫기"></a><video play controls poster="'+item.img_url+'" preload="metadata" alt="'+item.alt_text+slideNum+'" src="'+item.video_url+'" preload="auto" type="video/mp4"><source src="'+item.video_url+'" type="video/mp4">'+item.alt_text+slideNum+'</video></div>');
 							$('.video_play').append('<div class="video_player"></div>');
 							
-							$('.video_player').append('<div class="sub_scr" style="height:40px;line-height:40px;background:rgba(0,0,0,0.6);color:#fff;text-align:center;"></div>');
-							$('.video_player').append('<div class="play_controll" style="height:60px;background:rgba(0,0,0,0.6);color:#fff;"></div>');
-							$('.play_controll').append('<span class="play_puase" style=""></span>');
-							$('.video_player').append('<div class="play_bar_wrap" style="height:60px;background:rgba(0,0,0,0.6);color:#fff;"><div class="play_bar_back" style="width:96%;height:10px;background:rgba(255,255,255,0.7);margin:0 auto;"><span class="play_bar" style="display:block;width:0;height:10px;background:rgba(100,150,150,0.8);cursor:pointer;"></span></div></div>');
+							$('.video_player').append('<div class="sub_scr" style="min-height:40px;line-height:40px;background:rgba(255,255,255,1);color:#000;text-align:center;"></div>');
+							// $('.video_player').append('<div class="play_controll" style="height:60px;background:rgba(255,255,255,1);color:#000;"></div>');
+							// $('.play_controll').append('<span class="play_puase" style=""></span>');
+							// $('.video_player').append('<div class="play_bar_wrap" style="height:60px;background:rgba(255,255,255,1);color:#000;"><div class="play_bar_back" style="width:96%;height:10px;background:rgba(255,255,255,0.7);margin:0 auto;"><span class="play_bar" style="display:block;width:0;height:10px;background:rgba(100,150,150,0.8);cursor:pointer;"></span></div></div>');
 
 							$('.video_play').find('video').on('loadedmetadata',function(){
 								videoTime = parseInt($('.video_play').find('video').get(0).duration);
@@ -619,6 +619,7 @@ $(function(){
 								var percentage = 100 * currentPos / maxduration; //in %
 								var subLocation = './data/subscript_data.json';
 								var back_width = $('.video_player').find('.play_bar_back').width();
+								// var video_obj = document.getElementsByClassName('video_play').find('video');
 								
 								$('.video_player').find('.play_bar_back').on('mousedown mouseup click',function(event){
 									var bar_x;
@@ -629,16 +630,18 @@ $(function(){
 									if (event.type=='mousedown'){
 										bar_x=event.pageX;
 										bar_per_start=Math.floor((bar_x/back_width)*100)-10;
-										console.log(bar_per_start);
+										// video_obj.controls.currentPosition=bar_x;
+										// console.log(bar_per_start);
 										// $('.video_player').find('.play_bar').css({'width':bar_per_start+'%'});
 									}else if(event.type=='mouseup'){
 										bar_x=event.pageX;
 										bar_per_end=Math.floor((bar_x/back_width)*100)-10;
-										console.log(bar_per_end);
+										// video_obj.controls.currentPosition=bar_x;
+										// console.log(bar_per_end);
 										// $('.video_player').find('.play_bar').css({'width':bar_per_end+'%'});
 									}
 								});
-								$('.video_player').find('.play_bar').css({'width':percentage+'%'});
+								// $('.video_player').find('.play_bar').css({'width':percentage+'%'});
 								$.getJSON(subLocation, function(data){
 									$.each(data, function(I, item){
 										if(item.index==movei_index){
