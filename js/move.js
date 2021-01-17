@@ -11,9 +11,6 @@ $(function(){
 	var frame_year;
 	var $language = $('.language');
 	var $language_mobile = $('.language-mobile');
-	// var jsonCover_data=portfolioindex_url+'/data/cover_data.json';
-	// var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
-	// var jsonFrame_data=portfolioindex_url+'/data/frame_data.json';
 	var $name_header=$('.header');
 	var $name_section = $('.section');
 	var $name_footer = $('.footer');

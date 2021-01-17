@@ -588,6 +588,7 @@ $(function(){
 				var load_video;
 				var movei_index;
 				var time_left;
+				var play_info;
 				$('.background-filter').stop().fadeIn('300').addClass('on');
 				if(sort_index==1){
 					movei_index = '1';
@@ -597,13 +598,13 @@ $(function(){
 					$.each(data, function(I, item){
 						if (movei_index == item.index){
 							/*---생성---*/
-							$('.background-filter').append('<div class="video_play"><h1>'+item.alt_text+slideNum+'</h1><a href="javascript:;" class="close-btn"><img src="./images/closebtn.png" alt="동영상 닫기"></a><video play controls poster="'+item.img_url+'" preload="metadata" alt="'+item.alt_text+slideNum+'" src="'+item.video_url+'" preload="auto" type="video/mp4"><source src="'+item.video_url+'" type="video/mp4">'+item.alt_text+slideNum+'</video></div>');
+							$('.background-filter').append('<div class="video_play"><h1>'+item.alt_text+slideNum+'</h1><a href="javascript:;" class="close-btn"><img src="./images/closebtn.png" alt="동영상 닫기"></a><video id="video_move" play controls poster="'+item.img_url+'" preload="metadata" alt="'+item.alt_text+slideNum+'" src="'+item.video_url+'" preload="auto" type="video/mp4"><source src="'+item.video_url+'" type="video/mp4">'+item.alt_text+slideNum+'</video></div>');
 							$('.video_play').append('<div class="video_player"></div>');
 							
-							// $('.video_player').append('<div class="sub_scr" style="min-height:40px;line-height:40px;background:rgba(255,255,255,1);color:#000;text-align:center;"></div>');
-							// $('.video_player').append('<div class="play_controll" style="height:60px;background:rgba(255,255,255,1);color:#000;"></div>');
-							// $('.play_controll').append('<span class="play_puase" style=""></span>');
-							// $('.video_player').append('<div class="play_bar_wrap" style="height:60px;background:rgba(255,255,255,1);color:#000;"><div class="play_bar_back" style="width:96%;height:10px;background:rgba(255,255,255,0.7);margin:0 auto;"><span class="play_bar" style="display:block;width:0;height:10px;background:rgba(100,150,150,0.8);cursor:pointer;"></span></div></div>');
+							$('.video_player').append('<div class="sub_scr"></div>');
+							$('.video_player').append('<div class="play_controll"></div>');
+							$('.play_controll').append('<h2 class="play_puase"><input type="checkbox" name="playChck" id="playChck"><label for="playChck" tabindex="0"><span></span></label></h2><h2 class="play_stop"></h2>');
+							$('.video_player').append('<div class="play_bar_wrap"><div class="play_bar_back"><span class="play_bar"></span></div></div>');
 
 							$('.video_play').find('video').on('loadedmetadata',function(){
 								videoTime = parseInt($('.video_play').find('video').get(0).duration);
@@ -613,35 +614,54 @@ $(function(){
 							});
 							/*----------*/
 							/*---구동---*/
+							
+							$('.play_stop').on('click',function(){
+								$('.video_play').find('video').get(0).pause();
+								$('.video_play').find('video').get(0).currentTime=0;
+							});
 							$('.video_play').find('video').on('timeupdate', function() {
 								var currentPos = $('.video_play').find('video').get(0).currentTime; //Get currenttime
 								var maxduration = $('.video_play').find('video').get(0).duration; //Get video duration
 								var percentage = 100 * currentPos / maxduration; //in %
 								var subLocation = './data/subscript_data.json';
 								var back_width = $('.video_player').find('.play_bar_back').width();
-								// var video_obj = document.getElementsByClassName('video_play').find('video');
-								
+								var video_play = document.getElementsByClassName('video_play');
+								var video_obj;
+								var bar_per;
 								$('.video_player').find('.play_bar_back').on('mousedown mouseup click',function(event){
 									var bar_x;
-									var bar_per_start;
 									var bar_per_end;
+									video_obj = document.getElementById('video_move');
 									event.preventDefault();
 									event.stopPropagation();
 									if (event.type=='mousedown'){
 										bar_x=event.pageX;
 										bar_per_start=Math.floor((bar_x/back_width)*100)-10;
-										// video_obj.controls.currentPosition=bar_x;
-										// console.log(bar_per_start);
+										// bar_per_start = Math.floor((100 / video_obj.maxduration) * video_obj.currentPos)
+										console.log(bar_per_start);
+										$('.video_play').find('video').get(0).pause();
+										// currentPos = bar_x;
+										console.log(currentPos);
 										// $('.video_player').find('.play_bar').css({'width':bar_per_start+'%'});
 									}else if(event.type=='mouseup'){
 										bar_x=event.pageX;
 										bar_per_end=Math.floor((bar_x/back_width)*100)-10;
-										// video_obj.controls.currentPosition=bar_x;
-										// console.log(bar_per_end);
-										// $('.video_player').find('.play_bar').css({'width':bar_per_end+'%'});
+										var bar_con = Math.floor((bar_per_end*maxduration)/100);
+										var bar_dur = Math.floor((bar_con/100)*bar_per_end);
+										bar_per = Math.floor((bar_dur/maxduration)*100);
+										function video_play_bar(){
+											return video_obj;
+										};
+										console.log(bar_per_end);
+										video_play_bar().currentTime = bar_con;
+										// $('.video_play').find('video').get(0).pause();
+										currentPos = bar_x;
+										console.log(bar_con);
+										$('.video_player').find('.play_bar').css({'width':bar_per_end+'%'});
+										$('.video_play').find('video').get(0).play();
 									}
 								});
-								// $('.video_player').find('.play_bar').css({'width':percentage+'%'});
+								$('.video_player').find('.play_bar').css({'width':percentage+'%'});
 								$.getJSON(subLocation, function(data){
 									$.each(data, function(I, item){
 										if(item.index==movei_index){

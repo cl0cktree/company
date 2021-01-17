@@ -1,5 +1,13 @@
-.sub_scr{height:30px;line-height:30px;background:rgba(0,0,0,0.6);color:#fff;text-align:center;}
-
+.video_player .sub_scr{height:30px;line-height:30px;background:rgba(255,255,255,1);color:#000;text-align:center;}
+.video_player .play_controll{height:60px;background:rgba(255,255,255,1);color:#000;overflow:hidden;}
+.video_player .play_controll .play_puase{width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 150px;background-position: 0px 0px;margin-left:2%;overflow:hidden; float:left; z-index:50;}
+.video_player .play_controll .play_puase.on{background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 150px;background-position: 0px -50px;}
+.video_player .play_controll .play_puase span{display:block;position:absolute;background:transparent;left:-200%;}
+.video_player .play_controll .play_puase label{display:block;width:50px;height:50px;cursor:pointer;}
+.video_player .play_controll .play_stop{width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 150px;background-position: 0px -100px;margin-left:5px;overflow:hidden; float:left; cursor:pointer; z-index:50;}
+.video_player .play_bar_wrap{height:60px;background:rgba(255,255,255,1);color:#000;}
+.video_player .play_bar_wrap .play_bar_back{width:96%;height:10px;background:rgba(120,120,120,0.7);margin:0 auto;}
+.video_player .play_bar_wrap .play_bar_back span{display:block;width:0;height:10px;background:rgba(100,150,150,0.8);cursor:pointer;}
 @media all and (max-width:320px){
 }
 @media all and (min-width:321px) and (max-width:480px){
