@@ -603,7 +603,7 @@ $(function(){
 							
 							$('.video_player').append('<div class="sub_scr"></div>');
 							$('.video_player').append('<div class="play_controll"></div>');
-							$('.play_controll').append('<h2 class="play_puase"><input type="checkbox" name="playChck" id="playChck"><label for="playChck" tabindex="0"><span></span></label></h2><h2 class="play_stop"></h2>');
+							$('.play_controll').append('<h2 class="play_puase"><input type="checkbox" name="playChck" id="playChck"><label for="playChck" tabindex="0"><span></span></label></h2><h2 class="play_stop"></h2><a href="javascript:;" class="subscript_btn"></a>');
 							$('.video_player').append('<div class="play_bar_wrap"><div class="play_bar_back"><span class="play_bar"></span></div></div>');
 
 							$('.video_play').find('video').on('loadedmetadata',function(){

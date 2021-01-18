@@ -1,7 +1,7 @@
 {
 "manifest_version": 2,
 
-"name": "Welcome to Clocktree Portfolio Site",
+"name": "안녕하세요. Fixability 입니다.",
 
 "version": "1.0",
 
@@ -26,5 +26,8 @@
         "sizes": "128x128",
         "type": "image/webp"
     }
-]
+],
+"start_url": "/index.html",
+"display": "browser",
+"orientation": "landscape"
 }
