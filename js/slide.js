@@ -614,10 +614,21 @@ $(function(){
 							});
 							/*----------*/
 							/*---구동---*/
-							
+							$('.play_puase  input[type=checkbox]').on('click',function(){
+								if($('.play_puase input[type=checkbox]').prop('checked')==false){
+									$('.play_puase').removeClass('on');
+									$('.video_play').find('video').get(0).pause();
+								}else{
+									$('.play_puase').addClass('on');
+									$('.video_play').find('video').get(0).play();
+								}
+							});
 							$('.play_stop').on('click',function(){
 								$('.video_play').find('video').get(0).pause();
 								$('.video_play').find('video').get(0).currentTime=0;
+								if($('.play_puase input[type=checkbox]').prop('checked')==true){
+									$('.play_puase  input[type=checkbox]').stop().click();
+								}
 							});
 							$('.video_play').find('video').on('timeupdate', function() {
 								var currentPos = $('.video_play').find('video').get(0).currentTime; //Get currenttime
@@ -662,6 +673,10 @@ $(function(){
 									}
 								});
 								$('.video_player').find('.play_bar').css({'width':percentage+'%'});
+								console.log(currentPos);
+								if (currentPos==maxduration){
+									$('.play_stop').stop().click();
+								};
 								$.getJSON(subLocation, function(data){
 									$.each(data, function(I, item){
 										if(item.index==movei_index){
