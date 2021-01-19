@@ -589,6 +589,7 @@ $(function(){
 				var movei_index;
 				var time_left;
 				var play_info;
+				var video_play;
 				$('.background-filter').stop().fadeIn('300').addClass('on');
 				if(sort_index==1){
 					movei_index = '1';
@@ -598,12 +599,12 @@ $(function(){
 					$.each(data, function(I, item){
 						if (movei_index == item.index){
 							/*---생성---*/
-							$('.background-filter').append('<div class="video_play"><h1>'+item.alt_text+slideNum+'</h1><a href="javascript:;" class="close-btn"><img src="./images/closebtn.png" alt="동영상 닫기"></a><video id="video_move" play controls poster="'+item.img_url+'" preload="metadata" alt="'+item.alt_text+slideNum+'" src="'+item.video_url+'" preload="auto" type="video/mp4"><source src="'+item.video_url+'" type="video/mp4">'+item.alt_text+slideNum+'</video></div>');
+							$('.background-filter').append('<div class="video_play" id="video_play"><h1>'+item.alt_text+slideNum+'</h1><a href="javascript:;" class="close-btn"><img src="./images/closebtn.png" alt="동영상 닫기"></a><video id="video_move" play controls poster="'+item.img_url+'" preload="metadata" alt="'+item.alt_text+slideNum+'" src="'+item.video_url+'" preload="auto" type="video/mp4"><source src="'+item.video_url+'" type="video/mp4">'+item.alt_text+slideNum+'</video></div>');
 							$('.video_play').append('<div class="video_player"></div>');
 							
 							$('.video_player').append('<div class="sub_scr"></div>');
 							$('.video_player').append('<div class="play_controll"></div>');
-							$('.play_controll').append('<h2 class="play_puase"><input type="checkbox" name="playChck" id="playChck"><label for="playChck" tabindex="0"><span></span></label></h2><h2 class="play_stop"></h2><a href="javascript:;" class="fullscreen_btn"></a><a href="javascript:;" class="subscript_btn"></a><h2 class="volume_btn"><input type="checkbox" name="muteChck" id="muteChck"><label for="muteChck" tabindex="0"><span></span></h2>');
+							$('.play_controll').append('<h2 class="play_puase"><input type="checkbox" name="playChck" id="playChck"><label for="playChck" tabindex="0"><span></span></label></h2><a href="javascript:;" class="play_stop"></a><h2 class="fullscreen_btn"><input type="checkbox" name="screenChck" id="screenChck"><label for="screenChck" tabindex="0"><span></span></label></h2><h2 class="subscript_btn"><input type="checkbox" name="subChck" id="subChck"><label for="subChck" tabindex="0"><span></span></label></h2><h2 class="volume_btn"><input type="checkbox" name="muteChck" id="muteChck"><label for="muteChck" tabindex="0"><span></span></label></h2>');
 							$('.video_player').append('<div class="play_bar_wrap"><div class="play_bar_back"><span class="play_bar"></span></div></div>');
 
 							$('.video_play').find('video').on('loadedmetadata',function(){
@@ -639,6 +640,36 @@ $(function(){
 									$('.video_play').find('video').prop('muted', true);
 								}
 							});
+							$('.fullscreen_btn').on('click',function(){
+								video_play = document.getElementById('video_play');
+								// console.log($('.fullscreen_btn input[type=checkbox]').prop('checked'));
+								if($('.fullscreen_btn input[type=checkbox]').prop('checked')==false){
+									$('.fullscreen_btn').removeClass('on');
+									if (video_play.requestFullscreen) {
+										video_play.requestFullscreen();
+									} else if (video_play.mozRequestFullScreen) {
+										video_play.mozRequestFullScreen();
+									} else if (video_play.webkitRequestFullscreen) {
+										video_play.webkitRequestFullscreen();
+									} else if(video_play.msRequestFullscreen){
+										video_play.msRequestFullscreen();
+									}
+								}else{
+									$('.fullscreen_btn').addClass('on');
+									if (video_play.exitFullscreen){
+										document.exitFullscreen();
+									}else if(document.cancelFullScreen) {
+										document.cancelFullScreen();
+									} else if(document.webkitCancelFullScreen ) {
+										document.webkitCancelFullScreen();
+									} else if(document.mozCancelFullScreen) {
+										document.mozCancelFullScreen();
+									} else if (document.msExitFullscreen) {
+											document.msExitFullscreen(); // IE
+									}
+								}
+							});
+
 							$('.video_play').find('video').on('timeupdate', function() {
 								var currentPos = $('.video_play').find('video').get(0).currentTime; //Get currenttime
 								var maxduration = $('.video_play').find('video').get(0).duration; //Get video duration

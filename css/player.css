@@ -1,16 +1,27 @@
-.video_player .sub_scr{height:40px;line-height:40px;background:rgba(255,255,255,1);color:#000;text-align:center;}
+.video_player .sub_scr{height:40px;line-height:40px;background:rgba(255,255,255,1);color:#000;font-size:18px;text-align:center;transition:all 0.3s;}
 .video_player .play_controll{height:60px;background:rgba(255,255,255,1);color:#000;overflow:hidden;}
-.video_player .play_controll .play_puase{width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 350px;background-position: 0px 0px;margin-left:2%;overflow:hidden; float:left; z-index:50;}
-.video_player .play_controll .play_puase.on{background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 350px;background-position: 0px -50px;}
+
+.video_player .play_controll .play_puase{width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 450px;background-position: 0px 0px;margin-left:2%;overflow:hidden; float:left; z-index:50;}
+.video_player .play_controll .play_puase.on{background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 450px;background-position: 0px -50px;}
 .video_player .play_controll .play_puase span{display:block;position:absolute;background:transparent;left:-200%;}
 .video_player .play_controll .play_puase label{display:block;width:50px;height:50px;cursor:pointer;}
-.video_player .play_controll .play_stop{width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 350px;background-position: 0px -100px;margin-left:5px;overflow:hidden; float:left; cursor:pointer; z-index:50;}
-.video_player .play_controll .fullscreen_btn{display:block;width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 350px;background-position: 0px -150px; float:right; margin-right:2%;}
-.video_player .play_controll .subscript_btn{display:block;width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 350px;background-position: 0px -200px; float:right;  margin-right:5px;}
-.video_player .play_controll .volume_btn{display:block;width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 350px;background-position: 0px -250px; overflow:hidden; float:right;  margin-right:5px;}
-.video_player .play_controll .volume_btn.off{display:block;width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 350px;background-position: 0px -300px; float:right;  margin-right:5px;}
+.video_player .play_controll .play_stop{width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 450px;background-position: 0px -100px;margin-left:5px;overflow:hidden; float:left; cursor:pointer; z-index:50;}
+
+.video_player .play_controll .fullscreen_btn{display:block;width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 450px;background-position: 0px -150px; float:right; margin-right:2%;}
+.video_player .play_controll .fullscreen_btn.on{display:block;width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 450px;background-position: 0px -200px; float:right;  margin-right:2%;}
+.video_player .play_controll .fullscreen_btn span{display:block;position:absolute;background:transparent;left:-200%;}
+.video_player .play_controll .fullscreen_btn label{display:block;width:50px;height:50px;cursor:pointer;}
+
+.video_player .play_controll .subscript_btn{display:block;width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 450px;background-position: 0px -250px; float:right;  margin-right:5px;}
+.video_player .play_controll .subscript_btn.off{display:block;width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 450px;background-position: 0px -300px; float:right;  margin-right:5px;}
+.video_player .play_controll .subscript_btn span{display:block;position:absolute;background:transparent;left:-200%;}
+.video_player .play_controll .subscript_btn label{display:block;width:50px;height:50px;cursor:pointer;}
+
+.video_player .play_controll .volume_btn{display:block;width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 450px;background-position: 0px -350px; overflow:hidden; float:right;  margin-right:5px;}
+.video_player .play_controll .volume_btn.off{display:block;width:50px;height:50px;background:url('../images/slide/play_pause_stop.png') no-repeat;background-size:50px 450px;background-position: 0px -400px; float:right;  margin-right:5px;}
 .video_player .play_controll .volume_btn span{display:block;position:absolute;background:transparent;left:-200%;}
 .video_player .play_controll .volume_btn label{display:block;width:50px;height:50px;cursor:pointer;}
+
 .video_player .play_bar_wrap{height:60px;background:rgba(255,255,255,1);color:#000;padding-top:10px;}
 .video_player .play_bar_wrap .play_bar_back{width:96%;height:10px;background:rgba(120,120,120,0.7);margin:0 auto;}
 .video_player .play_bar_wrap .play_bar_back span{display:block;width:0;height:10px;background:rgba(100,150,150,0.8);cursor:pointer;}
