@@ -603,7 +603,7 @@ $(function(){
 							
 							$('.video_player').append('<div class="sub_scr"></div>');
 							$('.video_player').append('<div class="play_controll"></div>');
-							$('.play_controll').append('<h2 class="play_puase"><input type="checkbox" name="playChck" id="playChck"><label for="playChck" tabindex="0"><span></span></label></h2><h2 class="play_stop"></h2><a href="javascript:;" class="subscript_btn"></a>');
+							$('.play_controll').append('<h2 class="play_puase"><input type="checkbox" name="playChck" id="playChck"><label for="playChck" tabindex="0"><span></span></label></h2><h2 class="play_stop"></h2><a href="javascript:;" class="fullscreen_btn"></a><a href="javascript:;" class="subscript_btn"></a><h2 class="volume_btn"><input type="checkbox" name="muteChck" id="muteChck"><label for="muteChck" tabindex="0"><span></span></h2>');
 							$('.video_player').append('<div class="play_bar_wrap"><div class="play_bar_back"><span class="play_bar"></span></div></div>');
 
 							$('.video_play').find('video').on('loadedmetadata',function(){
@@ -628,6 +628,15 @@ $(function(){
 								$('.video_play').find('video').get(0).currentTime=0;
 								if($('.play_puase input[type=checkbox]').prop('checked')==true){
 									$('.play_puase  input[type=checkbox]').stop().click();
+								}
+							});
+							$('.volume_btn').on('click',function(){
+								if($('.volume_btn input[type=checkbox]').prop('checked')==false){
+									$('.volume_btn').removeClass('off');
+									$('.video_play').find('video').prop('muted', false);
+								}else{
+									$('.volume_btn').addClass('off');
+									$('.video_play').find('video').prop('muted', true);
 								}
 							});
 							$('.video_play').find('video').on('timeupdate', function() {
