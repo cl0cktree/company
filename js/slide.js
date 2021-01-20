@@ -618,10 +618,10 @@ $(function(){
 							$('.play_puase  input[type=checkbox]').on('click',function(){
 								if($('.play_puase input[type=checkbox]').prop('checked')==false){
 									$('.play_puase').removeClass('on');
-									$('.video_play').find('video').get(0).pause();
+									$('.video_play').find('video').stop().get(0).pause();
 								}else{
 									$('.play_puase').addClass('on');
-									$('.video_play').find('video').get(0).play();
+									$('.video_play').find('video').stop().get(0).play();
 								}
 							});
 							$('.play_stop').on('click',function(){
@@ -695,8 +695,10 @@ $(function(){
 										console.log(currentPos);
 										// $('.video_player').find('.play_bar').css({'width':bar_per_start+'%'});
 									}else if(event.type=='mouseup'){
+										var bar_wrap_left = Math.round($(this).offset().left);
+										console.log(bar_wrap_left);
 										bar_x=event.pageX;
-										bar_per_end=Math.floor((bar_x/back_width)*100)-10;
+										bar_per_end=Math.round(((bar_x-bar_wrap_left)/back_width)*100);
 										var bar_con = Math.floor((bar_per_end*maxduration)/100);
 										var bar_dur = Math.floor((bar_con/100)*bar_per_end);
 										bar_per = Math.floor((bar_dur/maxduration)*100);
@@ -709,11 +711,17 @@ $(function(){
 										currentPos = bar_x;
 										console.log(bar_con);
 										$('.video_player').find('.play_bar').css({'width':bar_per_end+'%'});
-										$('.video_play').find('video').get(0).play();
+										if($('.play_puase input[type=checkbox]').prop('checked')==false){
+											$('.play_puase').removeClass('on');
+											$('.video_play').find('video').stop().get(0).pause();
+										}else{
+											$('.play_puase').addClass('on');
+											$('.video_play').find('video').stop().get(0).play();
+										}
 									}
 								});
 								$('.video_player').find('.play_bar').css({'width':percentage+'%'});
-								console.log(currentPos);
+								// console.log(currentPos);
 								if (currentPos==maxduration){
 									$('.play_stop').stop().click();
 								};
