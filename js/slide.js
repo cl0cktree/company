@@ -599,20 +599,21 @@ $(function(){
 					$.each(data, function(I, item){
 						if (movei_index == item.index){
 							/*---생성---*/
-							$('.background-filter').append('<div class="video_play" id="video_play"><h1>'+item.alt_text+slideNum+'</h1><a href="javascript:;" class="close-btn"><img src="./images/closebtn.png" alt="동영상 닫기"></a><video id="video_move" play controls poster="'+item.img_url+'" preload="metadata" alt="'+item.alt_text+slideNum+'" src="'+item.video_url+'" preload="auto" type="video/mp4"><source src="'+item.video_url+'" type="video/mp4">'+item.alt_text+slideNum+'</video></div>');
+							$('.background-filter').append('<div class="video_play" id="video_play"><h1>'+item.alt_text+slideNum+'</h1><a href="javascript:;" class="close-btn"><img src="./images/closebtn.png" alt="동영상 닫기"></a><video id="video_move" play poster="'+item.img_url+'" preload="metadata" alt="'+item.alt_text+slideNum+'" src="'+item.video_url+'" preload="auto" type="video/mp4"><source src="'+item.video_url+'" type="video/mp4">'+item.alt_text+slideNum+'</video></div>');
 							$('.video_play').append('<div class="video_player"></div>');
-							
 							$('.video_player').append('<div class="sub_scr"><div class="sub_caption"></div></div>');
 							$('.video_player').append('<div class="play_controll"></div>');
 							$('.play_controll').append('<h2 class="play_puase"><input type="checkbox" name="playChck" id="playChck"><label for="playChck" tabindex="0"><span>동영상을 재생 합니다.</span></label></h2><a href="javascript:;" class="play_stop">동영상을 정지 합니다.</a>\
 							<h2 class="fullscreen_btn"><input type="checkbox" name="screenChck" id="screenChck"><label for="screenChck" tabindex="0"><span>전체화면으로 동영상을 봅니다.</span></label></h2><h2 class="subscript_btn"><input type="checkbox" name="subChck" id="subChck"><label for="subChck" tabindex="0"><span>자막 지원 중 입니다.</span></label></h2><h2 class="volume_btn"><input type="checkbox" name="muteChck" id="muteChck"><label for="muteChck" tabindex="0"><span>음성 지원 중 입니다.</span></label></h2><div class="volume_bar_wrap"><span class="volume_bar"></span></div>');
 							$('.video_player').append('<div class="play_bar_wrap"><div class="play_bar_back"><span class="play_bar"></span></div></div>');
-
+							$('.play_bar_wrap').append('<div class="video_dur"><span class="play_dur"></span><span class="max_dur"></span></div>');
+							
 							$('.video_play').find('video').on('loadedmetadata',function(){
 								videoTime = parseInt($('.video_play').find('video').get(0).duration);
 								time_left = Math.floor(videoTime / 60) + ":" + (videoTime % 60);  // 남은 시간 계산
 								// console.log(time_left);
-
+								$('.play_dur').html('0:00');
+								$('.max_dur').html(' / '+time_left);
 							});
 							/*----------*/
 							/*---구동---*/
@@ -630,9 +631,13 @@ $(function(){
 							$('.play_stop').on('click',function(){
 								$('.video_play').find('video').get(0).pause();
 								$('.video_play').find('video').get(0).currentTime=0;
+								$('.sub_caption').html('');
 								if($('.play_puase input[type=checkbox]').prop('checked')==true){
 									$('.play_puase  input[type=checkbox]').stop().click();
 								}
+							});
+							$('#video_move').on('click',function(){
+								$('.play_puase  input[type=checkbox]').stop().click();
 							});
 							$('.volume_btn').on('click',function(){
 								if($('.volume_btn input[type=checkbox]').prop('checked')==false){
@@ -643,6 +648,38 @@ $(function(){
 									$('.volume_btn').addClass('off');
 									$('.video_play').find('video').prop('muted', true);
 									$('.volume_btn').find('span').html('음소거 중 입니다.');
+								}
+							});
+							$('.video_player').find('.volume_bar_wrap').on('mousedown mouseup click',function(event){
+								var video_obj;
+								var sound_y;
+								var sound_per_end;
+								var $sound_height=$('.volume_bar_wrap').height();
+								event.preventDefault();
+								event.stopPropagation();
+								if (event.type=='mousedown'){
+									sound_y=event.pageY;
+									
+								}else if(event.type=='mouseup'){
+									sound_y=event.pageY;
+									video_obj = document.getElementById('video_move');
+									var sound_wrap_top = Math.floor($(this).offset().top);
+									sound_per_end=Math.floor((((sound_y-sound_wrap_top)/$sound_height)*100)/2);
+									var sound_vol=$sound_height-sound_per_end;
+									var stop_vol=sound_vol*0.02;
+									
+									function vol_bar(){
+										return video_obj;
+									};
+									vol_bar().volume = stop_vol;
+									$('.volume_bar').css({'height':sound_vol});
+									// if (sound_vol<1){
+										// $('.volume_btn').addClass('off');
+										// console.log('ride');
+									// }else{
+										// $('.volume_btn').removeClass('off');
+									// }
+									console.log(sound_vol);
 								}
 							});
 							$('.subscript_btn').on('click',function(){
@@ -697,6 +734,16 @@ $(function(){
 								var video_play = document.getElementsByClassName('video_play');
 								var video_obj;
 								var bar_per;
+								var zero_sum;
+								var left_current=parseInt(currentPos);
+								if ((left_current % 60)<10){
+									zero_sum='0';
+								}else{
+									zero_sum='';
+								};
+								var left_time=Math.floor(left_current / 60) + ":" + zero_sum+(left_current % 60);
+
+								$('.play_dur').html(left_time);
 								$('.video_player').find('.play_bar_back').on('mousedown mouseup click',function(event){
 									var bar_x;
 									var bar_per_end;
