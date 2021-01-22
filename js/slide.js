@@ -104,6 +104,11 @@ $(function(){
 						s_width = $('.slide').width();
 						article_height = $('.article').height();
 						$('.slide-wrap').css({'height':msheight});
+						if ($('body').width()!==$('#video_play').width()){
+							$('.fullscreen_btn input[type=checkbox]').prop('checked',false);
+							$('.fullscreen_btn').removeClass('on');
+							$('.fullscreen_btn').find('span').html('전체화면을 종료 합니다.');
+						}
 					},framespeed);
 				}
 			});
@@ -722,12 +727,6 @@ $(function(){
 											document.msExitFullscreen(); // IE
 									}
 									$('.fullscreen_btn').find('span').html('전체화면을 종료 합니다.');
-								}
-							});
-							$(window).resize(function(){
-								if ($('body').width()!==$('#video_play').width()){
-									$('.fullscreen_btn input[type=checkbox]').prop('checked',false);
-									$('.fullscreen_btn').removeClass('on');
 								}
 							});
 
