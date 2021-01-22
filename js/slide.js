@@ -724,6 +724,12 @@ $(function(){
 									$('.fullscreen_btn').find('span').html('전체화면을 종료 합니다.');
 								}
 							});
+							$(window).resize(function(){
+								if ($('body').width()!==$('#video_play').width()){
+									$('.fullscreen_btn input[type=checkbox]').prop('checked',false);
+									$('.fullscreen_btn').removeClass('on');
+								}
+							});
 
 							$('.video_play').find('video').on('timeupdate', function() {
 								var currentPos = $('.video_play').find('video').get(0).currentTime; //Get currenttime
