@@ -609,7 +609,7 @@ $(function(){
 							$('.video_player').append('<div class="sub_scr"><div class="sub_caption"></div></div>');
 							$('.video_player').append('<div class="play_controll"></div>');
 							$('.play_controll').append('<h2 class="play_puase"><input type="checkbox" name="playChck" id="playChck"><label for="playChck" tabindex="0"><span>동영상을 재생 합니다.</span></label></h2><a href="javascript:;" class="play_stop">동영상을 정지 합니다.</a>\
-							<h2 class="fullscreen_btn"><input type="checkbox" name="screenChck" id="screenChck"><label for="screenChck" tabindex="0"><span>전체화면으로 동영상을 봅니다.</span></label></h2><h2 class="subscript_btn"><input type="checkbox" name="subChck" id="subChck"><label for="subChck" tabindex="0"><span>자막 지원 중 입니다.</span></label></h2><h2 class="volume_btn"><input type="checkbox" name="muteChck" id="muteChck"><label for="muteChck" tabindex="0"><span>음성 지원 중 입니다.</span></label></h2><div class="volume_bar_wrap"><span class="volume_bar"></span></div>');
+							<h2 class="fullscreen_btn"><input type="checkbox" name="screenChck" id="screenChck"><label for="screenChck" tabindex="0"><span>전체화면으로 동영상을 봅니다.</span></label></h2><h2 class="subscript_btn off"><input type="checkbox" name="subChck" id="subChck"><label for="subChck" tabindex="0"><span>자막 지원 중 입니다.</span></label></h2><h2 class="volume_btn"><input type="checkbox" name="muteChck" id="muteChck"><label for="muteChck" tabindex="0"><span>음성 지원 중 입니다.</span></label></h2><div class="volume_bar_wrap"><span class="volume_bar"></span></div>');
 							$('.video_player').append('<div class="play_bar_wrap"><div class="play_bar_back"><span class="play_bar"></span></div></div>');
 							$('.play_bar_wrap').append('<div class="video_dur"><span class="play_dur"></span><span class="max_dur"></span></div>');
 							
@@ -689,11 +689,11 @@ $(function(){
 							});
 							$('.subscript_btn').on('click',function(){
 								if($('.subscript_btn input[type=checkbox]').prop('checked')==false){
-									$('.subscript_btn').removeClass('off');
+									$('.subscript_btn').addClass('off');
 									$('.sub_caption').css({'bottom':'0'});
 									$('.subscript_btn').find('span').html('자막 지원 중 입니다.');
 								}else{
-									$('.subscript_btn').addClass('off');
+									$('.subscript_btn').removeClass('off');
 									$('.sub_caption').css({'bottom':'-100%'});
 									$('.subscript_btn').find('span').html('자막이 닫혀 있습니다.');
 								}
@@ -760,7 +760,7 @@ $(function(){
 										bar_per_start=Math.floor((bar_x/back_width)*100)-10;
 										// bar_per_start = Math.floor((100 / video_obj.maxduration) * video_obj.currentPos)
 										// console.log(bar_per_start);
-										$('.video_play').find('video').get(0).pause();
+										// $('.video_play').find('video').get(0).pause();
 										// currentPos = bar_x;
 										// console.log(currentPos);
 										// $('.video_player').find('.play_bar').css({'width':bar_per_start+'%'});
@@ -783,10 +783,10 @@ $(function(){
 										$('.video_player').find('.play_bar').css({'width':bar_per_end+'%'});
 										if($('.play_puase input[type=checkbox]').prop('checked')==false){
 											$('.play_puase').removeClass('on');
-											$('.video_play').find('video').stop().get(0).pause();
+											// $('.video_play').find('video').stop().get(0).pause();
 										}else{
 											$('.play_puase').addClass('on');
-											$('.video_play').find('video').stop().get(0).play();
+											// $('.video_play').find('video').stop().get(0).play();
 										}
 									}
 								});
