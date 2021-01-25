@@ -108,6 +108,16 @@ $(function(){
 							$('.fullscreen_btn input[type=checkbox]').prop('checked',false);
 							$('.fullscreen_btn').removeClass('on');
 							$('.fullscreen_btn').find('span').html('전체화면을 종료 합니다.');
+							$('.video_play video').css({'margin':'0'});
+						}else{
+							var $video_top =($('.video_play').height()/2)-($('.video_play video').height()/2)-60;
+
+							if ($('.video_play').width()<$('.video_play').height()){
+								console.log('width :' + $('.video_play').width()+' / '+'height :'+ $('.video_play').height());
+								$('.video_play video').css({'margin-top':$video_top+'px'});
+							}else{
+								$('.video_play video').css({'margin':'0'});
+							}
 						}
 					},framespeed);
 				}
@@ -690,11 +700,11 @@ $(function(){
 							$('.subscript_btn').on('click',function(){
 								if($('.subscript_btn input[type=checkbox]').prop('checked')==false){
 									$('.subscript_btn').addClass('off');
-									$('.sub_caption').css({'bottom':'0'});
+									$('.sub_caption').css({'bottom':'0','opacity':'1'});
 									$('.subscript_btn').find('span').html('자막 지원 중 입니다.');
 								}else{
 									$('.subscript_btn').removeClass('off');
-									$('.sub_caption').css({'bottom':'-100%'});
+									$('.sub_caption').css({'bottom':'-100%','opacity':'0'});
 									$('.subscript_btn').find('span').html('자막이 닫혀 있습니다.');
 								}
 							});
