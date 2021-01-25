@@ -111,14 +111,13 @@ $(function(){
 							$('.video_play video').css({'margin':'0'});
 						}else{
 							var $video_top =($('.video_play').height()/2)-($('.video_play video').height()/2)-60;
-
-							if ($('.video_play').width()<$('.video_play').height()){
+							if (($('.video_play').width()*.75)<$('.video_play').height()){
 								console.log('width :' + $('.video_play').width()+' / '+'height :'+ $('.video_play').height());
 								$('.video_play video').css({'margin-top':$video_top+'px'});
 							}else{
 								$('.video_play video').css({'margin':'0'});
-							}
-						}
+							};
+						};
 					},framespeed);
 				}
 			});
