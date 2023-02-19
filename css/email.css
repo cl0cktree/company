@@ -34,3 +34,4 @@ input[type=select]{appearance:none;}
 .contact_form table td input[type=text]{width:100%; height: 30px; line-height:30px; border: 1px solid #cccccc; color: #333333; text-align:left;}
 .contact_form table td textarea{box-sizing:border-box; width: 100%; height: 198px; border: 1px solid #cccccc; color: #333333; text-align:left; resize:none;}
 .contact_form table td button{width:100%;height:50px;background:#171c61;border:0;color:#fff;font-size:18px;cursor:pointer;}
+.contact_form table td #h_button{display:none;}

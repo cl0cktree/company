@@ -39,6 +39,7 @@
             <th>내용</th>
             <td>
               <textarea id="message" name="message" rows="5" cols="26"></textarea>
+              <input type="hidden" id="h_mail"/>
             </td>
           </tr>
           <tr>
@@ -46,7 +47,10 @@
           </tr>
           <tr>
              <td colspan="2" style="padding-top:20px;">
-              <button name="submit" value="문의하기">
+              <button id="path_button" value="문의하기">
+                문의하기
+              </button>
+              <button id="h_button" name="submit" value="문의하기">
                 문의하기
               </button>
             </td>
